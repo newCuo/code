@@ -13,6 +13,17 @@
 		5E6A35A81F246BC3000C9D43 /* LB_LoginContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A35A71F246BC3000C9D43 /* LB_LoginContentViewModel.m */; };
 		5E7C890B1F248220009A578E /* LB_HomeTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C890A1F248220009A578E /* LB_HomeTitleView.m */; };
 		5E7C890E1F24844F009A578E /* LB_HomeTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C890D1F24844F009A578E /* LB_HomeTitleViewModel.m */; };
+		5E7C89171F24D4B3009A578E /* LB_HomeContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89161F24D4B3009A578E /* LB_HomeContentView.m */; };
+		5E7C891A1F24D4CF009A578E /* LB_HomeContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89191F24D4CF009A578E /* LB_HomeContentViewModel.m */; };
+		5E7C891E1F24D512009A578E /* LB_HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C891D1F24D512009A578E /* LB_HomeModel.m */; };
+		5E7C89281F24D7F5009A578E /* LB_SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89271F24D7F5009A578E /* LB_SearchViewController.m */; };
+		5E7C892B1F24D81F009A578E /* LB_SearchTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C892A1F24D81F009A578E /* LB_SearchTitleView.m */; };
+		5E7C892E1F24D842009A578E /* LB_SearchTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C892D1F24D842009A578E /* LB_SearchTitleViewModel.m */; };
+		5E7C89311F24D870009A578E /* LB_SearchContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89301F24D870009A578E /* LB_SearchContentView.m */; };
+		5E7C89341F24D89C009A578E /* LB_SearchContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89331F24D89C009A578E /* LB_SearchContentViewModel.m */; };
+		5E7C89371F24E23F009A578E /* LB_GoodsTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89361F24E23F009A578E /* LB_GoodsTitleView.m */; };
+		5E7C893A1F24E272009A578E /* LB_GoodsTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89391F24E272009A578E /* LB_GoodsTitleViewModel.m */; };
+		5E7C893D1F24E625009A578E /* LB_SearchEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C893C1F24E625009A578E /* LB_SearchEmptyView.m */; };
 		5E82184B1F21DF7800635013 /* NavigationTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E82184A1F21DF7800635013 /* NavigationTitleView.m */; };
 		5E8218511F21E32300635013 /* UserInfoTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8218501F21E32300635013 /* UserInfoTitleViewModel.m */; };
 		5E8218541F21EBB500635013 /* ShoppingTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8218531F21EBB500635013 /* ShoppingTitleViewModel.m */; };
@@ -47,6 +58,28 @@
 		5E7C890A1F248220009A578E /* LB_HomeTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_HomeTitleView.m; sourceTree = "<group>"; };
 		5E7C890C1F24844F009A578E /* LB_HomeTitleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_HomeTitleViewModel.h; sourceTree = "<group>"; };
 		5E7C890D1F24844F009A578E /* LB_HomeTitleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_HomeTitleViewModel.m; sourceTree = "<group>"; };
+		5E7C89151F24D4B3009A578E /* LB_HomeContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_HomeContentView.h; sourceTree = "<group>"; };
+		5E7C89161F24D4B3009A578E /* LB_HomeContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_HomeContentView.m; sourceTree = "<group>"; };
+		5E7C89181F24D4CF009A578E /* LB_HomeContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_HomeContentViewModel.h; sourceTree = "<group>"; };
+		5E7C89191F24D4CF009A578E /* LB_HomeContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_HomeContentViewModel.m; sourceTree = "<group>"; };
+		5E7C891C1F24D512009A578E /* LB_HomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_HomeModel.h; sourceTree = "<group>"; };
+		5E7C891D1F24D512009A578E /* LB_HomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_HomeModel.m; sourceTree = "<group>"; };
+		5E7C89261F24D7F5009A578E /* LB_SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_SearchViewController.h; sourceTree = "<group>"; };
+		5E7C89271F24D7F5009A578E /* LB_SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_SearchViewController.m; sourceTree = "<group>"; };
+		5E7C89291F24D81F009A578E /* LB_SearchTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_SearchTitleView.h; sourceTree = "<group>"; };
+		5E7C892A1F24D81F009A578E /* LB_SearchTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_SearchTitleView.m; sourceTree = "<group>"; };
+		5E7C892C1F24D842009A578E /* LB_SearchTitleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_SearchTitleViewModel.h; sourceTree = "<group>"; };
+		5E7C892D1F24D842009A578E /* LB_SearchTitleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_SearchTitleViewModel.m; sourceTree = "<group>"; };
+		5E7C892F1F24D870009A578E /* LB_SearchContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_SearchContentView.h; sourceTree = "<group>"; };
+		5E7C89301F24D870009A578E /* LB_SearchContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_SearchContentView.m; sourceTree = "<group>"; };
+		5E7C89321F24D89C009A578E /* LB_SearchContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_SearchContentViewModel.h; sourceTree = "<group>"; };
+		5E7C89331F24D89C009A578E /* LB_SearchContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_SearchContentViewModel.m; sourceTree = "<group>"; };
+		5E7C89351F24E23F009A578E /* LB_GoodsTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_GoodsTitleView.h; sourceTree = "<group>"; };
+		5E7C89361F24E23F009A578E /* LB_GoodsTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_GoodsTitleView.m; sourceTree = "<group>"; };
+		5E7C89381F24E272009A578E /* LB_GoodsTitleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_GoodsTitleViewModel.h; sourceTree = "<group>"; };
+		5E7C89391F24E272009A578E /* LB_GoodsTitleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_GoodsTitleViewModel.m; sourceTree = "<group>"; };
+		5E7C893B1F24E625009A578E /* LB_SearchEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_SearchEmptyView.h; sourceTree = "<group>"; };
+		5E7C893C1F24E625009A578E /* LB_SearchEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_SearchEmptyView.m; sourceTree = "<group>"; };
 		5E8218491F21DF7800635013 /* NavigationTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationTitleView.h; sourceTree = "<group>"; };
 		5E82184A1F21DF7800635013 /* NavigationTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationTitleView.m; sourceTree = "<group>"; };
 		5E82184F1F21E32300635013 /* UserInfoTitleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoTitleViewModel.h; sourceTree = "<group>"; };
@@ -108,6 +141,58 @@
 				5E6A359E1F23994C000C9D43 /* UserModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5E7C891B1F24D4F5009A578E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E7C891C1F24D512009A578E /* LB_HomeModel.h */,
+				5E7C891D1F24D512009A578E /* LB_HomeModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E7C891F1F24D74B009A578E /* Seach */ = {
+			isa = PBXGroup;
+			children = (
+				5E7C89201F24D74B009A578E /* Controller */,
+				5E7C89211F24D74B009A578E /* View */,
+				5E7C89221F24D74B009A578E /* ViewModel */,
+			);
+			path = Seach;
+			sourceTree = "<group>";
+		};
+		5E7C89201F24D74B009A578E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5E7C89261F24D7F5009A578E /* LB_SearchViewController.h */,
+				5E7C89271F24D7F5009A578E /* LB_SearchViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5E7C89211F24D74B009A578E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E7C89291F24D81F009A578E /* LB_SearchTitleView.h */,
+				5E7C892A1F24D81F009A578E /* LB_SearchTitleView.m */,
+				5E7C892F1F24D870009A578E /* LB_SearchContentView.h */,
+				5E7C89301F24D870009A578E /* LB_SearchContentView.m */,
+				5E7C893B1F24E625009A578E /* LB_SearchEmptyView.h */,
+				5E7C893C1F24E625009A578E /* LB_SearchEmptyView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5E7C89221F24D74B009A578E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5E7C892C1F24D842009A578E /* LB_SearchTitleViewModel.h */,
+				5E7C892D1F24D842009A578E /* LB_SearchTitleViewModel.m */,
+				5E7C89321F24D89C009A578E /* LB_SearchContentViewModel.h */,
+				5E7C89331F24D89C009A578E /* LB_SearchContentViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		5E8218581F21FBA200635013 /* Login */ = {
@@ -267,6 +352,8 @@
 		5EF4EC8B1F1F4CB6000C2EAD /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5E7C891F1F24D74B009A578E /* Seach */,
+				5E7C891B1F24D4F5009A578E /* Model */,
 				5EF4EC911F1F53C0000C2EAD /* Controller */,
 				5EF4EC921F1F53C0000C2EAD /* View */,
 				5EF4EC931F1F53C0000C2EAD /* ViewModel */,
@@ -306,6 +393,8 @@
 		5EF4EC8F1F1F4D39000C2EAD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5E7C89351F24E23F009A578E /* LB_GoodsTitleView.h */,
+				5E7C89361F24E23F009A578E /* LB_GoodsTitleView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -313,6 +402,8 @@
 		5EF4EC901F1F4D39000C2EAD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5E7C89381F24E272009A578E /* LB_GoodsTitleViewModel.h */,
+				5E7C89391F24E272009A578E /* LB_GoodsTitleViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -331,6 +422,8 @@
 			children = (
 				5E7C89091F248220009A578E /* LB_HomeTitleView.h */,
 				5E7C890A1F248220009A578E /* LB_HomeTitleView.m */,
+				5E7C89151F24D4B3009A578E /* LB_HomeContentView.h */,
+				5E7C89161F24D4B3009A578E /* LB_HomeContentView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -340,6 +433,8 @@
 			children = (
 				5E7C890C1F24844F009A578E /* LB_HomeTitleViewModel.h */,
 				5E7C890D1F24844F009A578E /* LB_HomeTitleViewModel.m */,
+				5E7C89181F24D4CF009A578E /* LB_HomeContentViewModel.h */,
+				5E7C89191F24D4CF009A578E /* LB_HomeContentViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -572,23 +667,34 @@
 			files = (
 				5E8218641F21FD1700635013 /* ShoppingEmptyView.m in Sources */,
 				5EF4ECA11F1F5E88000C2EAD /* UserInfoViewController.m in Sources */,
+				5E7C89371F24E23F009A578E /* LB_GoodsTitleView.m in Sources */,
 				5E7C890E1F24844F009A578E /* LB_HomeTitleViewModel.m in Sources */,
 				5EF4EC891F1F3B83000C2EAD /* TabBarViewController.m in Sources */,
 				5EF4ECAA1F1F5EB5000C2EAD /* ShoppingViewController.m in Sources */,
+				5E7C892E1F24D842009A578E /* LB_SearchTitleViewModel.m in Sources */,
 				5EF4EC851F1F3B15000C2EAD /* BaseViewController.m in Sources */,
 				5E82185E1F21FBB400635013 /* LoginViewController.m in Sources */,
+				5E7C89341F24D89C009A578E /* LB_SearchContentViewModel.m in Sources */,
+				5E7C893A1F24E272009A578E /* LB_GoodsTitleViewModel.m in Sources */,
 				5EF4EC6B1F1F311C000C2EAD /* AppDelegate.m in Sources */,
 				5E8218541F21EBB500635013 /* ShoppingTitleViewModel.m in Sources */,
 				5E6A359F1F23994C000C9D43 /* UserModel.m in Sources */,
 				5E7C890B1F248220009A578E /* LB_HomeTitleView.m in Sources */,
 				5E82184B1F21DF7800635013 /* NavigationTitleView.m in Sources */,
+				5E7C89281F24D7F5009A578E /* LB_SearchViewController.m in Sources */,
 				5E8218611F21FBCF00635013 /* LoginTitleViewModel.m in Sources */,
+				5E7C891E1F24D512009A578E /* LB_HomeModel.m in Sources */,
 				5E8218511F21E32300635013 /* UserInfoTitleViewModel.m in Sources */,
 				5E8218571F21EF0B00635013 /* AppDelegate+Configuration.m in Sources */,
+				5E7C89171F24D4B3009A578E /* LB_HomeContentView.m in Sources */,
+				5E7C89311F24D870009A578E /* LB_SearchContentView.m in Sources */,
 				5EF4ECA71F1F5EA5000C2EAD /* GoodsViewController.m in Sources */,
+				5E7C891A1F24D4CF009A578E /* LB_HomeContentViewModel.m in Sources */,
 				5E6A35A81F246BC3000C9D43 /* LB_LoginContentViewModel.m in Sources */,
 				5E8218671F21FD7900635013 /* ShoppingEmptyViewModel.m in Sources */,
+				5E7C893D1F24E625009A578E /* LB_SearchEmptyView.m in Sources */,
 				5EF4EC681F1F311C000C2EAD /* main.m in Sources */,
+				5E7C892B1F24D81F009A578E /* LB_SearchTitleView.m in Sources */,
 				5E6A35A51F246A14000C9D43 /* LB_ContentView.m in Sources */,
 				5E6A35A21F246369000C9D43 /* LB_BaseViewModel.m in Sources */,
 				5EF4ECA41F1F5E96000C2EAD /* HomeViewController.m in Sources */,

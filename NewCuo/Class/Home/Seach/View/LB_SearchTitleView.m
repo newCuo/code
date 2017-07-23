@@ -1,25 +1,24 @@
 //
-//  LB_HomeTitleView.m
+//  LB_SearchTitleView.m
 //  NewCuo
 //
 //  Created by 林波 on 2017/7/23.
 //  Copyright © 2017年 林波. All rights reserved.
 //
 
-#import "LB_HomeTitleView.h"
+#import "LB_SearchTitleView.h"
 
-@interface LB_HomeTitleView ();
+@interface LB_SearchTitleView ()
 
-@property(strong,nonatomic)UIButton *scanBtn;
-
-@property(strong,nonatomic)UIButton *messageBtn;
+@property(strong,nonatomic)UIButton *backBtn;
 
 @property(strong,nonatomic)UIButton *searchBtn;
 
+@property(strong,nonatomic)UITextField *searchTF;
 
 @end
 
-@implementation LB_HomeTitleView
+@implementation LB_SearchTitleView
 
 -(id)initWithFrame:(CGRect)frame{
     
@@ -36,10 +35,13 @@
 
 -(void)initUI{
     
-    self.scanBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.scanBtn setImage:[UIImage imageNamed:@"sweep.png"] forState:UIControlStateNormal];
-    [self addSubview:self.scanBtn];
-    [self.scanBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    
+    
+    self.backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.backBtn setImage:[UIImage imageNamed:@"navigation_back.png"] forState:UIControlStateNormal];
+    [self.backBtn setTitle:@" " forState:UIControlStateNormal];
+    [self addSubview:self.backBtn];
+    [self.backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_top).offset(20);
         make.left.equalTo(self.mas_left).offset(10);
         make.bottom.equalTo(self.mas_bottom).offset(0);
@@ -47,16 +49,18 @@
     }];
     
     
-    self.messageBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.messageBtn setImage:[UIImage imageNamed:@"message.png"] forState:UIControlStateNormal];
-    [self addSubview:self.messageBtn];
-    [self.messageBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.searchBtn setTitle:@"搜索" forState:UIControlStateNormal];
+    self.searchBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+    [self.searchBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self addSubview:self.searchBtn];
+    [self.searchBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_top).offset(20);
         make.right.equalTo(self.mas_right).offset(-10);
         make.bottom.equalTo(self.mas_bottom).offset(0);
         make.width.offset(30);
     }];
-
+    
     
     UIView *view =[[UIView alloc]init];
     view.layer.cornerRadius = 5;
@@ -64,14 +68,14 @@
     [self addSubview:view];
     [view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_top).offset(26);
-        make.right.equalTo(self.messageBtn.mas_left).offset(-10);
+        make.right.equalTo(self.searchBtn.mas_left).offset(-10);
         make.bottom.equalTo(self.mas_bottom).offset(-6);
-        make.left.equalTo(self.scanBtn.mas_right).offset(10);
+        make.left.equalTo(self.backBtn.mas_right).offset(10);
     }];
     
     
-   
-
+    
+    
     
     UIImageView *imageV = [[UIImageView alloc]init];
     imageV.image =[UIImage imageNamed:@"search_big.png"];
@@ -82,26 +86,21 @@
         make.left.equalTo(view.mas_left).offset(10);
     }];
     
-    UILabel *searchLab = [[UILabel alloc]init];
-    searchLab.text = @"搜索商品";
-    searchLab.textColor = [UIColor grayColor];
-    searchLab.font = [UIFont systemFontOfSize:13];
-    [view addSubview:searchLab];
-    [searchLab mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.searchTF = [[UITextField alloc]init];
+    self.searchTF.placeholder = @"搜索商品";
+    self.searchTF.textColor = [UIColor blackColor];
+    self.searchTF.font = [UIFont systemFontOfSize:13];
+    [view addSubview:self.self.searchTF];
+    [self.searchTF mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.centerY.equalTo(view.mas_centerY).offset(0);
+
         make.left.equalTo(imageV.mas_right).offset(8);
+        make.right.equalTo(view.mas_right).offset(0);
+        make.top.equalTo(view.mas_top).offset(0);
+        make.bottom.equalTo(view.mas_bottom).offset(0);
         
     }];
     
-    self.searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [view addSubview:self.searchBtn];
-    [self.searchBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(view.mas_top).offset(0);
-        make.right.equalTo(view.mas_right).offset(0);
-        make.bottom.equalTo(view.mas_bottom).offset(0);
-        make.left.equalTo(view.mas_left).offset(0);
-    }];
     
 }
 

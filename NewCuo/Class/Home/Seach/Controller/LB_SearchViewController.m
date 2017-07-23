@@ -1,28 +1,31 @@
 //
-//  GoodsViewController.m
+//  LB_SearchViewController.m
 //  NewCuo
 //
-//  Created by 林波 on 2017/7/19.
+//  Created by 林波 on 2017/7/23.
 //  Copyright © 2017年 林波. All rights reserved.
 //
 
-#import "GoodsViewController.h"
-#import "LB_GoodsTitleViewModel.h"
+#import "LB_SearchViewController.h"
+#import "LB_SearchTitleViewModel.h"
+#import "LB_SearchContentViewModel.h"
 
-@interface GoodsViewController ()
+@interface LB_SearchViewController ()
 
-@property(strong,nonatomic)LB_GoodsTitleViewModel *goodsTitleViewModel;
+@property(strong,nonatomic)LB_SearchTitleViewModel *titleViewModel;
 
-
+@property(strong,nonatomic)LB_SearchContentViewModel *contentViewModel;
 @end
 
-@implementation GoodsViewController
+@implementation LB_SearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.goodsTitleViewModel = [[LB_GoodsTitleViewModel alloc]initWithViewController:self];
+    self.titleViewModel = [[LB_SearchTitleViewModel alloc]initWithViewController:self];
+    
+    self.contentViewModel = [[LB_SearchContentViewModel alloc]initWithViewController:self];
     
 }
 

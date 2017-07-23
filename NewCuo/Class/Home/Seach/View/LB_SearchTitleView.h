@@ -1,5 +1,5 @@
 //
-//  LB_HomeTitleView.h
+//  LB_SearchTitleView.h
 //  NewCuo
 //
 //  Created by 林波 on 2017/7/23.
@@ -8,15 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LB_HomeTitleView : UIView
+@interface LB_SearchTitleView : UIView
 
-//扫描
--(UIButton*)scanBtn;
+-(UIButton*)backBtn;
 
-//消息
--(UIButton*)messageBtn;
-
-//搜索
 -(UIButton*)searchBtn;
+
+-(UITextField*)searchTF;
 
 @end
