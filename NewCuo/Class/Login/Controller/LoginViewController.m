@@ -27,7 +27,7 @@
     self.titleViewModel = [[LoginTitleViewModel alloc]initWithViewController:self];
     
     self.contentViewModel = [[LB_LoginContentViewModel alloc]initWithViewController:self];
-    
+    //33333333
 }
 
 - (void)didReceiveMemoryWarning {
