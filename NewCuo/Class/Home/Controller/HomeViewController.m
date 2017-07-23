@@ -7,8 +7,11 @@
 //
 
 #import "HomeViewController.h"
+#import "LB_HomeTitleViewModel.h"
 
 @interface HomeViewController ()
+
+@property(strong,nonatomic)LB_HomeTitleViewModel *homeTitleViewModel;
 
 @end
 
@@ -17,6 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.homeTitleViewModel = [[LB_HomeTitleViewModel alloc]initWithViewController:self];
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
