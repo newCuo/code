@@ -11,6 +11,8 @@
 		5E6A35A21F246369000C9D43 /* LB_BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A35A11F246369000C9D43 /* LB_BaseViewModel.m */; };
 		5E6A35A51F246A14000C9D43 /* LB_ContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A35A41F246A14000C9D43 /* LB_ContentView.m */; };
 		5E6A35A81F246BC3000C9D43 /* LB_LoginContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A35A71F246BC3000C9D43 /* LB_LoginContentViewModel.m */; };
+		5E7C890B1F248220009A578E /* LB_HomeTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C890A1F248220009A578E /* LB_HomeTitleView.m */; };
+		5E7C890E1F24844F009A578E /* LB_HomeTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C890D1F24844F009A578E /* LB_HomeTitleViewModel.m */; };
 		5E82184B1F21DF7800635013 /* NavigationTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E82184A1F21DF7800635013 /* NavigationTitleView.m */; };
 		5E8218511F21E32300635013 /* UserInfoTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8218501F21E32300635013 /* UserInfoTitleViewModel.m */; };
 		5E8218541F21EBB500635013 /* ShoppingTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8218531F21EBB500635013 /* ShoppingTitleViewModel.m */; };
@@ -41,6 +43,10 @@
 		5E6A35A41F246A14000C9D43 /* LB_ContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_ContentView.m; sourceTree = "<group>"; };
 		5E6A35A61F246BC3000C9D43 /* LB_LoginContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_LoginContentViewModel.h; sourceTree = "<group>"; };
 		5E6A35A71F246BC3000C9D43 /* LB_LoginContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_LoginContentViewModel.m; sourceTree = "<group>"; };
+		5E7C89091F248220009A578E /* LB_HomeTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_HomeTitleView.h; sourceTree = "<group>"; };
+		5E7C890A1F248220009A578E /* LB_HomeTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_HomeTitleView.m; sourceTree = "<group>"; };
+		5E7C890C1F24844F009A578E /* LB_HomeTitleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_HomeTitleViewModel.h; sourceTree = "<group>"; };
+		5E7C890D1F24844F009A578E /* LB_HomeTitleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_HomeTitleViewModel.m; sourceTree = "<group>"; };
 		5E8218491F21DF7800635013 /* NavigationTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationTitleView.h; sourceTree = "<group>"; };
 		5E82184A1F21DF7800635013 /* NavigationTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationTitleView.m; sourceTree = "<group>"; };
 		5E82184F1F21E32300635013 /* UserInfoTitleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoTitleViewModel.h; sourceTree = "<group>"; };
@@ -323,6 +329,8 @@
 		5EF4EC921F1F53C0000C2EAD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5E7C89091F248220009A578E /* LB_HomeTitleView.h */,
+				5E7C890A1F248220009A578E /* LB_HomeTitleView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,6 +338,8 @@
 		5EF4EC931F1F53C0000C2EAD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5E7C890C1F24844F009A578E /* LB_HomeTitleViewModel.h */,
+				5E7C890D1F24844F009A578E /* LB_HomeTitleViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -562,6 +572,7 @@
 			files = (
 				5E8218641F21FD1700635013 /* ShoppingEmptyView.m in Sources */,
 				5EF4ECA11F1F5E88000C2EAD /* UserInfoViewController.m in Sources */,
+				5E7C890E1F24844F009A578E /* LB_HomeTitleViewModel.m in Sources */,
 				5EF4EC891F1F3B83000C2EAD /* TabBarViewController.m in Sources */,
 				5EF4ECAA1F1F5EB5000C2EAD /* ShoppingViewController.m in Sources */,
 				5EF4EC851F1F3B15000C2EAD /* BaseViewController.m in Sources */,
@@ -569,6 +580,7 @@
 				5EF4EC6B1F1F311C000C2EAD /* AppDelegate.m in Sources */,
 				5E8218541F21EBB500635013 /* ShoppingTitleViewModel.m in Sources */,
 				5E6A359F1F23994C000C9D43 /* UserModel.m in Sources */,
+				5E7C890B1F248220009A578E /* LB_HomeTitleView.m in Sources */,
 				5E82184B1F21DF7800635013 /* NavigationTitleView.m in Sources */,
 				5E8218611F21FBCF00635013 /* LoginTitleViewModel.m in Sources */,
 				5E8218511F21E32300635013 /* UserInfoTitleViewModel.m in Sources */,
