@@ -1,5 +1,5 @@
 //
-//  LB_SearchContentView.h
+//  LB_SearchClickEmptyView.h
 //  NewCuo
 //
 //  Created by 林波 on 2017/7/23.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LB_SearchContentView : UIView
+@interface LB_SearchClickEmptyView : UIView
 
-@property(strong,nonatomic)NSMutableArray *list;
+-(UIButton*)emptyBtn;
 
 @end

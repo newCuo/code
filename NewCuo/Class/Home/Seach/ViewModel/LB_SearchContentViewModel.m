@@ -27,8 +27,12 @@
 
 -(void)bindingEvent{
     
-    
-    
+    NSMutableArray *list = [[NSMutableArray alloc]init];
+    for (int i = 0; i<0; i++) {
+        NSString * tt = [NSString stringWithFormat:@"%d",i];
+        [list addObject:tt];
+    }
+    self.searchContentView.list = list;
 }
 
 @end
