@@ -8,6 +8,7 @@
 
 #import "LB_SearchTitleViewModel.h"
 #import "LB_SearchTitleView.h"
+#import "LB_SearchModel.h"
 
 @interface LB_SearchTitleViewModel ()
 
@@ -26,14 +27,32 @@
 }
 -(void)bindingEvent
 {
+    
+
+    
     @weakify(self);
     [[self.searchTitleView.backBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
         @strongify(self);
         [self.viewController dismissViewControllerAnimated:NO completion:nil];
     }];
     
-    
     [self.searchTitleView.searchTF becomeFirstResponder];
+    
+
+    [[self.searchTitleView.searchBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
+        
+        [LB_SearchModel saveSearch:self.searchTitleView.searchTF.text];
+        
+    }];
+    
+    
+}
+
+
+
+-(void)dealloc
+{
+    NSLog(@"LB_SearchTitleViewModel-dealloc");
     
 }
 

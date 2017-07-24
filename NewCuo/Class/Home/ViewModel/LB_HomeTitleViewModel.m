@@ -30,8 +30,10 @@
 -(void)bindingEvent{
     
     
+    
+    
     [[self.homeTitleView.searchBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
-        
+
         LB_SearchViewController *search = [[LB_SearchViewController alloc]init];
         UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:search];
         nav.navigationBar.hidden = YES;

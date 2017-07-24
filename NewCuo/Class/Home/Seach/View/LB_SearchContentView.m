@@ -9,6 +9,7 @@
 #import "LB_SearchContentView.h"
 #import "LB_SearchEmptyView.h"
 #import "LB_SearchClickEmptyView.h"
+#import "LB_SearchModel.h"
 
 @interface LB_SearchContentView()<UITableViewDelegate,UITableViewDataSource>
 
@@ -30,6 +31,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self initUI];
+        [self bindingEvent];
     }
     return self;
 }
@@ -99,6 +101,21 @@
     
 }
 
+-(void)bindingEvent{
+    
+    @weakify(self);
+    [[self.clickEmpty.emptyBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
+        @strongify(self);
+        
+        [LB_SearchModel clearSearch];
+        self.list = [NSMutableArray new];
+        [self.tableView reloadData];
+        
+    }];
+    
+    
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.list.count;
@@ -135,7 +152,7 @@
         cell  =[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     cell.textLabel.font = [UIFont systemFontOfSize:14];
-    cell.textLabel.text = @"werew";
+    cell.textLabel.text = self.list[indexPath.row];
     return cell;
 }
 
@@ -146,6 +163,12 @@
     [self.tableView reloadData];
     
     
+    
+}
+-(void)dealloc
+{
+    
+    NSLog(@"33333333");
     
 }
 

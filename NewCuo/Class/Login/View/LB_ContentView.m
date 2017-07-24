@@ -202,8 +202,10 @@
 
 -(void)bindingEvent{
     
+    
+    @weakify(self);
     [[self.passwordShowBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(UIButton *btn) {
-        
+        @strongify(self);
         btn.selected = !btn.selected;
         self.passwordTF.secureTextEntry = !btn.selected;
         

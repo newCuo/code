@@ -10,7 +10,7 @@
 
 @interface LB_BaseViewModel()
 
-@property(strong,nonatomic)BaseViewController *viewController;
+@property(weak,nonatomic)BaseViewController *viewController;
 
 @end
 

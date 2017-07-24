@@ -25,6 +25,9 @@
 		5E7C893A1F24E272009A578E /* LB_GoodsTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89391F24E272009A578E /* LB_GoodsTitleViewModel.m */; };
 		5E7C893D1F24E625009A578E /* LB_SearchEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C893C1F24E625009A578E /* LB_SearchEmptyView.m */; };
 		5E7C89401F24F257009A578E /* LB_SearchClickEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C893F1F24F257009A578E /* LB_SearchClickEmptyView.m */; };
+		5E7C89441F25DABE009A578E /* LB_SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89431F25DABE009A578E /* LB_SearchModel.m */; };
+		5E7C89471F25E45B009A578E /* LB_UserInfoHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89461F25E45B009A578E /* LB_UserInfoHeadView.m */; };
+		5E7C894A1F25E58F009A578E /* LB_UserInfoContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89491F25E58F009A578E /* LB_UserInfoContentViewModel.m */; };
 		5E82184B1F21DF7800635013 /* NavigationTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E82184A1F21DF7800635013 /* NavigationTitleView.m */; };
 		5E8218511F21E32300635013 /* UserInfoTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8218501F21E32300635013 /* UserInfoTitleViewModel.m */; };
 		5E8218541F21EBB500635013 /* ShoppingTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8218531F21EBB500635013 /* ShoppingTitleViewModel.m */; };
@@ -83,6 +86,12 @@
 		5E7C893C1F24E625009A578E /* LB_SearchEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_SearchEmptyView.m; sourceTree = "<group>"; };
 		5E7C893E1F24F257009A578E /* LB_SearchClickEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_SearchClickEmptyView.h; sourceTree = "<group>"; };
 		5E7C893F1F24F257009A578E /* LB_SearchClickEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_SearchClickEmptyView.m; sourceTree = "<group>"; };
+		5E7C89421F25DABE009A578E /* LB_SearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_SearchModel.h; sourceTree = "<group>"; };
+		5E7C89431F25DABE009A578E /* LB_SearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_SearchModel.m; sourceTree = "<group>"; };
+		5E7C89451F25E45B009A578E /* LB_UserInfoHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_UserInfoHeadView.h; sourceTree = "<group>"; };
+		5E7C89461F25E45B009A578E /* LB_UserInfoHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_UserInfoHeadView.m; sourceTree = "<group>"; };
+		5E7C89481F25E58F009A578E /* LB_UserInfoContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_UserInfoContentViewModel.h; sourceTree = "<group>"; };
+		5E7C89491F25E58F009A578E /* LB_UserInfoContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_UserInfoContentViewModel.m; sourceTree = "<group>"; };
 		5E8218491F21DF7800635013 /* NavigationTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationTitleView.h; sourceTree = "<group>"; };
 		5E82184A1F21DF7800635013 /* NavigationTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationTitleView.m; sourceTree = "<group>"; };
 		5E82184F1F21E32300635013 /* UserInfoTitleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoTitleViewModel.h; sourceTree = "<group>"; };
@@ -158,6 +167,7 @@
 		5E7C891F1F24D74B009A578E /* Seach */ = {
 			isa = PBXGroup;
 			children = (
+				5E7C89411F25D9E0009A578E /* Model */,
 				5E7C89201F24D74B009A578E /* Controller */,
 				5E7C89211F24D74B009A578E /* View */,
 				5E7C89221F24D74B009A578E /* ViewModel */,
@@ -198,6 +208,15 @@
 				5E7C89331F24D89C009A578E /* LB_SearchContentViewModel.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5E7C89411F25D9E0009A578E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E7C89421F25DABE009A578E /* LB_SearchModel.h */,
+				5E7C89431F25DABE009A578E /* LB_SearchModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5E8218581F21FBA200635013 /* Login */ = {
@@ -485,6 +504,8 @@
 		5EF4EC981F1F53CD000C2EAD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5E7C89451F25E45B009A578E /* LB_UserInfoHeadView.h */,
+				5E7C89461F25E45B009A578E /* LB_UserInfoHeadView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -494,6 +515,8 @@
 			children = (
 				5E82184F1F21E32300635013 /* UserInfoTitleViewModel.h */,
 				5E8218501F21E32300635013 /* UserInfoTitleViewModel.m */,
+				5E7C89481F25E58F009A578E /* LB_UserInfoContentViewModel.h */,
+				5E7C89491F25E58F009A578E /* LB_UserInfoContentViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -678,6 +701,7 @@
 				5EF4ECAA1F1F5EB5000C2EAD /* ShoppingViewController.m in Sources */,
 				5E7C892E1F24D842009A578E /* LB_SearchTitleViewModel.m in Sources */,
 				5EF4EC851F1F3B15000C2EAD /* BaseViewController.m in Sources */,
+				5E7C894A1F25E58F009A578E /* LB_UserInfoContentViewModel.m in Sources */,
 				5E82185E1F21FBB400635013 /* LoginViewController.m in Sources */,
 				5E7C89341F24D89C009A578E /* LB_SearchContentViewModel.m in Sources */,
 				5E7C893A1F24E272009A578E /* LB_GoodsTitleViewModel.m in Sources */,
@@ -699,9 +723,11 @@
 				5E8218671F21FD7900635013 /* ShoppingEmptyViewModel.m in Sources */,
 				5E7C893D1F24E625009A578E /* LB_SearchEmptyView.m in Sources */,
 				5EF4EC681F1F311C000C2EAD /* main.m in Sources */,
+				5E7C89471F25E45B009A578E /* LB_UserInfoHeadView.m in Sources */,
 				5E7C89401F24F257009A578E /* LB_SearchClickEmptyView.m in Sources */,
 				5E7C892B1F24D81F009A578E /* LB_SearchTitleView.m in Sources */,
 				5E6A35A51F246A14000C9D43 /* LB_ContentView.m in Sources */,
+				5E7C89441F25DABE009A578E /* LB_SearchModel.m in Sources */,
 				5E6A35A21F246369000C9D43 /* LB_BaseViewModel.m in Sources */,
 				5EF4ECA41F1F5E96000C2EAD /* HomeViewController.m in Sources */,
 			);

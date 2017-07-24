@@ -38,12 +38,20 @@
     self.emptyBtn.layer.borderColor = [UIColor grayColor].CGColor;
     [self addSubview:self.emptyBtn];
     [self.emptyBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.mas_right).offset(-20);
-        make.left.equalTo(self.mas_left).offset(20);
+   
         make.height.offset(45);
         make.centerY.equalTo(self.mas_centerY).offset(0);
+        make.centerX.equalTo(self.mas_centerX).offset(0);
+        make.width.offset(KSCREENWIDTH-40);
     }];
     
+    
+}
+
+-(void)dealloc
+{
+    
+    NSLog(@"111111111");
     
 }
 

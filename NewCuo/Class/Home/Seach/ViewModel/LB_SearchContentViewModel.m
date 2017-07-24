@@ -8,6 +8,7 @@
 
 #import "LB_SearchContentViewModel.h"
 #import "LB_SearchContentView.h"
+#import "LB_SearchModel.h"
 
 @interface LB_SearchContentViewModel()
 
@@ -27,12 +28,10 @@
 
 -(void)bindingEvent{
     
-    NSMutableArray *list = [[NSMutableArray alloc]init];
-    for (int i = 0; i<0; i++) {
-        NSString * tt = [NSString stringWithFormat:@"%d",i];
-        [list addObject:tt];
-    }
-    self.searchContentView.list = list;
+    
+    
+    self.searchContentView.list = [LB_SearchModel getAllSearch];
+
 }
 
 @end

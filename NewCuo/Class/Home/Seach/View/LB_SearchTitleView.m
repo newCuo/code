@@ -90,7 +90,7 @@
     self.searchTF.placeholder = @"搜索商品";
     self.searchTF.textColor = [UIColor blackColor];
     self.searchTF.font = [UIFont systemFontOfSize:13];
-    [view addSubview:self.self.searchTF];
+    [view addSubview:self.searchTF];
     [self.searchTF mas_makeConstraints:^(MASConstraintMaker *make) {
         
 
@@ -101,6 +101,12 @@
         
     }];
     
+    
+}
+
+-(void)dealloc
+{
+    NSLog(@"LB_SearchTitleView-dealloc");
     
 }
 

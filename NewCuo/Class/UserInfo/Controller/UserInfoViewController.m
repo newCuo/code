@@ -8,10 +8,12 @@
 
 #import "UserInfoViewController.h"
 #import "UserInfoTitleViewModel.h"
+#import "LB_UserInfoContentViewModel.h"
 
 
 @interface UserInfoViewController ()
 @property (strong,nonatomic)UserInfoTitleViewModel *titleViewModel;
+@property (strong,nonatomic)LB_UserInfoContentViewModel *contentViewModel;
 @end
 
 @implementation UserInfoViewController
@@ -21,6 +23,8 @@
     // Do any additional setup after loading the view.
     
     self.titleViewModel = [[UserInfoTitleViewModel alloc]initWithViewController:self];
+    
+    self.contentViewModel = [[LB_UserInfoContentViewModel alloc]initWithViewController:self];
     
 }
 
