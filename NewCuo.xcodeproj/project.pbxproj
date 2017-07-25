@@ -33,6 +33,11 @@
 		5E7C89531F272265009A578E /* LB_UserInfoPropertyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89521F272265009A578E /* LB_UserInfoPropertyView.m */; };
 		5E7C89561F2735C9009A578E /* LB_UserInfoOnLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89551F2735C9009A578E /* LB_UserInfoOnLineView.m */; };
 		5E7C89591F273CCD009A578E /* LB_UserInfoMaybeYouLikeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89581F273CCD009A578E /* LB_UserInfoMaybeYouLikeView.m */; };
+		5E7C89601F274822009A578E /* LB_SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C895F1F274822009A578E /* LB_SetViewController.m */; };
+		5E7C89631F274844009A578E /* LB_SetViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89621F274844009A578E /* LB_SetViewModel.m */; };
+		5E7C89661F274B04009A578E /* LB_SetTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89651F274B04009A578E /* LB_SetTitleViewModel.m */; };
+		5E7C89691F274CFE009A578E /* LB_LoginOutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89681F274CFE009A578E /* LB_LoginOutView.m */; };
+		5E7C896C1F274D17009A578E /* LB_SetFootViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C896B1F274D17009A578E /* LB_SetFootViewModel.m */; };
 		5E82184B1F21DF7800635013 /* NavigationTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E82184A1F21DF7800635013 /* NavigationTitleView.m */; };
 		5E8218511F21E32300635013 /* UserInfoTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8218501F21E32300635013 /* UserInfoTitleViewModel.m */; };
 		5E8218541F21EBB500635013 /* ShoppingTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8218531F21EBB500635013 /* ShoppingTitleViewModel.m */; };
@@ -107,6 +112,16 @@
 		5E7C89551F2735C9009A578E /* LB_UserInfoOnLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_UserInfoOnLineView.m; sourceTree = "<group>"; };
 		5E7C89571F273CCD009A578E /* LB_UserInfoMaybeYouLikeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_UserInfoMaybeYouLikeView.h; sourceTree = "<group>"; };
 		5E7C89581F273CCD009A578E /* LB_UserInfoMaybeYouLikeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_UserInfoMaybeYouLikeView.m; sourceTree = "<group>"; };
+		5E7C895E1F274822009A578E /* LB_SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_SetViewController.h; sourceTree = "<group>"; };
+		5E7C895F1F274822009A578E /* LB_SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_SetViewController.m; sourceTree = "<group>"; };
+		5E7C89611F274844009A578E /* LB_SetViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_SetViewModel.h; sourceTree = "<group>"; };
+		5E7C89621F274844009A578E /* LB_SetViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_SetViewModel.m; sourceTree = "<group>"; };
+		5E7C89641F274B04009A578E /* LB_SetTitleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_SetTitleViewModel.h; sourceTree = "<group>"; };
+		5E7C89651F274B04009A578E /* LB_SetTitleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_SetTitleViewModel.m; sourceTree = "<group>"; };
+		5E7C89671F274CFE009A578E /* LB_LoginOutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_LoginOutView.h; sourceTree = "<group>"; };
+		5E7C89681F274CFE009A578E /* LB_LoginOutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_LoginOutView.m; sourceTree = "<group>"; };
+		5E7C896A1F274D17009A578E /* LB_SetFootViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_SetFootViewModel.h; sourceTree = "<group>"; };
+		5E7C896B1F274D17009A578E /* LB_SetFootViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_SetFootViewModel.m; sourceTree = "<group>"; };
 		5E8218491F21DF7800635013 /* NavigationTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationTitleView.h; sourceTree = "<group>"; };
 		5E82184A1F21DF7800635013 /* NavigationTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationTitleView.m; sourceTree = "<group>"; };
 		5E82184F1F21E32300635013 /* UserInfoTitleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoTitleViewModel.h; sourceTree = "<group>"; };
@@ -232,6 +247,47 @@
 				5E7C89431F25DABE009A578E /* LB_SearchModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5E7C895A1F27480C009A578E /* A_Set */ = {
+			isa = PBXGroup;
+			children = (
+				5E7C895B1F27480C009A578E /* Controller */,
+				5E7C895C1F27480C009A578E /* View */,
+				5E7C895D1F27480C009A578E /* ViewModel */,
+			);
+			path = A_Set;
+			sourceTree = "<group>";
+		};
+		5E7C895B1F27480C009A578E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5E7C895E1F274822009A578E /* LB_SetViewController.h */,
+				5E7C895F1F274822009A578E /* LB_SetViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5E7C895C1F27480C009A578E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E7C89671F274CFE009A578E /* LB_LoginOutView.h */,
+				5E7C89681F274CFE009A578E /* LB_LoginOutView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5E7C895D1F27480C009A578E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5E7C89611F274844009A578E /* LB_SetViewModel.h */,
+				5E7C89621F274844009A578E /* LB_SetViewModel.m */,
+				5E7C89641F274B04009A578E /* LB_SetTitleViewModel.h */,
+				5E7C89651F274B04009A578E /* LB_SetTitleViewModel.m */,
+				5E7C896A1F274D17009A578E /* LB_SetFootViewModel.h */,
+				5E7C896B1F274D17009A578E /* LB_SetFootViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		5E8218581F21FBA200635013 /* Login */ = {
@@ -413,6 +469,7 @@
 		5EF4EC8D1F1F4CB6000C2EAD /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
+				5E7C895A1F27480C009A578E /* A_Set */,
 				5EF4EC971F1F53CD000C2EAD /* Controller */,
 				5EF4EC981F1F53CD000C2EAD /* View */,
 				5EF4EC991F1F53CD000C2EAD /* ViewModel */,
@@ -719,6 +776,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E8218641F21FD1700635013 /* ShoppingEmptyView.m in Sources */,
+				5E7C89631F274844009A578E /* LB_SetViewModel.m in Sources */,
 				5E7C89561F2735C9009A578E /* LB_UserInfoOnLineView.m in Sources */,
 				5EF4ECA11F1F5E88000C2EAD /* UserInfoViewController.m in Sources */,
 				5E7C89501F26ED44009A578E /* LB_UserInfoOrderView.m in Sources */,
@@ -741,6 +799,8 @@
 				5E7C89281F24D7F5009A578E /* LB_SearchViewController.m in Sources */,
 				5E7C89531F272265009A578E /* LB_UserInfoPropertyView.m in Sources */,
 				5E8218611F21FBCF00635013 /* LoginTitleViewModel.m in Sources */,
+				5E7C89661F274B04009A578E /* LB_SetTitleViewModel.m in Sources */,
+				5E7C89691F274CFE009A578E /* LB_LoginOutView.m in Sources */,
 				5E7C891E1F24D512009A578E /* LB_HomeModel.m in Sources */,
 				5E8218511F21E32300635013 /* UserInfoTitleViewModel.m in Sources */,
 				5E8218571F21EF0B00635013 /* AppDelegate+Configuration.m in Sources */,
@@ -748,6 +808,8 @@
 				5E7C89311F24D870009A578E /* LB_SearchContentView.m in Sources */,
 				5EF4ECA71F1F5EA5000C2EAD /* GoodsViewController.m in Sources */,
 				5E7C891A1F24D4CF009A578E /* LB_HomeContentViewModel.m in Sources */,
+				5E7C896C1F274D17009A578E /* LB_SetFootViewModel.m in Sources */,
+				5E7C89601F274822009A578E /* LB_SetViewController.m in Sources */,
 				5E6A35A81F246BC3000C9D43 /* LB_LoginContentViewModel.m in Sources */,
 				5E8218671F21FD7900635013 /* ShoppingEmptyViewModel.m in Sources */,
 				5E7C893D1F24E625009A578E /* LB_SearchEmptyView.m in Sources */,

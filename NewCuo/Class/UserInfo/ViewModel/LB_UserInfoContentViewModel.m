@@ -14,6 +14,7 @@
 #import "LB_UserInfoPropertyView.h"
 #import "LB_UserInfoOnLineView.h"
 #import "LB_UserInfoMaybeYouLikeView.h"
+#import "LB_SetViewController.h"
 
 @interface LB_UserInfoContentViewModel()
 
@@ -126,6 +127,16 @@
         nav.navigationBar.hidden = YES;
         [self.viewController presentViewController:nav animated:YES completion:nil];
     }];
+    
+
+    [[self.userInfoHeadView.setBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
+        @strongify(self);
+        LB_SetViewController *set = [[LB_SetViewController alloc]init];
+        set.hidesBottomBarWhenPushed = YES;
+        [self.viewController.navigationController pushViewController:set animated:YES];
+        
+    }];
+    
     
     
 }

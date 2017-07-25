@@ -14,4 +14,6 @@
 
 -(UIButton*)loginBtn;
 
+-(UIButton*)setBtn;
+
 @end
