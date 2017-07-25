@@ -28,6 +28,11 @@
 		5E7C89441F25DABE009A578E /* LB_SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89431F25DABE009A578E /* LB_SearchModel.m */; };
 		5E7C89471F25E45B009A578E /* LB_UserInfoHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89461F25E45B009A578E /* LB_UserInfoHeadView.m */; };
 		5E7C894A1F25E58F009A578E /* LB_UserInfoContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89491F25E58F009A578E /* LB_UserInfoContentViewModel.m */; };
+		5E7C894D1F26E942009A578E /* LB_CustormView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C894C1F26E942009A578E /* LB_CustormView.m */; };
+		5E7C89501F26ED44009A578E /* LB_UserInfoOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C894F1F26ED44009A578E /* LB_UserInfoOrderView.m */; };
+		5E7C89531F272265009A578E /* LB_UserInfoPropertyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89521F272265009A578E /* LB_UserInfoPropertyView.m */; };
+		5E7C89561F2735C9009A578E /* LB_UserInfoOnLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89551F2735C9009A578E /* LB_UserInfoOnLineView.m */; };
+		5E7C89591F273CCD009A578E /* LB_UserInfoMaybeYouLikeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C89581F273CCD009A578E /* LB_UserInfoMaybeYouLikeView.m */; };
 		5E82184B1F21DF7800635013 /* NavigationTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E82184A1F21DF7800635013 /* NavigationTitleView.m */; };
 		5E8218511F21E32300635013 /* UserInfoTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8218501F21E32300635013 /* UserInfoTitleViewModel.m */; };
 		5E8218541F21EBB500635013 /* ShoppingTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8218531F21EBB500635013 /* ShoppingTitleViewModel.m */; };
@@ -92,6 +97,16 @@
 		5E7C89461F25E45B009A578E /* LB_UserInfoHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_UserInfoHeadView.m; sourceTree = "<group>"; };
 		5E7C89481F25E58F009A578E /* LB_UserInfoContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_UserInfoContentViewModel.h; sourceTree = "<group>"; };
 		5E7C89491F25E58F009A578E /* LB_UserInfoContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_UserInfoContentViewModel.m; sourceTree = "<group>"; };
+		5E7C894B1F26E942009A578E /* LB_CustormView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_CustormView.h; sourceTree = "<group>"; };
+		5E7C894C1F26E942009A578E /* LB_CustormView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_CustormView.m; sourceTree = "<group>"; };
+		5E7C894E1F26ED44009A578E /* LB_UserInfoOrderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_UserInfoOrderView.h; sourceTree = "<group>"; };
+		5E7C894F1F26ED44009A578E /* LB_UserInfoOrderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_UserInfoOrderView.m; sourceTree = "<group>"; };
+		5E7C89511F272265009A578E /* LB_UserInfoPropertyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_UserInfoPropertyView.h; sourceTree = "<group>"; };
+		5E7C89521F272265009A578E /* LB_UserInfoPropertyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_UserInfoPropertyView.m; sourceTree = "<group>"; };
+		5E7C89541F2735C9009A578E /* LB_UserInfoOnLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_UserInfoOnLineView.h; sourceTree = "<group>"; };
+		5E7C89551F2735C9009A578E /* LB_UserInfoOnLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_UserInfoOnLineView.m; sourceTree = "<group>"; };
+		5E7C89571F273CCD009A578E /* LB_UserInfoMaybeYouLikeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_UserInfoMaybeYouLikeView.h; sourceTree = "<group>"; };
+		5E7C89581F273CCD009A578E /* LB_UserInfoMaybeYouLikeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_UserInfoMaybeYouLikeView.m; sourceTree = "<group>"; };
 		5E8218491F21DF7800635013 /* NavigationTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationTitleView.h; sourceTree = "<group>"; };
 		5E82184A1F21DF7800635013 /* NavigationTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationTitleView.m; sourceTree = "<group>"; };
 		5E82184F1F21E32300635013 /* UserInfoTitleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoTitleViewModel.h; sourceTree = "<group>"; };
@@ -506,6 +521,16 @@
 			children = (
 				5E7C89451F25E45B009A578E /* LB_UserInfoHeadView.h */,
 				5E7C89461F25E45B009A578E /* LB_UserInfoHeadView.m */,
+				5E7C894B1F26E942009A578E /* LB_CustormView.h */,
+				5E7C894C1F26E942009A578E /* LB_CustormView.m */,
+				5E7C894E1F26ED44009A578E /* LB_UserInfoOrderView.h */,
+				5E7C894F1F26ED44009A578E /* LB_UserInfoOrderView.m */,
+				5E7C89511F272265009A578E /* LB_UserInfoPropertyView.h */,
+				5E7C89521F272265009A578E /* LB_UserInfoPropertyView.m */,
+				5E7C89541F2735C9009A578E /* LB_UserInfoOnLineView.h */,
+				5E7C89551F2735C9009A578E /* LB_UserInfoOnLineView.m */,
+				5E7C89571F273CCD009A578E /* LB_UserInfoMaybeYouLikeView.h */,
+				5E7C89581F273CCD009A578E /* LB_UserInfoMaybeYouLikeView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -694,7 +719,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E8218641F21FD1700635013 /* ShoppingEmptyView.m in Sources */,
+				5E7C89561F2735C9009A578E /* LB_UserInfoOnLineView.m in Sources */,
 				5EF4ECA11F1F5E88000C2EAD /* UserInfoViewController.m in Sources */,
+				5E7C89501F26ED44009A578E /* LB_UserInfoOrderView.m in Sources */,
 				5E7C89371F24E23F009A578E /* LB_GoodsTitleView.m in Sources */,
 				5E7C890E1F24844F009A578E /* LB_HomeTitleViewModel.m in Sources */,
 				5EF4EC891F1F3B83000C2EAD /* TabBarViewController.m in Sources */,
@@ -709,8 +736,10 @@
 				5E8218541F21EBB500635013 /* ShoppingTitleViewModel.m in Sources */,
 				5E6A359F1F23994C000C9D43 /* UserModel.m in Sources */,
 				5E7C890B1F248220009A578E /* LB_HomeTitleView.m in Sources */,
+				5E7C894D1F26E942009A578E /* LB_CustormView.m in Sources */,
 				5E82184B1F21DF7800635013 /* NavigationTitleView.m in Sources */,
 				5E7C89281F24D7F5009A578E /* LB_SearchViewController.m in Sources */,
+				5E7C89531F272265009A578E /* LB_UserInfoPropertyView.m in Sources */,
 				5E8218611F21FBCF00635013 /* LoginTitleViewModel.m in Sources */,
 				5E7C891E1F24D512009A578E /* LB_HomeModel.m in Sources */,
 				5E8218511F21E32300635013 /* UserInfoTitleViewModel.m in Sources */,
@@ -730,6 +759,7 @@
 				5E7C89441F25DABE009A578E /* LB_SearchModel.m in Sources */,
 				5E6A35A21F246369000C9D43 /* LB_BaseViewModel.m in Sources */,
 				5EF4ECA41F1F5E96000C2EAD /* HomeViewController.m in Sources */,
+				5E7C89591F273CCD009A578E /* LB_UserInfoMaybeYouLikeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

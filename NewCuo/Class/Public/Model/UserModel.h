@@ -10,6 +10,14 @@
 
 @interface UserModel : NSObject
 
-+(instancetype)shareUserModel;
+@property(strong,nonatomic)NSString *userID;
+
+@property(strong,nonatomic)NSString *token;
+
+@property(strong,nonatomic)NSString *userName;
+
+
+
++(instancetype)shareDefaultUserModel;
 
 @end

@@ -12,6 +12,8 @@ static UserModel *_instance = nil;
 
 @interface UserModel();
 
+
+
 @end
 
 @implementation UserModel
@@ -30,7 +32,7 @@ static UserModel *_instance = nil;
 }
 
 // 类方法命名规范 share类名|default类名|类名
-+(instancetype)shareUserModel
++(instancetype)shareDefaultUserModel
 {
     //return _instance;
     // 最好用self 用Tools他的子类调用时会出现错误

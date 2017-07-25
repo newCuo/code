@@ -24,6 +24,12 @@
 
 @property(strong,nonatomic)UIButton *readHistoriesBtn;//浏览历史
 
+@property(strong,nonatomic)UILabel *myConcernLab; //我的关注
+
+@property(strong,nonatomic)UILabel *readHistoriesLab; //浏览历史
+
+@property(strong,nonatomic)UIButton *loginBtn;
+
 
 
 @end
@@ -51,14 +57,20 @@
     };
     
     UIButton *(^markBtn)(void) = ^(){
-        
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.titleLabel.font = [UIFont systemFontOfSize:15];
-        [btn setTitleColor:[UIColor darkTextColor] forState:UIControlStateNormal];
+        btn.titleLabel.font = [UIFont systemFontOfSize:14];
+        [btn setTitleColor:K_COLOR_RGB(53, 53, 53) forState:UIControlStateNormal];
         return btn;
-        
     };
     
+    
+    UILabel *(^markLab)(void) = ^(){
+        UILabel *lab = [[UILabel alloc]init];
+        lab.textColor = [UIColor grayColor];
+        lab.font = [UIFont systemFontOfSize:12];
+        lab.textAlignment = NSTextAlignmentCenter;
+        return lab;
+    };
 
     
     UIImageView *imagev = [[UIImageView alloc]init];
@@ -148,29 +160,60 @@
     }];
     
     
+    
+    self.loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.loginBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.loginBtn setTitle:@"登录/注册 >" forState:UIControlStateNormal];
+    self.loginBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+    [self addSubview:self.loginBtn];
+    [self.loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.headImageView.mas_right).offset(10);
+        make.bottom.equalTo(imagev.mas_bottom).offset(-2);
+        make.size.mas_equalTo(CGSizeMake(80, 30));
+    }];
+    
     //浏览历史
     [self addSubview:self.readHistoriesBtn = markBtn()];
     [self.readHistoriesBtn setTitle:@"浏览历史" forState:UIControlStateNormal];
     [self.readHistoriesBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.mas_bottom).offset(-10);
+        make.bottom.equalTo(self.mas_bottom).offset(-15);
         make.right.equalTo(self.mas_right).offset(-20);
-        make.size.mas_equalTo(CGSizeMake(80, 30));
+        make.size.mas_equalTo(CGSizeMake(80, 25));
     }];
+    
+    [self addSubview:self.readHistoriesLab = markLab()];
+    self.readHistoriesLab.text = @"12";
+    [self.readHistoriesLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.readHistoriesBtn.mas_top).offset(0);
+        make.right.equalTo(self.mas_right).offset(-20);
+        make.size.mas_equalTo(CGSizeMake(80, 20));
+    }];
+    
     
     //我的关注
     [self addSubview:self.myConcernBtn = markBtn()];
     [self.myConcernBtn setTitle:@"我的关注" forState:UIControlStateNormal];
     [self.myConcernBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.mas_bottom).offset(-10);
+        make.bottom.equalTo(self.mas_bottom).offset(-15);
         make.right.equalTo(self.readHistoriesBtn.mas_left).offset(-20);
-        make.size.mas_equalTo(CGSizeMake(80, 30));
+        make.size.mas_equalTo(CGSizeMake(80, 25));
     }];
+    
+    [self addSubview:self.myConcernLab = markLab()];
+    self.myConcernLab.text = @"1200";
+    [self.myConcernLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.myConcernBtn.mas_top).offset(0);
+        make.right.equalTo(self.readHistoriesBtn.mas_left).offset(-20);
+        make.size.mas_equalTo(CGSizeMake(80, 20));
+    }];
+
+    
     
     
     
     //线
     UILabel *line = [[UILabel alloc]init];
-    line.backgroundColor = K_LINE_COLOR;
+    line.backgroundColor = K_DARKLINE_COLOR;
     [self addSubview:line];
     [line mas_makeConstraints:^(MASConstraintMaker *make) {
          make.left.equalTo(self.mas_left).offset(0);
@@ -179,6 +222,16 @@
          make.height.offset(0.5);
     }];
 
+    
+}
+-(void)setIsLogin:(BOOL)isLogin
+{
+    
+    self.myConcernLab.hidden = !isLogin;
+    self.readHistoriesLab.hidden = !isLogin;
+    self.userNameLab.hidden = !isLogin;
+    self.leverLab.hidden = !isLogin;
+    self.loginBtn.hidden = isLogin;
     
 }
 
