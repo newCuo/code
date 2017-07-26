@@ -16,4 +16,6 @@
 
 -(UIButton*)setBtn;
 
+-(UIButton*)messageBtn;
+
 @end

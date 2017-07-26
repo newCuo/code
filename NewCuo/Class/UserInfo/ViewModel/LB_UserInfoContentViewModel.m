@@ -15,6 +15,7 @@
 #import "LB_UserInfoOnLineView.h"
 #import "LB_UserInfoMaybeYouLikeView.h"
 #import "LB_SetViewController.h"
+#import "LB_UserInfoMyMessageViewController.h"
 
 @interface LB_UserInfoContentViewModel()
 
@@ -129,6 +130,7 @@
     }];
     
 
+    //****************   设置   *************************/
     [[self.userInfoHeadView.setBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
         @strongify(self);
         LB_SetViewController *set = [[LB_SetViewController alloc]init];
@@ -137,7 +139,15 @@
         
     }];
     
-    
+    //****************   消息   *************************/
+    [[self.userInfoHeadView.messageBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
+        @strongify(self);
+        LB_UserInfoMyMessageViewController *message = [[LB_UserInfoMyMessageViewController alloc]init];
+        message.hidesBottomBarWhenPushed = YES;
+        [self.viewController.navigationController pushViewController:message animated:YES];
+        
+    }];
+
     
 }
 
