@@ -16,6 +16,8 @@
 #import "LB_UserInfoMaybeYouLikeView.h"
 #import "LB_SetViewController.h"
 #import "LB_UserInfoMyMessageViewController.h"
+#import "LB_MyConcernViewController.h"
+#import "LB_ReadHistoryViewController.h"
 
 @interface LB_UserInfoContentViewModel()
 
@@ -147,7 +149,25 @@
         [self.viewController.navigationController pushViewController:message animated:YES];
         
     }];
-
+    
+    //****************   我的关注   *************************/
+    [[self.userInfoHeadView.myConcernBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
+        @strongify(self);
+        LB_MyConcernViewController *concern = [[LB_MyConcernViewController alloc]init];
+        concern.hidesBottomBarWhenPushed = YES;
+        [self.viewController.navigationController pushViewController:concern animated:YES];
+        
+    }];
+    
+    
+    //****************   浏览历史   *************************/
+    [[self.userInfoHeadView.readHistoriesBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
+        @strongify(self);
+        LB_ReadHistoryViewController *message = [[LB_ReadHistoryViewController alloc]init];
+        message.hidesBottomBarWhenPushed = YES;
+        [self.viewController.navigationController pushViewController:message animated:YES];
+        
+    }];
 }
 
 -(void)setToken:(NSString *)token

@@ -18,4 +18,8 @@
 
 -(UIButton*)messageBtn;
 
+-(UIButton*)myConcernBtn;
+
+-(UIButton*)readHistoriesBtn;
+
 @end

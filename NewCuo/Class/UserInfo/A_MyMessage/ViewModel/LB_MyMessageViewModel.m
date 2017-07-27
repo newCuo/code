@@ -18,6 +18,7 @@
 @property(strong,nonatomic)LB_MyMessageContentViewModel *contentViewModel;
 
 @property(strong,nonatomic)LB_MyMessageFootViewModel *footViewModel;
+
 @end
 
 @implementation LB_MyMessageViewModel
