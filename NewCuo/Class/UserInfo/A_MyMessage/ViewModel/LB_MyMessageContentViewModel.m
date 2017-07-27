@@ -11,6 +11,7 @@
 @interface LB_MyMessageContentViewModel()
 
 @end
+
 @implementation LB_MyMessageContentViewModel
 
 @end

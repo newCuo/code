@@ -148,7 +148,6 @@
         
     }];
 
-    
 }
 
 -(void)setToken:(NSString *)token

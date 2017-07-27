@@ -7,18 +7,14 @@
 //
 
 #import "LB_UserInfoMyMessageViewController.h"
-#import "LB_MyMessageFootViewModel.h"
-#import "LB_MyMessageTitleViewModel.h"
-#import "LB_MyMessageContentViewModel.h"
+
+#import "LB_MyMessageViewModel.h"
 
 @interface LB_UserInfoMyMessageViewController ()
 
-@property(strong,nonatomic)LB_MyMessageTitleViewModel *titleViewModel;
 
-@property(strong,nonatomic)LB_MyMessageContentViewModel *contentViewModel;
 
-@property(strong,nonatomic)LB_MyMessageFootViewModel *footViewModel;
-
+@property(strong,nonatomic)LB_MyMessageViewModel *viewModel;
 
 @end
 
@@ -28,10 +24,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.titleViewModel = [[LB_MyMessageTitleViewModel alloc]initWithViewController:self];
-    self.contentViewModel = [[LB_MyMessageContentViewModel alloc]initWithViewController:self];
-     self.footViewModel = [[LB_MyMessageFootViewModel alloc]initWithViewController:self];
+    
+      
+    
+     self.viewModel = [[LB_MyMessageViewModel alloc]initWithViewController:self];
+    
 }
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

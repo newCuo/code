@@ -51,6 +51,8 @@
 		5E975FB21F2787AF006994FE /* LB_MyMessageTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E975FB11F2787AF006994FE /* LB_MyMessageTitleViewModel.m */; };
 		5E975FB51F2787CE006994FE /* LB_MyMessageContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E975FB41F2787CE006994FE /* LB_MyMessageContentViewModel.m */; };
 		5E975FB81F2787F2006994FE /* LB_MyMessageFootViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E975FB71F2787F2006994FE /* LB_MyMessageFootViewModel.m */; };
+		5E975FBB1F283D7D006994FE /* LB_MyMessageFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E975FBA1F283D7D006994FE /* LB_MyMessageFootView.m */; };
+		5E975FBE1F288B71006994FE /* LB_MyMessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E975FBD1F288B71006994FE /* LB_MyMessageViewModel.m */; };
 		5EF4EC681F1F311C000C2EAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4EC671F1F311C000C2EAD /* main.m */; };
 		5EF4EC6B1F1F311C000C2EAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4EC6A1F1F311C000C2EAD /* AppDelegate.m */; };
 		5EF4EC731F1F311C000C2EAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF4EC721F1F311C000C2EAD /* Assets.xcassets */; };
@@ -153,6 +155,10 @@
 		5E975FB41F2787CE006994FE /* LB_MyMessageContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_MyMessageContentViewModel.m; sourceTree = "<group>"; };
 		5E975FB61F2787F2006994FE /* LB_MyMessageFootViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_MyMessageFootViewModel.h; sourceTree = "<group>"; };
 		5E975FB71F2787F2006994FE /* LB_MyMessageFootViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_MyMessageFootViewModel.m; sourceTree = "<group>"; };
+		5E975FB91F283D7D006994FE /* LB_MyMessageFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_MyMessageFootView.h; sourceTree = "<group>"; };
+		5E975FBA1F283D7D006994FE /* LB_MyMessageFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_MyMessageFootView.m; sourceTree = "<group>"; };
+		5E975FBC1F288B71006994FE /* LB_MyMessageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_MyMessageViewModel.h; sourceTree = "<group>"; };
+		5E975FBD1F288B71006994FE /* LB_MyMessageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_MyMessageViewModel.m; sourceTree = "<group>"; };
 		5EF4EC631F1F311C000C2EAD /* NewCuo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewCuo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF4EC671F1F311C000C2EAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5EF4EC691F1F311C000C2EAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -376,6 +382,8 @@
 		5E975FAB1F27873F006994FE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5E975FB91F283D7D006994FE /* LB_MyMessageFootView.h */,
+				5E975FBA1F283D7D006994FE /* LB_MyMessageFootView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -389,6 +397,8 @@
 				5E975FB41F2787CE006994FE /* LB_MyMessageContentViewModel.m */,
 				5E975FB61F2787F2006994FE /* LB_MyMessageFootViewModel.h */,
 				5E975FB71F2787F2006994FE /* LB_MyMessageFootViewModel.m */,
+				5E975FBC1F288B71006994FE /* LB_MyMessageViewModel.h */,
+				5E975FBD1F288B71006994FE /* LB_MyMessageViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -844,6 +854,7 @@
 				5E7C89631F274844009A578E /* LB_SetViewModel.m in Sources */,
 				5E7C89561F2735C9009A578E /* LB_UserInfoOnLineView.m in Sources */,
 				5EF4ECA11F1F5E88000C2EAD /* UserInfoViewController.m in Sources */,
+				5E975FBB1F283D7D006994FE /* LB_MyMessageFootView.m in Sources */,
 				5E7C89501F26ED44009A578E /* LB_UserInfoOrderView.m in Sources */,
 				5E7C89371F24E23F009A578E /* LB_GoodsTitleView.m in Sources */,
 				5E7C890E1F24844F009A578E /* LB_HomeTitleViewModel.m in Sources */,
@@ -855,6 +866,7 @@
 				5E82185E1F21FBB400635013 /* LoginViewController.m in Sources */,
 				5E7C89341F24D89C009A578E /* LB_SearchContentViewModel.m in Sources */,
 				5E7C893A1F24E272009A578E /* LB_GoodsTitleViewModel.m in Sources */,
+				5E975FBE1F288B71006994FE /* LB_MyMessageViewModel.m in Sources */,
 				5EF4EC6B1F1F311C000C2EAD /* AppDelegate.m in Sources */,
 				5E8218541F21EBB500635013 /* ShoppingTitleViewModel.m in Sources */,
 				5E6A359F1F23994C000C9D43 /* UserModel.m in Sources */,

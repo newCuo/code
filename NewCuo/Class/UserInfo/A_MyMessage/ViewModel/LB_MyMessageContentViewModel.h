@@ -10,4 +10,6 @@
 
 @interface LB_MyMessageContentViewModel : LB_BaseViewModel
 
+@property(assign,nonatomic)BOOL isOpen;
+
 @end

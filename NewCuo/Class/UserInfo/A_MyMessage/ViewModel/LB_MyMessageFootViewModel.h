@@ -10,4 +10,6 @@
 
 @interface LB_MyMessageFootViewModel : LB_BaseViewModel
 
+@property(assign,nonatomic)BOOL isOpen;
+
 @end

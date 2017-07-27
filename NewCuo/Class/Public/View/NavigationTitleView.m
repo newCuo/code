@@ -65,7 +65,7 @@
     self.rightBtn.titleLabel.font = [UIFont systemFontOfSize:14];
     [self addSubview:self.rightBtn];
     [self.rightBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_top).offset(0);
+        make.top.equalTo(self.mas_top).offset(25);
         make.right.equalTo(self.mas_right).offset(-10);
         make.width.offset(40);
         make.bottom.equalTo(self.mas_bottom).offset(0);
