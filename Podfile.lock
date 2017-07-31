@@ -30,6 +30,9 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
   - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
@@ -40,6 +43,7 @@ DEPENDENCIES:
   - MJRefresh
   - MLeaksFinder
   - ReactiveCocoa (~> 2.5)
+  - SDWebImage (~> 4.0.0)
   - SVProgressHUD (~> 2.0.3)
 
 SPEC CHECKSUMS:
@@ -51,8 +55,9 @@ SPEC CHECKSUMS:
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   MLeaksFinder: 0850e2f2abc7227adc4d4e2d1992b431264eb4d5
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 37e4875573b399d18392aa247a2e2fd24d81bbd0
+PODFILE CHECKSUM: beb8d5193a07613277a923be975bce5b1bb9f076
 
 COCOAPODS: 1.0.1

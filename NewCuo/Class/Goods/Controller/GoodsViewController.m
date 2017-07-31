@@ -8,10 +8,16 @@
 
 #import "GoodsViewController.h"
 #import "LB_GoodsTitleViewModel.h"
+#import "LB_GoodsLeftViewModel.h"
+#import "LB_GoodsRightViewModel.h"
 
 @interface GoodsViewController ()
 
 @property(strong,nonatomic)LB_GoodsTitleViewModel *goodsTitleViewModel;
+
+@property(strong,nonatomic)LB_GoodsLeftViewModel *leftViewModel;
+
+@property(strong,nonatomic)LB_GoodsRightViewModel *rightViewModel;
 
 
 @end
@@ -23,6 +29,11 @@
     // Do any additional setup after loading the view.
     
     self.goodsTitleViewModel = [[LB_GoodsTitleViewModel alloc]initWithViewController:self];
+     self.rightViewModel = [[LB_GoodsRightViewModel alloc]initWithViewController:self];
+    
+    self.leftViewModel = [[LB_GoodsLeftViewModel alloc]initWithViewController:self];
+    
+   
     
 }
 

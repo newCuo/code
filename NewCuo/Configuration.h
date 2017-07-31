@@ -27,4 +27,9 @@
 #define KAPPDELEGATE             (AppDelegate*)[UIApplication sharedApplication].delegate
 
 
+#define KNTCHANGEGOODSCLASS    @"KNTCHANGEGOODSCLASS" //切换种类
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+
 #endif /* Configuration_h */

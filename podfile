@@ -9,6 +9,7 @@ pod 'FMDB'
 pod 'SVProgressHUD', '~> 2.0.3'
 pod 'IQKeyboardManager'
 pod 'MLeaksFinder'
+pod 'SDWebImage', '~> 4.0.0'
 
 
 
