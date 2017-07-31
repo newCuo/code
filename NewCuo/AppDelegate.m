@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+Configuration.h"
-
+#import "GoodsDetailsViewController.h"
 @interface AppDelegate ()
 @property (strong, nonatomic) TabBarViewController *tabBarVC;
 @end
@@ -24,7 +24,8 @@
     [self initConfiguration];
     
     self.tabBarVC = [[TabBarViewController alloc]init];
-    self.window.rootViewController = self.tabBarVC;
+    //    self.window.rootViewController = self.tabBarVC;
+    self.window.rootViewController = [GoodsDetailsViewController new];
     [self.window makeKeyAndVisible];
     
     
