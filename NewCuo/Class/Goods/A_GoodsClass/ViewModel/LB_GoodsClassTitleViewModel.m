@@ -29,9 +29,19 @@
 
 -(void)bindingEvent
 {
+    
+    @weakify(self);
     [[self.titleView.backBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
+        @strongify(self);
+        
         [self.viewController.navigationController popViewControllerAnimated:YES];
     }];
+    
+    [[self.titleView.changeType rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(UIButton *btn) {
+        btn.selected = !btn.selected;
+    }];
+    
+    
 }
 
 @end

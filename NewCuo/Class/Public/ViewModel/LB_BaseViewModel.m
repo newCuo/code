@@ -12,6 +12,8 @@
 
 @property(weak,nonatomic)BaseViewController *viewController;
 
+@property(weak,nonatomic)UIView *LB_View;
+
 @end
 
 @implementation LB_BaseViewModel
@@ -21,6 +23,7 @@
     self = [super init];
     if (self) {
         self.viewController = ViewController;
+        self.LB_View = self.viewController.view;
         [self initUI];
         [self bindingEvent];
         [self NetWorking];

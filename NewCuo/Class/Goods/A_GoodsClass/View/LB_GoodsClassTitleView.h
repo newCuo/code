@@ -12,4 +12,6 @@
 
 -(UIButton*)backBtn;
 
+-(UIButton*)changeType;
+
 @end

@@ -24,8 +24,8 @@
     [self initConfiguration];
     
     self.tabBarVC = [[TabBarViewController alloc]init];
-    //    self.window.rootViewController = self.tabBarVC;
-    self.window.rootViewController = [GoodsDetailsViewController new];
+    self.window.rootViewController = self.tabBarVC;
+//    self.window.rootViewController = [GoodsDetailsViewController new];
     [self.window makeKeyAndVisible];
     
     
