@@ -27,5 +27,6 @@
 
 #import "AppDelegate.h"
 #import "LB_BaseViewModel.h"
+#import "UIColor+Hex.h"
 
 #endif /* NewCuo_pch */

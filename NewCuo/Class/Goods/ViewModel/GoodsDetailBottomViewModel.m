@@ -29,10 +29,10 @@
 }
 
 -(void)initUI{
-    GoodsDetailView *detailView = [[GoodsDetailView alloc]initWithFrame:CGRectMake(0, 0, KSCREENWIDTH, KSCREENHEIGHT-60)];
-    GoodsDetailBottomView *bottomView = [[GoodsDetailBottomView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(detailView.frame), KSCREENWIDTH, 60)];
+//    GoodsDetailView *detailView = [[GoodsDetailView alloc]initWithFrame:CGRectMake(0, 0, KSCREENWIDTH, KSCREENHEIGHT-60*SCALE)];
+    GoodsDetailBottomView *bottomView = [[GoodsDetailBottomView alloc]initWithFrame:CGRectMake(0, KSCREENHEIGHT - 60*SCALE, KSCREENWIDTH, 60*SCALE)];
     
-    [self.viewController.view addSubview:detailView];
+//    [self.viewController.view addSubview:detailView];
     [self.viewController.view addSubview:bottomView];
 }
 -(void)bindingEvent{

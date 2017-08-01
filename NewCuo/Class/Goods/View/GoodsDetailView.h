@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface GoodsDetailView : UIView
-
+@property (strong,nonatomic)UIScrollView *topScrollView;//
+@property (strong,nonatomic)UIScrollView *bottomScrollView;//
 @end

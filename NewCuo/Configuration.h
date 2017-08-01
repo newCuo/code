@@ -12,7 +12,7 @@
 
 #define KSCREENWIDTH    [UIScreen mainScreen].bounds.size.width
 #define KSCREENHEIGHT   [UIScreen mainScreen].bounds.size.height
-
+#define SCALE ([UIScreen mainScreen].bounds.size.width/375) //比例
 
 
 
