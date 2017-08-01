@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
+
 		3F6181921F30270C0096693D /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181911F30270C0096693D /* CustomButton.m */; };
 		3F6181951F3031750096693D /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181941F3031750096693D /* UIColor+Hex.m */; };
 		3F6181981F3074550096693D /* GoodsDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181971F3074550096693D /* GoodsDetailViewModel.m */; };
 		3F6181A41F30AA330096693D /* 222.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6181A31F30AA330096693D /* 222.png */; };
-=======
->>>>>>> 7149d4339cfbb77bd22526b3eb4e3db0d3d9aaf1
+
 		3F9DCBEE1F2D81AD00DF3735 /* GoodsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9DCBED1F2D81AD00DF3735 /* GoodsDetailsViewController.m */; };
 		3F9DCBF11F2D81CA00DF3735 /* GoodsDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9DCBF01F2D81CA00DF3735 /* GoodsDetailBottomView.m */; };
 		3F9DCBF41F2D81DC00DF3735 /* GoodsDetailBottomViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9DCBF31F2D81DC00DF3735 /* GoodsDetailBottomViewModel.m */; };
@@ -114,7 +113,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
+
 		3F6181901F30270C0096693D /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		3F6181911F30270C0096693D /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		3F6181931F3031750096693D /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
@@ -122,8 +121,7 @@
 		3F6181961F3074550096693D /* GoodsDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailViewModel.h; sourceTree = "<group>"; };
 		3F6181971F3074550096693D /* GoodsDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailViewModel.m; sourceTree = "<group>"; };
 		3F6181A31F30AA330096693D /* 222.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 222.png; sourceTree = "<group>"; };
-=======
->>>>>>> 7149d4339cfbb77bd22526b3eb4e3db0d3d9aaf1
+
 		3F9DCBEC1F2D81AD00DF3735 /* GoodsDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailsViewController.h; sourceTree = "<group>"; };
 		3F9DCBED1F2D81AD00DF3735 /* GoodsDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailsViewController.m; sourceTree = "<group>"; };
 		3F9DCBEF1F2D81CA00DF3735 /* GoodsDetailBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailBottomView.h; sourceTree = "<group>"; };
@@ -334,7 +332,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-<<<<<<< HEAD
+
 		3F61818F1F30270C0096693D /* CustomControls */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,8 +342,7 @@
 			path = CustomControls;
 			sourceTree = "<group>";
 		};
-=======
->>>>>>> 7149d4339cfbb77bd22526b3eb4e3db0d3d9aaf1
+
 		5E6A359C1F23993B000C9D43 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -974,11 +971,9 @@
 				5E7D75C81F2AD92400C6C92F /* LB_GoodsRightViewModel.m */,
 				3F9DCBF21F2D81DC00DF3735 /* GoodsDetailBottomViewModel.h */,
 				3F9DCBF31F2D81DC00DF3735 /* GoodsDetailBottomViewModel.m */,
-<<<<<<< HEAD
 				3F6181961F3074550096693D /* GoodsDetailViewModel.h */,
 				3F6181971F3074550096693D /* GoodsDetailViewModel.m */,
-=======
->>>>>>> 7149d4339cfbb77bd22526b3eb4e3db0d3d9aaf1
+
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1277,11 +1272,8 @@
 				5E7C892E1F24D842009A578E /* LB_SearchTitleViewModel.m in Sources */,
 				5EF4EC851F1F3B15000C2EAD /* BaseViewController.m in Sources */,
 				5EA3D8D41F29D6B100A8EFAD /* LB_MyConcernContentViewModel.m in Sources */,
-<<<<<<< HEAD
-=======
 				5E7D76071F2F10EB00C6C92F /* LB_GoodsClassCollectionViewModel.m in Sources */,
 				5E7D75F51F2EFB2600C6C92F /* LB_GoodsClassHeadViewModel.m in Sources */,
->>>>>>> 7149d4339cfbb77bd22526b3eb4e3db0d3d9aaf1
 				5E7C894A1F25E58F009A578E /* LB_UserInfoContentViewModel.m in Sources */,
 				5E7D75F81F2EFB4300C6C92F /* LB_GoodsClassHeadView.m in Sources */,
 				5EA3D8CE1F29D68500A8EFAD /* LB_ReadHistoryContentViewModel.m in Sources */,
