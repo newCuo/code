@@ -8,11 +8,17 @@
 
 #import "LB_GoodsClassViewController.h"
 #import "LB_GoodsClassTitleViewModel.h"
+#import "LB_GoodsClassHeadViewModel.h"
+#import "LB_GoodsClassListViewModel.h"
 
 
 @interface LB_GoodsClassViewController ()
 
 @property(strong,nonatomic)LB_GoodsClassTitleViewModel *titleViewModel;
+
+@property(strong,nonatomic)LB_GoodsClassHeadViewModel *headViewModel;
+
+@property(strong,nonatomic)LB_GoodsClassListViewModel *listViewModel;
 
 @end
 
@@ -23,6 +29,10 @@
     // Do any additional setup after loading the view.
     
     self.titleViewModel = [[LB_GoodsClassTitleViewModel alloc]initWithViewController:self];
+    
+    self.headViewModel = [[LB_GoodsClassHeadViewModel alloc]initWithViewController:self];
+    
+    self.listViewModel = [[LB_GoodsClassListViewModel alloc]initWithViewController:self];
     
 }
 

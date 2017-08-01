@@ -12,6 +12,8 @@
 
 -(BaseViewController*)viewController;
 
+-(UIView*)LB_View;
+
 //model初始化
 -(id)initWithViewController:(BaseViewController*)ViewController;
 
