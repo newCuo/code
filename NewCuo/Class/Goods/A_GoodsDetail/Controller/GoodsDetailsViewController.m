@@ -9,7 +9,9 @@
 #import "GoodsDetailsViewController.h"
 #import "GoodsDetailBottomViewModel.h"
 #import "GoodsDetailViewModel.h"
+#import "GoodsDetailTitleViewModel.h"
 @interface GoodsDetailsViewController ()
+@property (strong,nonatomic)GoodsDetailTitleViewModel *goodsDetailTitleViewModel;
 @property (strong,nonatomic)GoodsDetailBottomViewModel *goodsDetailBottomViewModel;
 @property (strong,nonatomic)GoodsDetailViewModel *goodsDetailViewModel;
 @end
@@ -18,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.goodsDetailTitleViewModel = [[GoodsDetailTitleViewModel alloc]initWithViewController:self];
     self.goodsDetailViewModel = [[GoodsDetailViewModel alloc]initWithViewController:self];
     self.goodsDetailBottomViewModel = [[GoodsDetailBottomViewModel alloc]initWithViewController:self];
 }

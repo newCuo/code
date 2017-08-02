@@ -14,6 +14,7 @@
 		3F6181D11F3186030096693D /* GoodsDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181CF1F3186030096693D /* GoodsDetailView.m */; };
 		3F6181D61F31A34C0096693D /* GoodsDetailBottomViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181D31F31A34C0096693D /* GoodsDetailBottomViewModel.m */; };
 		3F6181D71F31A34C0096693D /* GoodsDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181D51F31A34C0096693D /* GoodsDetailViewModel.m */; };
+		3F6181DC1F31DB550096693D /* GoodsDetailTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181DB1F31DB550096693D /* GoodsDetailTitleViewModel.m */; };
 		5E6A359F1F23994C000C9D43 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A359E1F23994C000C9D43 /* UserModel.m */; };
 		5E6A35A21F246369000C9D43 /* LB_BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A35A11F246369000C9D43 /* LB_BaseViewModel.m */; };
 		5E6A35A51F246A14000C9D43 /* LB_ContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A35A41F246A14000C9D43 /* LB_ContentView.m */; };
@@ -124,6 +125,10 @@
 		3F6181D31F31A34C0096693D /* GoodsDetailBottomViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailBottomViewModel.m; sourceTree = "<group>"; };
 		3F6181D41F31A34C0096693D /* GoodsDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailViewModel.h; sourceTree = "<group>"; };
 		3F6181D51F31A34C0096693D /* GoodsDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailViewModel.m; sourceTree = "<group>"; };
+		3F6181D81F31A7430096693D /* ColorHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorHeader.h; sourceTree = "<group>"; };
+		3F6181D91F31AA660096693D /* FontHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontHeader.h; sourceTree = "<group>"; };
+		3F6181DA1F31DB550096693D /* GoodsDetailTitleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailTitleViewModel.h; sourceTree = "<group>"; };
+		3F6181DB1F31DB550096693D /* GoodsDetailTitleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailTitleViewModel.m; sourceTree = "<group>"; };
 		5E6A359D1F23994C000C9D43 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		5E6A359E1F23994C000C9D43 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		5E6A35A01F246369000C9D43 /* LB_BaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_BaseViewModel.h; sourceTree = "<group>"; };
@@ -536,6 +541,8 @@
 				3F6181D31F31A34C0096693D /* GoodsDetailBottomViewModel.m */,
 				3F6181D41F31A34C0096693D /* GoodsDetailViewModel.h */,
 				3F6181D51F31A34C0096693D /* GoodsDetailViewModel.m */,
+				3F6181DA1F31DB550096693D /* GoodsDetailTitleViewModel.h */,
+				3F6181DB1F31DB550096693D /* GoodsDetailTitleViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -800,6 +807,8 @@
 				5EF4EC661F1F311C000C2EAD /* Supporting Files */,
 				5EF4EC7D1F1F326C000C2EAD /* NewCuo.pch */,
 				5EF4EC9D1F1F5461000C2EAD /* Configuration.h */,
+				3F6181D81F31A7430096693D /* ColorHeader.h */,
+				3F6181D91F31AA660096693D /* FontHeader.h */,
 				5E8218551F21EF0B00635013 /* AppDelegate+Configuration.h */,
 				5E8218561F21EF0B00635013 /* AppDelegate+Configuration.m */,
 			);
@@ -1328,6 +1337,7 @@
 				5E7C892B1F24D81F009A578E /* LB_SearchTitleView.m in Sources */,
 				5E7D76041F2F10D000C6C92F /* LB_GoodsClassListViewModel.m in Sources */,
 				5E6A35A51F246A14000C9D43 /* LB_ContentView.m in Sources */,
+				3F6181DC1F31DB550096693D /* GoodsDetailTitleViewModel.m in Sources */,
 				5E975FB81F2787F2006994FE /* LB_MyMessageFootViewModel.m in Sources */,
 				5E7C89441F25DABE009A578E /* LB_SearchModel.m in Sources */,
 				5E6A35A21F246369000C9D43 /* LB_BaseViewModel.m in Sources */,

@@ -14,6 +14,8 @@
 
 #import "BaseViewController.h"
 #import "Configuration.h"
+#import "ColorHeader.h"
+#import "FontHeader.h"
 #import "ReactiveCocoa.h"
 //#import <Masonry/Masonry.h>
 #import <ReactiveCocoa/RACEXTScope.h>

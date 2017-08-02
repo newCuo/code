@@ -6,9 +6,9 @@
 //  Copyright © 2017年 林波. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "LB_BaseViewModel.h"
 
-@interface GoodsDetailBottomViewModel : NSObject
+@interface GoodsDetailBottomViewModel : LB_BaseViewModel
 -(id)initWithViewController:(BaseViewController*)ViewController;
 
 @end

@@ -9,6 +9,7 @@
 #import "LB_GoodsRightViewModel.h"
 #import "LB_GoodsRightView.h"
 #import "LB_GoodsClassViewController.h"
+#import "GoodsDetailsViewController.h"
 
 @interface LB_GoodsRightViewModel()
 
@@ -36,7 +37,8 @@
     WS(weakSelf);
     self.rightView.clickItem = ^()
     {
-        LB_GoodsClassViewController *goodsClass = [[LB_GoodsClassViewController alloc]init];
+        GoodsDetailsViewController *goodsClass = [GoodsDetailsViewController new];
+//        LB_GoodsClassViewController *goodsClass = [[LB_GoodsClassViewController alloc]init];
         goodsClass.hidesBottomBarWhenPushed = YES;
         [weakSelf.viewController.navigationController pushViewController:goodsClass animated:YES];
     };

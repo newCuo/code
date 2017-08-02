@@ -25,8 +25,7 @@
 }
 
 -(void)initUI{
-    GoodsDetailView *detailView = [[GoodsDetailView alloc]initWithFrame:CGRectMake(0, 0, KSCREENWIDTH, KSCREENHEIGHT-60*SCALE)];
-    
+    GoodsDetailView *detailView = [[GoodsDetailView alloc]initWithFrame:CGRectMake(0, 64, KSCREENWIDTH, KSCREENHEIGHT-60*SCALE-64)];    
     [self.viewController.view addSubview:detailView];
 }
 -(void)bindingEvent{
