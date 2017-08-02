@@ -7,16 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-		3F6181921F30270C0096693D /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181911F30270C0096693D /* CustomButton.m */; };
-		3F6181951F3031750096693D /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181941F3031750096693D /* UIColor+Hex.m */; };
-		3F6181981F3074550096693D /* GoodsDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181971F3074550096693D /* GoodsDetailViewModel.m */; };
-		3F6181A41F30AA330096693D /* 222.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6181A31F30AA330096693D /* 222.png */; };
-
-		3F9DCBEE1F2D81AD00DF3735 /* GoodsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9DCBED1F2D81AD00DF3735 /* GoodsDetailsViewController.m */; };
-		3F9DCBF11F2D81CA00DF3735 /* GoodsDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9DCBF01F2D81CA00DF3735 /* GoodsDetailBottomView.m */; };
-		3F9DCBF41F2D81DC00DF3735 /* GoodsDetailBottomViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9DCBF31F2D81DC00DF3735 /* GoodsDetailBottomViewModel.m */; };
-		3FB5CFEF1F2DE03D005B57C4 /* GoodsDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5CFEE1F2DE03D005B57C4 /* GoodsDetailView.m */; };
+		3F6181C41F3181BF0096693D /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181C31F3181BF0096693D /* UIColor+Hex.m */; };
+		3F6181C81F3182150096693D /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181C71F3182150096693D /* CustomButton.m */; };
+		3F6181CB1F3185930096693D /* GoodsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181CA1F3185930096693D /* GoodsDetailsViewController.m */; };
+		3F6181D01F3186030096693D /* GoodsDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181CD1F3186030096693D /* GoodsDetailBottomView.m */; };
+		3F6181D11F3186030096693D /* GoodsDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181CF1F3186030096693D /* GoodsDetailView.m */; };
+		3F6181D61F31A34C0096693D /* GoodsDetailBottomViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181D31F31A34C0096693D /* GoodsDetailBottomViewModel.m */; };
+		3F6181D71F31A34C0096693D /* GoodsDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181D51F31A34C0096693D /* GoodsDetailViewModel.m */; };
 		5E6A359F1F23994C000C9D43 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A359E1F23994C000C9D43 /* UserModel.m */; };
 		5E6A35A21F246369000C9D43 /* LB_BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A35A11F246369000C9D43 /* LB_BaseViewModel.m */; };
 		5E6A35A51F246A14000C9D43 /* LB_ContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A35A41F246A14000C9D43 /* LB_ContentView.m */; };
@@ -113,23 +110,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-
-		3F6181901F30270C0096693D /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
-		3F6181911F30270C0096693D /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
-		3F6181931F3031750096693D /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
-		3F6181941F3031750096693D /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
-		3F6181961F3074550096693D /* GoodsDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailViewModel.h; sourceTree = "<group>"; };
-		3F6181971F3074550096693D /* GoodsDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailViewModel.m; sourceTree = "<group>"; };
-		3F6181A31F30AA330096693D /* 222.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 222.png; sourceTree = "<group>"; };
-
-		3F9DCBEC1F2D81AD00DF3735 /* GoodsDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailsViewController.h; sourceTree = "<group>"; };
-		3F9DCBED1F2D81AD00DF3735 /* GoodsDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailsViewController.m; sourceTree = "<group>"; };
-		3F9DCBEF1F2D81CA00DF3735 /* GoodsDetailBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailBottomView.h; sourceTree = "<group>"; };
-		3F9DCBF01F2D81CA00DF3735 /* GoodsDetailBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailBottomView.m; sourceTree = "<group>"; };
-		3F9DCBF21F2D81DC00DF3735 /* GoodsDetailBottomViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailBottomViewModel.h; sourceTree = "<group>"; };
-		3F9DCBF31F2D81DC00DF3735 /* GoodsDetailBottomViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailBottomViewModel.m; sourceTree = "<group>"; };
-		3FB5CFED1F2DE03D005B57C4 /* GoodsDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailView.h; sourceTree = "<group>"; };
-		3FB5CFEE1F2DE03D005B57C4 /* GoodsDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailView.m; sourceTree = "<group>"; };
+		3F6181C21F3181BF0096693D /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		3F6181C31F3181BF0096693D /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		3F6181C61F3182150096693D /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		3F6181C71F3182150096693D /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		3F6181C91F3185930096693D /* GoodsDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailsViewController.h; sourceTree = "<group>"; };
+		3F6181CA1F3185930096693D /* GoodsDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailsViewController.m; sourceTree = "<group>"; };
+		3F6181CC1F3186030096693D /* GoodsDetailBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailBottomView.h; sourceTree = "<group>"; };
+		3F6181CD1F3186030096693D /* GoodsDetailBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailBottomView.m; sourceTree = "<group>"; };
+		3F6181CE1F3186030096693D /* GoodsDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailView.h; sourceTree = "<group>"; };
+		3F6181CF1F3186030096693D /* GoodsDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailView.m; sourceTree = "<group>"; };
+		3F6181D21F31A34C0096693D /* GoodsDetailBottomViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailBottomViewModel.h; sourceTree = "<group>"; };
+		3F6181D31F31A34C0096693D /* GoodsDetailBottomViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailBottomViewModel.m; sourceTree = "<group>"; };
+		3F6181D41F31A34C0096693D /* GoodsDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailViewModel.h; sourceTree = "<group>"; };
+		3F6181D51F31A34C0096693D /* GoodsDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailViewModel.m; sourceTree = "<group>"; };
 		5E6A359D1F23994C000C9D43 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		5E6A359E1F23994C000C9D43 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		5E6A35A01F246369000C9D43 /* LB_BaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_BaseViewModel.h; sourceTree = "<group>"; };
@@ -332,17 +326,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-
-		3F61818F1F30270C0096693D /* CustomControls */ = {
+		3F6181C51F3182150096693D /* CustomControls */ = {
 			isa = PBXGroup;
 			children = (
-				3F6181901F30270C0096693D /* CustomButton.h */,
-				3F6181911F30270C0096693D /* CustomButton.m */,
+				3F6181C61F3182150096693D /* CustomButton.h */,
+				3F6181C71F3182150096693D /* CustomButton.m */,
 			);
 			path = CustomControls;
 			sourceTree = "<group>";
 		};
-
 		5E6A359C1F23993B000C9D43 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,6 +505,8 @@
 			children = (
 				5E7D75E21F2B363F00C6C92F /* LB_GoodsDetailViewController.h */,
 				5E7D75E31F2B363F00C6C92F /* LB_GoodsDetailViewController.m */,
+				3F6181C91F3185930096693D /* GoodsDetailsViewController.h */,
+				3F6181CA1F3185930096693D /* GoodsDetailsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -527,6 +521,10 @@
 		5E7D75E01F2B362600C6C92F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3F6181CC1F3186030096693D /* GoodsDetailBottomView.h */,
+				3F6181CD1F3186030096693D /* GoodsDetailBottomView.m */,
+				3F6181CE1F3186030096693D /* GoodsDetailView.h */,
+				3F6181CF1F3186030096693D /* GoodsDetailView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -534,6 +532,10 @@
 		5E7D75E11F2B362600C6C92F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3F6181D21F31A34C0096693D /* GoodsDetailBottomViewModel.h */,
+				3F6181D31F31A34C0096693D /* GoodsDetailBottomViewModel.m */,
+				3F6181D41F31A34C0096693D /* GoodsDetailViewModel.h */,
+				3F6181D51F31A34C0096693D /* GoodsDetailViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -788,9 +790,7 @@
 		5EF4EC651F1F311C000C2EAD /* NewCuo */ = {
 			isa = PBXGroup;
 			children = (
-				3F6181A31F30AA330096693D /* 222.png */,
 				5EF4EC7E1F1F3A93000C2EAD /* Class */,
-				3F61818F1F30270C0096693D /* CustomControls */,
 				5EF4EC811F1F3A93000C2EAD /* Tool */,
 				5EF4EC691F1F311C000C2EAD /* AppDelegate.h */,
 				5EF4EC6A1F1F311C000C2EAD /* AppDelegate.m */,
@@ -852,8 +852,7 @@
 		5EF4EC811F1F3A93000C2EAD /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				3F6181931F3031750096693D /* UIColor+Hex.h */,
-				3F6181941F3031750096693D /* UIColor+Hex.m */,
+				3F6181C51F3182150096693D /* CustomControls */,
 				5EF4EC9E1F1F550E000C2EAD /* Utilities */,
 				5EF4EC821F1F3A93000C2EAD /* Widgets */,
 			);
@@ -931,8 +930,6 @@
 			children = (
 				5EF4ECA51F1F5EA5000C2EAD /* GoodsViewController.h */,
 				5EF4ECA61F1F5EA5000C2EAD /* GoodsViewController.m */,
-				3F9DCBEC1F2D81AD00DF3735 /* GoodsDetailsViewController.h */,
-				3F9DCBED1F2D81AD00DF3735 /* GoodsDetailsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -952,10 +949,6 @@
 				5E7D75D81F2B1A7A00C6C92F /* LB_GoodsHomeCollectionViewCell.m */,
 				5E7D75DA1F2B229100C6C92F /* LB_GoodsRightCollectionHeadView.h */,
 				5E7D75DB1F2B229100C6C92F /* LB_GoodsRightCollectionHeadView.m */,
-				3F9DCBEF1F2D81CA00DF3735 /* GoodsDetailBottomView.h */,
-				3F9DCBF01F2D81CA00DF3735 /* GoodsDetailBottomView.m */,
-				3FB5CFED1F2DE03D005B57C4 /* GoodsDetailView.h */,
-				3FB5CFEE1F2DE03D005B57C4 /* GoodsDetailView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -969,11 +962,6 @@
 				5E7D75C51F2AD90F00C6C92F /* LB_GoodsLeftViewModel.m */,
 				5E7D75C71F2AD92400C6C92F /* LB_GoodsRightViewModel.h */,
 				5E7D75C81F2AD92400C6C92F /* LB_GoodsRightViewModel.m */,
-				3F9DCBF21F2D81DC00DF3735 /* GoodsDetailBottomViewModel.h */,
-				3F9DCBF31F2D81DC00DF3735 /* GoodsDetailBottomViewModel.m */,
-				3F6181961F3074550096693D /* GoodsDetailViewModel.h */,
-				3F6181971F3074550096693D /* GoodsDetailViewModel.m */,
-
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1107,6 +1095,8 @@
 		5EF4EC9E1F1F550E000C2EAD /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				3F6181C21F3181BF0096693D /* UIColor+Hex.h */,
+				3F6181C31F3181BF0096693D /* UIColor+Hex.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1191,7 +1181,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F6181A41F30AA330096693D /* 222.png in Resources */,
 				5EF4EC761F1F311C000C2EAD /* LaunchScreen.storyboard in Resources */,
 				5EF4EC731F1F311C000C2EAD /* Assets.xcassets in Resources */,
 			);
@@ -1253,17 +1242,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E8218641F21FD1700635013 /* ShoppingEmptyView.m in Sources */,
-				3FB5CFEF1F2DE03D005B57C4 /* GoodsDetailView.m in Sources */,
 				5E7C89631F274844009A578E /* LB_SetViewModel.m in Sources */,
 				5E7C89561F2735C9009A578E /* LB_UserInfoOnLineView.m in Sources */,
 				5E7D75CC1F2AD93F00C6C92F /* LB_GoodsLeftView.m in Sources */,
 				5EF4ECA11F1F5E88000C2EAD /* UserInfoViewController.m in Sources */,
 				5E975FBB1F283D7D006994FE /* LB_MyMessageFootView.m in Sources */,
 				5EA3D8BA1F29BB1200A8EFAD /* LB_MyMessageCell.m in Sources */,
+				3F6181D61F31A34C0096693D /* GoodsDetailBottomViewModel.m in Sources */,
 				5E7D75C21F29F39A00C6C92F /* SDCycleScrollView.m in Sources */,
 				5E7C89501F26ED44009A578E /* LB_UserInfoOrderView.m in Sources */,
 				5EA3D8DA1F29D6F800A8EFAD /* LB_ReadHistoryContentView.m in Sources */,
 				5E7C89371F24E23F009A578E /* LB_GoodsTitleView.m in Sources */,
+				3F6181C41F3181BF0096693D /* UIColor+Hex.m in Sources */,
 				5E7C890E1F24844F009A578E /* LB_HomeTitleViewModel.m in Sources */,
 				5EF4EC891F1F3B83000C2EAD /* TabBarViewController.m in Sources */,
 				5E7D75C91F2AD92400C6C92F /* LB_GoodsRightViewModel.m in Sources */,
@@ -1274,6 +1264,7 @@
 				5EA3D8D41F29D6B100A8EFAD /* LB_MyConcernContentViewModel.m in Sources */,
 				5E7D76071F2F10EB00C6C92F /* LB_GoodsClassCollectionViewModel.m in Sources */,
 				5E7D75F51F2EFB2600C6C92F /* LB_GoodsClassHeadViewModel.m in Sources */,
+				3F6181D11F3186030096693D /* GoodsDetailView.m in Sources */,
 				5E7C894A1F25E58F009A578E /* LB_UserInfoContentViewModel.m in Sources */,
 				5E7D75F81F2EFB4300C6C92F /* LB_GoodsClassHeadView.m in Sources */,
 				5EA3D8CE1F29D68500A8EFAD /* LB_ReadHistoryContentViewModel.m in Sources */,
@@ -1282,13 +1273,11 @@
 				5E7D76011F2F103900C6C92F /* LB_GoodsClassCollectionView.m in Sources */,
 				5E7C893A1F24E272009A578E /* LB_GoodsTitleViewModel.m in Sources */,
 				5EA3D8C81F29D64700A8EFAD /* LB_ReadHistoryViewController.m in Sources */,
-				3F6181921F30270C0096693D /* CustomButton.m in Sources */,
+				3F6181C81F3182150096693D /* CustomButton.m in Sources */,
 				5E975FBE1F288B71006994FE /* LB_MyMessageViewModel.m in Sources */,
 				5E7D75C11F29F39A00C6C92F /* SDCollectionViewCell.m in Sources */,
 				5EF4EC6B1F1F311C000C2EAD /* AppDelegate.m in Sources */,
 				5E8218541F21EBB500635013 /* ShoppingTitleViewModel.m in Sources */,
-				3F6181951F3031750096693D /* UIColor+Hex.m in Sources */,
-				3F9DCBEE1F2D81AD00DF3735 /* GoodsDetailsViewController.m in Sources */,
 				5E6A359F1F23994C000C9D43 /* UserModel.m in Sources */,
 				5E7D75BD1F29F39A00C6C92F /* TAAbstractDotView.m in Sources */,
 				5E7C890B1F248220009A578E /* LB_HomeTitleView.m in Sources */,
@@ -1303,6 +1292,7 @@
 				5E7C89661F274B04009A578E /* LB_SetTitleViewModel.m in Sources */,
 				5E7C89691F274CFE009A578E /* LB_LoginOutView.m in Sources */,
 				5E7C891E1F24D512009A578E /* LB_HomeModel.m in Sources */,
+				3F6181D01F3186030096693D /* GoodsDetailBottomView.m in Sources */,
 				5E8218511F21E32300635013 /* UserInfoTitleViewModel.m in Sources */,
 				5E7D75EC1F2B3DD200C6C92F /* LB_GoodsClassViewController.m in Sources */,
 				5E8218571F21EF0B00635013 /* AppDelegate+Configuration.m in Sources */,
@@ -1312,7 +1302,6 @@
 				5E975FAF1F278764006994FE /* LB_UserInfoMyMessageViewController.m in Sources */,
 				5E7D75CF1F2AD95200C6C92F /* LB_GoodsRightView.m in Sources */,
 				5E7D75F21F2B3E3900C6C92F /* LB_GoodsClassTitleView.m in Sources */,
-				3F6181981F3074550096693D /* GoodsDetailViewModel.m in Sources */,
 				5EA3D8B71F29B74200A8EFAD /* LB_MyMessageContentView.m in Sources */,
 				5E7C89311F24D870009A578E /* LB_SearchContentView.m in Sources */,
 				5EF4ECA71F1F5EA5000C2EAD /* GoodsViewController.m in Sources */,
@@ -1323,7 +1312,7 @@
 				5E7C89601F274822009A578E /* LB_SetViewController.m in Sources */,
 				5E6A35A81F246BC3000C9D43 /* LB_LoginContentViewModel.m in Sources */,
 				5E7D75BF1F29F39A00C6C92F /* TADotView.m in Sources */,
-				3F9DCBF11F2D81CA00DF3735 /* GoodsDetailBottomView.m in Sources */,
+				3F6181CB1F3185930096693D /* GoodsDetailsViewController.m in Sources */,
 				5E8218671F21FD7900635013 /* ShoppingEmptyViewModel.m in Sources */,
 				5E7C893D1F24E625009A578E /* LB_SearchEmptyView.m in Sources */,
 				5EF4EC681F1F311C000C2EAD /* main.m in Sources */,
@@ -1345,9 +1334,9 @@
 				5EF4ECA41F1F5E96000C2EAD /* HomeViewController.m in Sources */,
 				5EA3D8D11F29D69D00A8EFAD /* LB_MyConcernTitleViewModel.m in Sources */,
 				5E7D75C61F2AD90F00C6C92F /* LB_GoodsLeftViewModel.m in Sources */,
-				3F9DCBF41F2D81DC00DF3735 /* GoodsDetailBottomViewModel.m in Sources */,
 				5E7C89591F273CCD009A578E /* LB_UserInfoMaybeYouLikeView.m in Sources */,
 				5E975FB21F2787AF006994FE /* LB_MyMessageTitleViewModel.m in Sources */,
+				3F6181D71F31A34C0096693D /* GoodsDetailViewModel.m in Sources */,
 				5E7D75D61F2B0E8200C6C92F /* LB_GoodsLeftModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
