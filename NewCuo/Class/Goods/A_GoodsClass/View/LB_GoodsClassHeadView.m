@@ -27,6 +27,8 @@
 
 @property(strong,nonatomic)UILabel *filterLab;
 
+@property(assign,nonatomic)HEADTYPE type;
+
 @end
 
 @implementation LB_GoodsClassHeadView
@@ -37,6 +39,7 @@
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
         [self initUI];
+        [self bingingEvent];
     }
     return self;
 }
@@ -57,9 +60,9 @@
     self.upTitleLab = [[UILabel alloc]init];
     self.upTitleLab.font = [UIFont systemFontOfSize:14];
     self.upTitleLab.textAlignment = NSTextAlignmentCenter;
-    self.upTitleLab.textColor = [UIColor grayColor];
+    self.upTitleLab.textColor = K_RED_COLOR;
     [view addSubview:self.upTitleLab];
-    self.upTitleLab.text = @"默认排序";
+    self.upTitleLab.text = @"默认排列";
     [self.upTitleLab mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.centerY.equalTo(view.mas_centerY);
@@ -73,13 +76,17 @@
     [self.showViewBtn setImage:[UIImage imageNamed:@"down_s"] forState:UIControlStateSelected];
     [view addSubview:self.showViewBtn];
     [self.showViewBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        
         make.centerY.equalTo(view.mas_centerY).offset(0);
         make.left.equalTo(self.upTitleLab.mas_right).offset(0);
         make.size.mas_equalTo(CGSizeMake(11, 11));
-        
     }];
     
+    
+    self.UpBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [view addSubview:self.UpBtn];
+    [self.UpBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.offset(0);
+    }];
     
     
      /*****************************   销量   ****************************************/
@@ -136,6 +143,12 @@
     }];
 
     
+    self.priceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [view1 addSubview:self.priceBtn];
+    [self.priceBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.offset(0);
+    }];
+    
     /*****************************   筛选   ****************************************/
     
     UIView *view2 = [[UIView alloc]init];
@@ -189,7 +202,74 @@
     
 }
 
+-(void)bingingEvent{
+    
+    
+    @weakify(self);
+    [[self.UpBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(UIButton *btn) {
+        @strongify(self);
+        btn.selected = !btn.selected;
+        self.showViewBtn.selected = btn.selected;
+        self.type = btn.selected?HEADTYPE_RANK:HEADTYPE_RANK_CLOSED;
+    }];
+    
+    
+    [[self.sellGoodBtn rac_signalForControlEvents:UIControlEventTouchDown]subscribeNext:^(UIButton *btn) {
+        btn.selected = !btn.selected;
+        self.type = HEADTYPE_SELL;
+    }];
+    
+    [[self.priceBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(UIButton *btn) {
+        self.priceImageBtn.selected = !btn.selected;
+        btn.selected = !btn.selected;
+        self.type = HEADTYPE_PRICE;
+    }];
+    
+     [[self.filterBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
+         self.type = HEADTYPE_FILTER;
+     }];
+}
 
+-(void)setType:(HEADTYPE)type
+{
+    
+    self.clickHeadType(type);
+  
+    switch (type) {
+        case HEADTYPE_RANK:
+            
+            self.priceLab.textColor = [UIColor grayColor];
+            self.sellGoodBtn.selected = NO;
+            break;
+        case HEADTYPE_SELL:
+            self.showViewBtn.selected = NO;
+            self.UpBtn.selected = NO;
+            self.upTitleLab.textColor = [UIColor grayColor];
+            self.priceLab.textColor = [UIColor grayColor];
+            self.sellGoodBtn.selected = YES;
+            break;
+        case HEADTYPE_PRICE:
+            self.showViewBtn.selected = NO;
+            self.UpBtn.selected = NO;
+            self.priceLab.textColor = K_RED_COLOR;
+            self.upTitleLab.textColor = [UIColor grayColor];
+            self.sellGoodBtn.selected = NO;
+        default:
+            break;
+    }
+}
+
+-(void)setSelectString:(NSString *)selectString
+{
+    if (selectString.length<1) {
+        return;
+    }
+    _selectString = selectString;
+    self.upTitleLab.text = selectString;
+    self.upTitleLab.textColor = K_RED_COLOR;
+    self.showViewBtn.selected = NO;
+    self.UpBtn.selected = NO;
+}
 
 
 @end

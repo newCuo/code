@@ -34,6 +34,22 @@
         make.bottom.equalTo(self.LB_View.mas_bottom).offset(0);
     }];
     
+    self.collectionView = [[LB_GoodsClassCollectionView alloc]init];
+    [self.viewController.view addSubview:self.collectionView];
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.LB_View.mas_top).offset(109);
+        make.left.equalTo(self.LB_View.mas_left).offset(0);
+        make.right.equalTo(self.LB_View.mas_right).offset(0);
+        make.bottom.equalTo(self.LB_View.mas_bottom).offset(0);
+    }];
+
+}
+
+-(void)setIsList:(BOOL)isList
+{
+    self.listView.hidden = isList;
+    self.collectionView.hidden = !isList;
+    
     
 }
 

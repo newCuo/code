@@ -30,11 +30,24 @@
     
     self.titleViewModel = [[LB_GoodsClassTitleViewModel alloc]initWithViewController:self];
     
-    self.headViewModel = [[LB_GoodsClassHeadViewModel alloc]initWithViewController:self];
     
     self.listViewModel = [[LB_GoodsClassListViewModel alloc]initWithViewController:self];
     
+    self.headViewModel = [[LB_GoodsClassHeadViewModel alloc]initWithViewController:self];
+
+    RAC(self.listViewModel,isList) = RACObserve(self.titleViewModel, isList);
+    
 }
+
+-(void)bindingEvent{
+    
+    
+
+    
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

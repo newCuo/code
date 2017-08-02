@@ -10,4 +10,6 @@
 
 @interface LB_GoodsClassHeadViewModel : LB_BaseViewModel
 
+
+
 @end
