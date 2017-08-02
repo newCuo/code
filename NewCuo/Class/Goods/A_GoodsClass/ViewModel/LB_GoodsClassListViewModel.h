@@ -10,4 +10,6 @@
 
 @interface LB_GoodsClassListViewModel : LB_BaseViewModel
 
+@property(assign,nonatomic)BOOL isList;
+
 @end

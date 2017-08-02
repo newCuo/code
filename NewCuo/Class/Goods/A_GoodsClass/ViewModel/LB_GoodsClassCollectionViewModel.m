@@ -8,6 +8,13 @@
 
 #import "LB_GoodsClassCollectionViewModel.h"
 
+@interface LB_GoodsClassCollectionViewModel()
+
+@end
+
 @implementation LB_GoodsClassCollectionViewModel
+
+
+
 
 @end
