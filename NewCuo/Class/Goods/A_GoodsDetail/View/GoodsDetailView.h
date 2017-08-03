@@ -10,7 +10,7 @@
 
 @interface GoodsDetailView : UIView
 @property (strong,nonatomic)UIScrollView *topScrollView;//
-@property (strong,nonatomic)UIScrollView *bottomScrollView;//
+@property (strong,nonatomic)UITableView *bottomTableView;//
 @property (strong,nonatomic)UILabel *goodsNameLab;
 @property (strong,nonatomic)UILabel *goodsPriceLab;
 @property (strong,nonatomic)UIButton *couponRedemptionBtn;

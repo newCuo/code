@@ -1172,7 +1172,7 @@
 				TargetAttributes = {
 					5EF4EC621F1F311C000C2EAD = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 78SE4BENGG;
+						DevelopmentTeam = 2YNXRD8G33;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1470,7 +1470,7 @@
 			baseConfigurationReference = 78D2519C920F3AB93394571C /* Pods-NewCuo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 78SE4BENGG;
+				DEVELOPMENT_TEAM = 2YNXRD8G33;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NewCuo/NewCuo.pch";
 				INFOPLIST_FILE = NewCuo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1485,7 +1485,7 @@
 			baseConfigurationReference = 75FF1E215122D9B56594A278 /* Pods-NewCuo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 78SE4BENGG;
+				DEVELOPMENT_TEAM = 2YNXRD8G33;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NewCuo/NewCuo.pch";
 				INFOPLIST_FILE = NewCuo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
