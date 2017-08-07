@@ -9,11 +9,12 @@
 #import "GoodsDetailView.h"
 #import "SDCycleScrollView.h"
 
-@interface GoodsDetailView ()
-
+@interface GoodsDetailView ()<UIScrollViewDelegate,UITableViewDelegate>
 {
-    
+    UIWebView *web1,*web2;
+    UIView *headerView;
 }
+@property (strong,nonatomic)UIButton *btn1,*btn2;
 @end
 @implementation GoodsDetailView
 
@@ -33,10 +34,12 @@
     self.topScrollView = [UIScrollView new];
     [self addSubview:self.topScrollView];
     [self.topScrollView makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self);
-        
+        make.edges.insets(UIEdgeInsetsZero);//这两个都能用，效果一样
+//        make.edges.equalTo(self);
     }];
     self.topScrollView.backgroundColor = [UIColor clearColor];
+    self.topScrollView.delegate = self;
+    self.topScrollView.tag = 88;
     
     UIView *bgView = [UIView new];
     [self.topScrollView addSubview:bgView];
@@ -100,7 +103,7 @@
     [lineLab makeConstraints:^(MASConstraintMaker *make) {
         make.leading.trailing.equalTo(view1);
         make.top.equalTo(self.goodsPriceLab.bottom).offset(20);
-        make.height.equalTo(1);
+        make.height.equalTo(0.5);
     }];
     
     UILabel *couponRedemptionLab = [UILabel new];
@@ -323,7 +326,7 @@
     [lineLab2 makeConstraints:^(MASConstraintMaker *make) {
         make.leading.trailing.equalTo(view3);
         make.top.equalTo(promptTitleLab.bottom).offset((arr.count-1)*25+30);
-        make.height.equalTo(1);
+        make.height.equalTo(0.5);
     }];
     lineLab2.backgroundColor = K_COLOR_LINE;
     
@@ -377,7 +380,7 @@
     [pullUpLab makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(view3.bottom).offset(5);
         make.centerX.equalTo(self.topScrollView);
-        make.bottom.equalTo(bgView).offset(-10);
+        make.bottom.equalTo(bgView).offset(-10);// 设置与bgView底部高度固定，pullUpLab位置变化的时候，由于设置了容器bgView的高度动态变化，底部距离固定。 此时bgView的高度变化之后，ScrollView的contentSize就发生了变化，可滑动查看。
     }];
     pullUpLab.textColor = K_COLOR_TEXT_MID;
     pullUpLab.text = @"上拉查看图文详情";
@@ -387,9 +390,9 @@
     [bgView addSubview:lineLab3];
     [lineLab3 makeConstraints:^(MASConstraintMaker *make) {
         make.leading.equalTo(self.topScrollView);
-        make.trailing.equalTo(pullUpLab.leading).offset(5);
+        make.trailing.equalTo(pullUpLab.leading).offset(-5);
         make.centerY.equalTo(pullUpLab);
-        make.height.equalTo(1);
+        make.height.equalTo(0.5);
     }];
     lineLab3.backgroundColor = K_COLOR_LINE;
     
@@ -399,36 +402,140 @@
         make.leading.equalTo(pullUpLab.trailing).offset(5);
         make.trailing.equalTo(self.topScrollView);
         make.centerY.equalTo(pullUpLab);
-        make.height.equalTo(1);
+        make.height.equalTo(0.5);
     }];
     lineLab4.backgroundColor = K_COLOR_LINE;
-//    [view3 makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(view2.bottom).offset(10);
-//        make.leading.equalTo(self.topScrollView.leading);
-//        make.bottom.equalTo(promptTitleLab.bottom).offset(15);
-//        make.width.equalTo(self.topScrollView.width);
-//    }];
-//    self.topScrollView.contentSize = CGSizeMake(self.frame.size.width, self.frame.size.height);
 
+#pragma mark --- 商品介绍 规格参数
+    self.bottomTableView = [UITableView new];
+    [self addSubview:self.bottomTableView];
+    [self.bottomTableView makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.insets(UIEdgeInsetsZero);
+        make.top.equalTo(self.topScrollView.bottom);
+        make.leading.equalTo(self.topScrollView);
+        make.size.equalTo(CGSizeMake(KSCREENWIDTH, 0.01));
+    }];
+    self.bottomTableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0.01, 0.01)];
+    self.bottomTableView.backgroundColor = [UIColor clearColor];
+    self.bottomTableView.delegate = self;
+    self.bottomTableView.tag = 99;
+    
+    
+    //头部的view
+    headerView = [UIView new];
+    self.bottomTableView.tableHeaderView = headerView;
+    [headerView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.leading.equalTo(self.bottomTableView);
+        make.width.height.equalTo(self.bottomTableView);
+    }];
+    headerView.backgroundColor = [UIColor clearColor];
+    
+    
+    //商品介绍 规格参数两个按钮所在的view
+    UIView *btnView = [UIView new];
+    [headerView addSubview:btnView];
+    [btnView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.leading.trailing.equalTo(headerView);
+        make.height.equalTo(40);
+    }];
+    btnView.backgroundColor = [UIColor clearColor];
+    
+    self.btn1 = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [btnView addSubview:self.btn1];
+    [self.btn1 makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.top.bottom.equalTo(btnView);
+    }];
+    [self.btn1 setTitle:@"商品介绍" forState:(UIControlStateNormal)];
+    [self.btn1 setTitleColor:K_COLOR_TEXT_BLACK forState:(UIControlStateNormal)];
+    self.btn1.titleLabel.font = K_FONT_17;
+    
+    self.btn2 = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [btnView addSubview:self.btn2];
+    [self.btn2 makeConstraints:^(MASConstraintMaker *make) {
+        make.trailing.top.bottom.equalTo(btnView);
+        make.leading.equalTo(self.btn1.trailing);
+        make.width.equalTo(self.btn1);
+    }];
+    [self.btn2 setTitle:@"规格参数" forState:(UIControlStateNormal)];
+    [self.btn2 setTitleColor:K_COLOR_TEXT_BLACK forState:(UIControlStateNormal)];
+    self.btn2.titleLabel.font = K_FONT_17;
+    
+    web1 = [UIWebView new];
+    [headerView addSubview:web1];
+    [web1 makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(btnView.bottom);
+        make.leading.bottom.trailing.equalTo(headerView);
+    }];
+    NSURL *url1 = [NSURL URLWithString:@"https://www.baidu.com"];
+    NSURLRequest *request1 = [NSURLRequest requestWithURL:url1];
+    [web1 loadRequest:request1];
+    
+    web2 = [UIWebView new];
+    [headerView addSubview:web2];
+    [web2 makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(btnView.bottom);
+        make.leading.bottom.trailing.equalTo(headerView);
+    }];
+    NSURL *url2 = [NSURL URLWithString:@"https://cn.bing.com"];
+    NSURLRequest *request2 = [NSURLRequest requestWithURL:url2];
+    [web2 loadRequest:request2];
+    
+    [headerView bringSubviewToFront:web1];
+    
 }
 -(void)bindingEvent{
     @weakify(self);
     [[self.couponRedemptionBtn rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(id x) {
         @strongify(self);
         NSLog(@"点击了领券按钮");
-        [self.topScrollView remakeConstraints:^(MASConstraintMaker *make) {
-            make.top.leading.trailing.equalTo(self);
-            make.height.equalTo(100);
-        }];
     }];
+    
+    [[self.btn1 rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(id x) {
+        [headerView bringSubviewToFront:web1];
+    }];
+    [[self.btn2 rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(id x) {
+        [headerView bringSubviewToFront:web2];
+    }];
+    
 }
-//-(void)layoutSubviews {
-//    [super layoutSubviews];
-//    
-//    [self setNeedsLayout];
-//    [self layoutIfNeeded];
-//    
-//}
+#pragma mark ---- scrollView delagate
+-(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
+    NSInteger tag = scrollView.tag;
+    ///偏移量，下拉的偏移量为负，上拉的正
+    CGFloat offsetY = scrollView.contentOffset.y - targetContentOffset->y;
+    if (tag == 88) {
+        if (offsetY > 30) {
+            [self.topScrollView remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.leading.trailing.equalTo(self);
+                make.height.equalTo(0.01);
+            }];
+            [self.bottomTableView remakeConstraints:^(MASConstraintMaker *make) {
+                make.edges.insets(UIEdgeInsetsZero);
+            }];
+
+        }
+    }else if (tag == 99){
+        if (offsetY < -30) {
+            [self.topScrollView remakeConstraints:^(MASConstraintMaker *make) {
+                make.edges.insets(UIEdgeInsetsZero);
+            }];
+            [self.bottomTableView remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.topScrollView.bottom);
+                make.leading.equalTo(self.topScrollView);
+                make.size.equalTo(CGSizeMake(KSCREENWIDTH, 0.01));
+            }];
+
+        }
+        
+    }else{
+        
+    }
+}
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(nullable UIView *)view atScale:(CGFloat)scale{
+    NSLog(@"%f",scale);
+    
+}
+
 - (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font
 {
     CGSize maxSize = CGSizeMake(MAXFLOAT, MAXFLOAT);
