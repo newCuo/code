@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^ClickItem)(void);
+
+
 @interface LB_GoodsClassListView : UIView
+
+@property(strong,nonatomic)ClickItem clickItem;
 
 @end

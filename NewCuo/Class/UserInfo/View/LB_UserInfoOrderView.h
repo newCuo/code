@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LB_CustormView.h"
 
 @interface LB_UserInfoOrderView : UIView
+
+@property(strong,nonatomic)ClickOrderItem clickOrderItem;
+
+
 
 
 @end

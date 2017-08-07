@@ -7,7 +7,7 @@
 //
 
 #import "LB_GoodsClassCollectionView.h"
-#import "LB_GoodsHomeCollectionViewCell.h"
+#import "LB_GoodsClassCollectionViewCell.h"
 
 #define BrankViewCellIdentifier  @"BrankViewCellIdentifier"
 
@@ -28,6 +28,9 @@
     self = [super init];
     
     if (self) {
+        
+        self.backgroundColor = K_BACKGROUND_COLOR;
+        
         [self initUI];
     }
     return self;
@@ -36,18 +39,18 @@
     
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.itemSize = CGSizeMake((KSCREENWIDTH-20)/2, (KSCREENWIDTH-20)/2+20);
+    layout.itemSize = CGSizeMake((KSCREENWIDTH-20)/2, 250);
     layout.sectionInset = UIEdgeInsetsMake(5, 6,10, 5);
     layout.minimumLineSpacing = 5;
     layout.minimumInteritemSpacing = 5;
     
     self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, KSCREENWIDTH, KSCREENHEIGHT-64-45) collectionViewLayout:layout];
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.backgroundColor = K_BACKGROUND_COLOR;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self addSubview:self.collectionView];
     
-    [self.collectionView registerClass:[LB_GoodsHomeCollectionViewCell class] forCellWithReuseIdentifier:BrankViewCellIdentifier];
+    [self.collectionView registerClass:[LB_GoodsClassCollectionViewCell class] forCellWithReuseIdentifier:BrankViewCellIdentifier];
     
     
     
@@ -63,17 +66,16 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    LB_GoodsHomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:BrankViewCellIdentifier forIndexPath:indexPath];
+    LB_GoodsClassCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:BrankViewCellIdentifier forIndexPath:indexPath];
     if (!cell) {
-        cell = [[LB_GoodsHomeCollectionViewCell alloc]init];
+        cell = [[LB_GoodsClassCollectionViewCell alloc]init];
     }
-    
     return cell;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    self.clickItme();
     
 }
 

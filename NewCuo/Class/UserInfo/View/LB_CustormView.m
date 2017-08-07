@@ -10,24 +10,27 @@
 
 @interface LB_CustormView();
 
-@property(weak,nonatomic)NSDictionary *dic;
+@property(strong,nonatomic)NSDictionary *dic;
 
 @property(strong,nonatomic)UILabel *countLab;
+
+@property(strong,nonatomic)ClickOrderItem clickOrderItem;
 
 @end
 
 @implementation LB_CustormView
 
--(id)initWithDic:(NSDictionary*)dic{
+-(id)initWithDic:(NSDictionary*)dic clickOrderItem:(ClickOrderItem)clickOrderItem{
     
     self = [super init];
     if (self) {
         self.dic = dic;
-        [self initUI];
+        self.clickOrderItem = clickOrderItem;
+        [self initUIclickOrderItem];
     }
     return self;
 }
--(void)initUI{
+-(void)initUIclickOrderItem{
     
     
     UIImageView * imageV = [[UIImageView alloc]init];
@@ -70,7 +73,37 @@
     }];
     
     
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self addSubview:btn];
+    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.offset(0);
+    }];
+    
+    @weakify(self);
+    [[btn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
+        @strongify(self);
+        int t = [self.dic[@"type"] intValue];
+        switch (t) {
+            case 1:
+                 self.clickOrderItem(ORDERTYPE_WAITE_PAY);
+                break;
+            case 2:
+                 self.clickOrderItem(ORDERTYPE_WAITE_TAKE);
+                break;
+            case 3:
+                 self.clickOrderItem(ORDERTYPE_WAITE_APPRAISE);
+                break;
+            case 4:
+                 self.clickOrderItem(ORDERTYPE_RETURN);
+                break;
+            default:
+                break;
+        }
+    }];
     
 }
+
+
+
 
 @end

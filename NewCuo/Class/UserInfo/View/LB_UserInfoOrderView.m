@@ -7,11 +7,14 @@
 //
 
 #import "LB_UserInfoOrderView.h"
-#import "LB_CustormView.h"
+
 
 @interface LB_UserInfoOrderView()
 
 @property(strong,nonatomic)UIButton *lookAllOrderBtn;
+
+
+
 
 
 @end
@@ -25,6 +28,7 @@
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
         [self initUI];
+        [self bindingEvent];
     }
     return self;
 }
@@ -93,8 +97,10 @@
     }];
     
 
-    NSDictionary *dic = @{@"title":@"待付款",@"Image":@"c_pay.png"};
-    LB_CustormView *payView = [[LB_CustormView alloc]initWithDic:dic];
+    NSDictionary *dic = @{@"title":@"待付款",@"Image":@"c_pay.png",@"type":@"1"};
+    LB_CustormView *payView = [[LB_CustormView alloc]initWithDic:dic clickOrderItem:^(int type) {
+        self.clickOrderItem(type);
+    }];
     [self addSubview:payView];
     [payView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(middleline.mas_bottom).offset(0);
@@ -103,8 +109,10 @@
         make.width.offset(KSCREENWIDTH/4);
     }];
     
-    NSDictionary *dic1 = @{@"title":@"待收获",@"Image":@"c_notconsign.png"};
-    LB_CustormView *getView = [[LB_CustormView alloc]initWithDic:dic1];
+    NSDictionary *dic1 = @{@"title":@"待收获",@"Image":@"c_notconsign.png",@"type":@"2"};
+    LB_CustormView *getView = [[LB_CustormView alloc]initWithDic:dic1 clickOrderItem:^(int type) {
+        self.clickOrderItem(type);
+    }];
     [self addSubview:getView];
     [getView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(middleline.mas_bottom).offset(0);
@@ -114,18 +122,23 @@
     }];
     
     
-    NSDictionary *dic2 = @{@"title":@"待评价",@"Image":@"c_comment.png"};
-    LB_CustormView *commentView = [[LB_CustormView alloc]initWithDic:dic2];
+    NSDictionary *dic2 = @{@"title":@"待评价",@"Image":@"c_comment.png",@"type":@"3"};
+    LB_CustormView *commentView = [[LB_CustormView alloc]initWithDic:dic2 clickOrderItem:^(int type) {
+        self.clickOrderItem(type);
+    }];
     [self addSubview:commentView];
     [commentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(middleline.mas_bottom).offset(0);
         make.left.equalTo(getView.mas_right).offset(0);
         make.bottom.equalTo(self.mas_bottom).offset(0);
+        
         make.width.offset(KSCREENWIDTH/4);
     }];
     
-    NSDictionary *dic3 = @{@"title":@"退款/退货",@"Image":@"c_exchange.png"};
-    LB_CustormView *backPayView = [[LB_CustormView alloc]initWithDic:dic3];
+    NSDictionary *dic3 = @{@"title":@"退款/退货",@"Image":@"c_exchange.png",@"type":@"4"};
+    LB_CustormView *backPayView = [[LB_CustormView alloc]initWithDic:dic3 clickOrderItem:^(int type) {
+        self.clickOrderItem(type);
+    }];
     [self addSubview:backPayView];
     [backPayView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(middleline.mas_bottom).offset(0);
@@ -134,10 +147,17 @@
         make.width.offset(KSCREENWIDTH/4);
     }];
 
+}
+-(void)bindingEvent{
     
+    @weakify(self);
+    [[self.lookAllOrderBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
+        @strongify(self);
+        self.clickOrderItem(ORDERTYPE_ALL);
+    }];
     
-
     
 }
+
 
 @end

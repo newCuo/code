@@ -23,13 +23,23 @@
 @implementation NavigationTitleView
 
 
+-(id)init{
+    
+    self = [super init];
+    if (self) {
+       [self addUI];
+       self.backgroundColor = K_MAIN_COLOR;
+    }
+    return self;
+}
+
+
 -(id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
-        self.backgroundColor = K_MAIN_COLOR;
         [self addUI];
+        self.backgroundColor = K_MAIN_COLOR;
     }
     return self;
 }

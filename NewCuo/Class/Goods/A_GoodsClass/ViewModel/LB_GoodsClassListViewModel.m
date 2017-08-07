@@ -12,6 +12,8 @@
 
 #import "LB_GoodsClassCollectionView.h"
 
+#import "GoodsDetailsViewController.h"
+
 @interface LB_GoodsClassListViewModel()
 
 @property(strong,nonatomic)LB_GoodsClassListView *listView;
@@ -44,6 +46,23 @@
     }];
 
 }
+
+-(void)bindingEvent
+{
+    WS(weakSelf);
+    self.listView.clickItem = ^(){
+        [weakSelf.viewController.navigationController pushViewController:[GoodsDetailsViewController new] animated:YES];
+        
+    };
+    
+    self.collectionView.clickItme = ^(){
+        [weakSelf.viewController.navigationController pushViewController:[GoodsDetailsViewController new] animated:YES];
+    };
+    
+    
+    
+}
+
 
 -(void)setIsList:(BOOL)isList
 {

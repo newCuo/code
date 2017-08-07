@@ -16,6 +16,7 @@
 #import "Configuration.h"
 #import "ColorHeader.h"
 #import "FontHeader.h"
+#import "Enumeration.h"
 #import "ReactiveCocoa.h"
 //#import <Masonry/Masonry.h>
 #import <ReactiveCocoa/RACEXTScope.h>

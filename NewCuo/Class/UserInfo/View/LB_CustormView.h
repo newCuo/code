@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^ClickOrderItem)(int type);
+
 @interface LB_CustormView : UIView
 
--(id)initWithDic:(NSDictionary*)dic;
+-(id)initWithDic:(NSDictionary*)dic clickOrderItem:(ClickOrderItem)clickOrderItem;
+
+
+
 
 @end

@@ -65,7 +65,16 @@
     if (!cell) {
         cell = [[LB_GoodsCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:yyy];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    self.clickItem();
+    
+    
 }
 
 

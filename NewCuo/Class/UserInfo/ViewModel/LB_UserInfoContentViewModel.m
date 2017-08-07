@@ -18,6 +18,7 @@
 #import "LB_UserInfoMyMessageViewController.h"
 #import "LB_MyConcernViewController.h"
 #import "LB_ReadHistoryViewController.h"
+#import "LB_UserOrderViewController.h"
 
 @interface LB_UserInfoContentViewModel()
 
@@ -168,6 +169,20 @@
         [self.viewController.navigationController pushViewController:message animated:YES];
         
     }];
+    
+//    //****************   订单   *************************/
+    
+    WS(weakSelf);
+    self.userInfoOrderView.clickOrderItem = ^(int type){
+        LB_UserOrderViewController *order = [[LB_UserOrderViewController alloc]init];
+        order.orderType = type;
+        order.hidesBottomBarWhenPushed = YES;
+        [weakSelf.viewController.navigationController pushViewController:order animated:YES];
+    };
+    
+    
+    
+    
 }
 
 -(void)setToken:(NSString *)token
