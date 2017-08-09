@@ -25,6 +25,7 @@
 }
 
 -(void)initUI{
+    
     GoodsDetailView *detailView = [[GoodsDetailView alloc]initWithFrame:CGRectMake(0, 64, KSCREENWIDTH, KSCREENHEIGHT-60*SCALE-64)];//60*SCALE 是底部一按钮的高度 64是顶部导航栏的高度
     
     

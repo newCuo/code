@@ -504,21 +504,31 @@
     ///偏移量，下拉的偏移量为负，上拉的正
     CGFloat offsetY = scrollView.contentOffset.y - targetContentOffset->y;
     if (tag == 88) {
-        if (offsetY > 30) {
+        if (offsetY > 50) {
+            
             [self.topScrollView remakeConstraints:^(MASConstraintMaker *make) {
                 make.top.leading.trailing.equalTo(self);
                 make.height.equalTo(0.01);
             }];
-            [self.bottomTableView remakeConstraints:^(MASConstraintMaker *make) {
-                make.edges.insets(UIEdgeInsetsZero);
+            
+            [UIView animateWithDuration:0.5 animations:^{
+                [self.bottomTableView remakeConstraints:^(MASConstraintMaker *make) {
+                    make.edges.insets(UIEdgeInsetsZero);
+                }];
+                [self.bottomTableView.superview layoutIfNeeded];//强制绘制
             }];
-
+            
         }
     }else if (tag == 99){
-        if (offsetY < -30) {
-            [self.topScrollView remakeConstraints:^(MASConstraintMaker *make) {
-                make.edges.insets(UIEdgeInsetsZero);
+        if (offsetY < -50) {
+            [UIView animateWithDuration:0.5 animations:^{
+                [self.topScrollView remakeConstraints:^(MASConstraintMaker *make) {
+                    make.edges.insets(UIEdgeInsetsZero);
+                }];
+                [self.topScrollView.superview layoutIfNeeded];//强制绘制
             }];
+            
+            
             [self.bottomTableView remakeConstraints:^(MASConstraintMaker *make) {
                 make.top.equalTo(self.topScrollView.bottom);
                 make.leading.equalTo(self.topScrollView);
