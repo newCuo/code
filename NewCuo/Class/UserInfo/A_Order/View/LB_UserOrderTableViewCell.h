@@ -12,4 +12,6 @@
 
 @property(assign,nonatomic)ORDERCONENTTYPE contentType;
 
+@property(strong,nonatomic)NSDictionary *dic;
+
 @end

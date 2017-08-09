@@ -10,4 +10,8 @@
 
 @interface LB_UserOrderContentView : UIView
 
+@property(strong,nonatomic)NSMutableArray * list;
+
+-(UITableView*)tableView;
+
 @end

@@ -8,6 +8,8 @@
 
 #import "LB_BaseViewModel.h"
 
+
+
 @interface LB_UserInfoContentViewModel : LB_BaseViewModel
 
 @end

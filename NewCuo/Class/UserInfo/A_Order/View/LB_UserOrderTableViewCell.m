@@ -152,7 +152,7 @@
     self.totalLab.textColor = K_RED_COLOR;
     [self.view addSubview:self.totalLab];
     [self.totalLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.btnView.mas_top).offset(0);
+        make.bottom.equalTo(self.btnView.mas_top).offset(-2);
         make.right.equalTo(self.view.mas_right).offset(-14);
         make.height.offset(24);
         make.width.offset(80);
@@ -165,7 +165,7 @@
     self.payType.textColor = [UIColor grayColor];
     [self.view addSubview:self.payType];
     [self.payType mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.btnView.mas_top).offset(0);
+        make.bottom.equalTo(self.btnView.mas_top).offset(-2);
         make.right.equalTo(self.totalLab.mas_left).offset(-4);
         make.height.offset(24);
         make.width.offset(80);
@@ -312,9 +312,6 @@
             make.height.offset(80);
         }];
     }
-
-    
-    
 }
 
 
@@ -339,6 +336,20 @@
         default:
             break;
     }
+    
+    
+    
+    
+}
+
+-(void)setDic:(NSDictionary *)dic
+{
+    
+    
+    
+    
+    
+    
     
     
     

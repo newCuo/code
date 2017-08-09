@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^ClickProperty)(int type);
+
 @interface LB_UserInfoPropertyView : UIView
 
 @property(assign,nonatomic)BOOL isLogin;
+
+@property(strong,nonatomic)ClickProperty clickProperty;
+
 
 @end

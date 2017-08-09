@@ -88,8 +88,10 @@
     
     
     
-    NSDictionary *dic = @{@"title":@"存款",@"Image":@"pre-deposit.png"};
+    NSDictionary *dic = @{@"title":@"预存款",@"Image":@"pre-deposit.png",@"type":@"1"};
     self.payView = [[LB_CustormView alloc]initWithDic:dic clickOrderItem:^(int type) {
+        
+        self.clickProperty(type);
         
     }];
     [self addSubview:self.payView];
@@ -100,9 +102,9 @@
         make.width.offset(KSCREENWIDTH/4);
     }];
     
-    NSDictionary *dic1 = @{@"title":@"账户明细",@"Image":@"present-record.png"};
+    NSDictionary *dic1 = @{@"title":@"账户明细",@"Image":@"present-record.png",@"type":@"2"};
     self.getView = [[LB_CustormView alloc]initWithDic:dic1 clickOrderItem:^(int type) {
-        
+        self.clickProperty(type);
     }];
     [self addSubview:self.getView];
     [self.getView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -113,9 +115,9 @@
     }];
     
     
-    NSDictionary *dic2 = @{@"title":@"积分",@"Image":@"integral.png"};
+    NSDictionary *dic2 = @{@"title":@"积分",@"Image":@"integral.png",@"type":@"3"};
     self.commentView = [[LB_CustormView alloc]initWithDic:dic2 clickOrderItem:^(int type) {
-        
+        self.clickProperty(type);
     }];
     [self addSubview:self.commentView];
     [self.commentView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -125,9 +127,9 @@
         make.width.offset(KSCREENWIDTH/4);
     }];
     
-    NSDictionary *dic3 = @{@"title":@"优惠券",@"Image":@"coupon.png"};
+    NSDictionary *dic3 = @{@"title":@"优惠券",@"Image":@"coupon.png",@"type":@"4"};
     self.backPayView = [[LB_CustormView alloc]initWithDic:dic3 clickOrderItem:^(int type) {
-        
+        self.clickProperty(type);
     }] ;
     [self addSubview:self.backPayView];
     [self.backPayView mas_makeConstraints:^(MASConstraintMaker *make) {

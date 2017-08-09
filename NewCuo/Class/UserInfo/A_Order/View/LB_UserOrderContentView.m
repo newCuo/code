@@ -14,6 +14,8 @@
 
 @property(strong,nonatomic)UITableView *tableView;
 
+
+
 @end
 
 @implementation LB_UserOrderContentView
@@ -46,13 +48,26 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return 7;
+    return self.list.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return 210;
+    
+    CGFloat height = 180;
+    
+    NSDictionary * tt = self.list[indexPath.row];
+    NSArray * i = [tt objectForKey:@"list"];
+    if (i.count== 2) {
+        height = height +80;
+    }
+    NSArray * btn = [tt objectForKey:@"btn"];
+    if (btn.count>0) {
+        height = height +34;
+    }
+    
+    return height;
 }
 
 

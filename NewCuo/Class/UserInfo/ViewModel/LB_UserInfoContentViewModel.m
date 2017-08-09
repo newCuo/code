@@ -19,6 +19,9 @@
 #import "LB_MyConcernViewController.h"
 #import "LB_ReadHistoryViewController.h"
 #import "LB_UserOrderViewController.h"
+#import "LB_AccountViewController.h"
+#import "LB_PointViewController.h"
+
 
 @interface LB_UserInfoContentViewModel()
 
@@ -170,7 +173,7 @@
         
     }];
     
-//    //****************   订单   *************************/
+//    //****************   订单详情   *************************/
     
     WS(weakSelf);
     self.userInfoOrderView.clickOrderItem = ^(int type){
@@ -181,8 +184,36 @@
     };
     
     
-    
-    
+    /****************   账户信息   
+                        1、预存款  2、账户明细  3、积分   4、优惠券
+    ***/
+    self.userInfoPropertyView.clickProperty = ^(int type){
+        switch (type) {
+            case 1:
+            {
+                
+            }break;
+            case 2:
+            {
+                LB_AccountViewController * account = [[LB_AccountViewController alloc]init];
+                account.hidesBottomBarWhenPushed = YES;
+                [weakSelf.viewController.navigationController pushViewController:account animated:YES];
+            }break;
+            case 3:
+            {
+                LB_PointViewController * point = [[LB_PointViewController alloc]init];
+                point.hidesBottomBarWhenPushed = YES;
+                [weakSelf.viewController.navigationController pushViewController:point animated:YES];
+                
+            }break;
+            case 4:
+            {
+                
+            }break;
+            default:
+                break;
+        }
+    };
 }
 
 -(void)setToken:(NSString *)token

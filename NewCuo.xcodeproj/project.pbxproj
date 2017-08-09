@@ -105,6 +105,14 @@
 		5EA3D8D71F29D6E200A8EFAD /* LB_MyConcernContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3D8D61F29D6E200A8EFAD /* LB_MyConcernContentView.m */; };
 		5EA3D8DA1F29D6F800A8EFAD /* LB_ReadHistoryContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3D8D91F29D6F800A8EFAD /* LB_ReadHistoryContentView.m */; };
 		5EA3D8DD1F29E1C700A8EFAD /* LB_GoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3D8DC1F29E1C700A8EFAD /* LB_GoodsCell.m */; };
+		5EA5D8B21F38585B00560864 /* LB_PointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5D8B11F38585B00560864 /* LB_PointViewController.m */; };
+		5EA5D8B51F38586B00560864 /* LB_AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5D8B41F38586B00560864 /* LB_AccountViewController.m */; };
+		5EA5D8B81F38589000560864 /* LB_AccountTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5D8B71F38589000560864 /* LB_AccountTitleViewModel.m */; };
+		5EA5D8BB1F3858A200560864 /* LB_AccountContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5D8BA1F3858A200560864 /* LB_AccountContentViewModel.m */; };
+		5EA5D8BE1F3858BA00560864 /* LB_PointTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5D8BD1F3858BA00560864 /* LB_PointTitleViewModel.m */; };
+		5EA5D8C11F3858CF00560864 /* LB_PointContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5D8C01F3858CF00560864 /* LB_PointContentViewModel.m */; };
+		5EA5D8C41F38600400560864 /* LB_PointContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5D8C31F38600400560864 /* LB_PointContentView.m */; };
+		5EA5D8D41F3AA18400560864 /* LB_PointTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5D8D31F3AA18400560864 /* LB_PointTableViewCell.m */; };
 		5EF4EC681F1F311C000C2EAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4EC671F1F311C000C2EAD /* main.m */; };
 		5EF4EC6B1F1F311C000C2EAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4EC6A1F1F311C000C2EAD /* AppDelegate.m */; };
 		5EF4EC731F1F311C000C2EAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF4EC721F1F311C000C2EAD /* Assets.xcassets */; };
@@ -318,6 +326,22 @@
 		5EA3D8D91F29D6F800A8EFAD /* LB_ReadHistoryContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_ReadHistoryContentView.m; sourceTree = "<group>"; };
 		5EA3D8DB1F29E1C700A8EFAD /* LB_GoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_GoodsCell.h; sourceTree = "<group>"; };
 		5EA3D8DC1F29E1C700A8EFAD /* LB_GoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_GoodsCell.m; sourceTree = "<group>"; };
+		5EA5D8B01F38585B00560864 /* LB_PointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_PointViewController.h; sourceTree = "<group>"; };
+		5EA5D8B11F38585B00560864 /* LB_PointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_PointViewController.m; sourceTree = "<group>"; };
+		5EA5D8B31F38586B00560864 /* LB_AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_AccountViewController.h; sourceTree = "<group>"; };
+		5EA5D8B41F38586B00560864 /* LB_AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_AccountViewController.m; sourceTree = "<group>"; };
+		5EA5D8B61F38589000560864 /* LB_AccountTitleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_AccountTitleViewModel.h; sourceTree = "<group>"; };
+		5EA5D8B71F38589000560864 /* LB_AccountTitleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_AccountTitleViewModel.m; sourceTree = "<group>"; };
+		5EA5D8B91F3858A200560864 /* LB_AccountContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_AccountContentViewModel.h; sourceTree = "<group>"; };
+		5EA5D8BA1F3858A200560864 /* LB_AccountContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_AccountContentViewModel.m; sourceTree = "<group>"; };
+		5EA5D8BC1F3858BA00560864 /* LB_PointTitleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_PointTitleViewModel.h; sourceTree = "<group>"; };
+		5EA5D8BD1F3858BA00560864 /* LB_PointTitleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_PointTitleViewModel.m; sourceTree = "<group>"; };
+		5EA5D8BF1F3858CF00560864 /* LB_PointContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_PointContentViewModel.h; sourceTree = "<group>"; };
+		5EA5D8C01F3858CF00560864 /* LB_PointContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_PointContentViewModel.m; sourceTree = "<group>"; };
+		5EA5D8C21F38600400560864 /* LB_PointContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_PointContentView.h; sourceTree = "<group>"; };
+		5EA5D8C31F38600400560864 /* LB_PointContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_PointContentView.m; sourceTree = "<group>"; };
+		5EA5D8D21F3AA18400560864 /* LB_PointTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_PointTableViewCell.h; sourceTree = "<group>"; };
+		5EA5D8D31F3AA18400560864 /* LB_PointTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_PointTableViewCell.m; sourceTree = "<group>"; };
 		5EF4EC631F1F311C000C2EAD /* NewCuo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewCuo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF4EC671F1F311C000C2EAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5EF4EC691F1F311C000C2EAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -856,6 +880,100 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		5EA5D8A61F38553400560864 /* A_ Point */ = {
+			isa = PBXGroup;
+			children = (
+				5EA5D8A71F38553400560864 /* Controller */,
+				5EA5D8A81F38553400560864 /* Model */,
+				5EA5D8A91F38553400560864 /* View */,
+				5EA5D8AA1F38553400560864 /* ViewModel */,
+			);
+			path = "A_ Point";
+			sourceTree = "<group>";
+		};
+		5EA5D8A71F38553400560864 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5EA5D8B01F38585B00560864 /* LB_PointViewController.h */,
+				5EA5D8B11F38585B00560864 /* LB_PointViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5EA5D8A81F38553400560864 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5EA5D8A91F38553400560864 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5EA5D8C21F38600400560864 /* LB_PointContentView.h */,
+				5EA5D8C31F38600400560864 /* LB_PointContentView.m */,
+				5EA5D8D21F3AA18400560864 /* LB_PointTableViewCell.h */,
+				5EA5D8D31F3AA18400560864 /* LB_PointTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5EA5D8AA1F38553400560864 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5EA5D8BC1F3858BA00560864 /* LB_PointTitleViewModel.h */,
+				5EA5D8BD1F3858BA00560864 /* LB_PointTitleViewModel.m */,
+				5EA5D8BF1F3858CF00560864 /* LB_PointContentViewModel.h */,
+				5EA5D8C01F3858CF00560864 /* LB_PointContentViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5EA5D8AB1F38553400560864 /* A_Account */ = {
+			isa = PBXGroup;
+			children = (
+				5EA5D8AC1F38553400560864 /* Controller */,
+				5EA5D8AD1F38553400560864 /* Model */,
+				5EA5D8AE1F38553400560864 /* View */,
+				5EA5D8AF1F38553400560864 /* ViewModel */,
+			);
+			path = A_Account;
+			sourceTree = "<group>";
+		};
+		5EA5D8AC1F38553400560864 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5EA5D8B31F38586B00560864 /* LB_AccountViewController.h */,
+				5EA5D8B41F38586B00560864 /* LB_AccountViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5EA5D8AD1F38553400560864 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5EA5D8AE1F38553400560864 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5EA5D8AF1F38553400560864 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5EA5D8B61F38589000560864 /* LB_AccountTitleViewModel.h */,
+				5EA5D8B71F38589000560864 /* LB_AccountTitleViewModel.m */,
+				5EA5D8B91F3858A200560864 /* LB_AccountContentViewModel.h */,
+				5EA5D8BA1F3858A200560864 /* LB_AccountContentViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		5EF4EC5A1F1F311C000C2EAD = {
 			isa = PBXGroup;
 			children = (
@@ -1004,6 +1122,8 @@
 		5EF4EC8D1F1F4CB6000C2EAD /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
+				5EA5D8A61F38553400560864 /* A_ Point */,
+				5EA5D8AB1F38553400560864 /* A_Account */,
 				5E7D760E1F32CBC100C6C92F /* A_Order */,
 				5EA3D8BB1F29D61500A8EFAD /* A_MyConcern */,
 				5EA3D8BF1F29D61500A8EFAD /* A_ReadHistory */,
@@ -1244,7 +1364,7 @@
 				TargetAttributes = {
 					5EF4EC621F1F311C000C2EAD = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2YNXRD8G33;
+						DevelopmentTeam = 78SE4BENGG;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1346,6 +1466,7 @@
 				5E7C89501F26ED44009A578E /* LB_UserInfoOrderView.m in Sources */,
 				5EA3D8DA1F29D6F800A8EFAD /* LB_ReadHistoryContentView.m in Sources */,
 				5E7C89371F24E23F009A578E /* LB_GoodsTitleView.m in Sources */,
+				5EA5D8B51F38586B00560864 /* LB_AccountViewController.m in Sources */,
 				3F6181C41F3181BF0096693D /* UIColor+Hex.m in Sources */,
 				5E7D76181F32CC9300C6C92F /* LB_UserOrderTitleViewModel.m in Sources */,
 				5E7C890E1F24844F009A578E /* LB_HomeTitleViewModel.m in Sources */,
@@ -1365,8 +1486,13 @@
 				5EA3D8CE1F29D68500A8EFAD /* LB_ReadHistoryContentViewModel.m in Sources */,
 				5E82185E1F21FBB400635013 /* LoginViewController.m in Sources */,
 				5E7C89341F24D89C009A578E /* LB_SearchContentViewModel.m in Sources */,
+				5EA5D8C41F38600400560864 /* LB_PointContentView.m in Sources */,
+				5EA5D8B81F38589000560864 /* LB_AccountTitleViewModel.m in Sources */,
 				5E7D76011F2F103900C6C92F /* LB_GoodsClassCollectionView.m in Sources */,
+				5EA5D8BE1F3858BA00560864 /* LB_PointTitleViewModel.m in Sources */,
+				5EA5D8D41F3AA18400560864 /* LB_PointTableViewCell.m in Sources */,
 				5E7C893A1F24E272009A578E /* LB_GoodsTitleViewModel.m in Sources */,
+				5EA5D8B21F38585B00560864 /* LB_PointViewController.m in Sources */,
 				5EA3D8C81F29D64700A8EFAD /* LB_ReadHistoryViewController.m in Sources */,
 				3F6181C81F3182150096693D /* CustomButton.m in Sources */,
 				5E7D762B1F345CE000C6C92F /* LB_UserOrderTableCellContentView.m in Sources */,
@@ -1387,6 +1513,7 @@
 				5E7C89531F272265009A578E /* LB_UserInfoPropertyView.m in Sources */,
 				5E8218611F21FBCF00635013 /* LoginTitleViewModel.m in Sources */,
 				5E7C89661F274B04009A578E /* LB_SetTitleViewModel.m in Sources */,
+				5EA5D8BB1F3858A200560864 /* LB_AccountContentViewModel.m in Sources */,
 				5E7C89691F274CFE009A578E /* LB_LoginOutView.m in Sources */,
 				5E7C891E1F24D512009A578E /* LB_HomeModel.m in Sources */,
 				3F6181D01F3186030096693D /* GoodsDetailBottomView.m in Sources */,
@@ -1426,6 +1553,7 @@
 				5E7D76151F32CBE700C6C92F /* LB_UserOrderViewController.m in Sources */,
 				5E7C892B1F24D81F009A578E /* LB_SearchTitleView.m in Sources */,
 				5E7D76041F2F10D000C6C92F /* LB_GoodsClassListViewModel.m in Sources */,
+				5EA5D8C11F3858CF00560864 /* LB_PointContentViewModel.m in Sources */,
 				5E6A35A51F246A14000C9D43 /* LB_ContentView.m in Sources */,
 				3F6181DC1F31DB550096693D /* GoodsDetailTitleViewModel.m in Sources */,
 				5E975FB81F2787F2006994FE /* LB_MyMessageFootViewModel.m in Sources */,
@@ -1548,7 +1676,7 @@
 			baseConfigurationReference = 78D2519C920F3AB93394571C /* Pods-NewCuo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2YNXRD8G33;
+				DEVELOPMENT_TEAM = 78SE4BENGG;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NewCuo/NewCuo.pch";
 				INFOPLIST_FILE = NewCuo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1563,7 +1691,7 @@
 			baseConfigurationReference = 75FF1E215122D9B56594A278 /* Pods-NewCuo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2YNXRD8G33;
+				DEVELOPMENT_TEAM = 78SE4BENGG;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NewCuo/NewCuo.pch";
 				INFOPLIST_FILE = NewCuo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
