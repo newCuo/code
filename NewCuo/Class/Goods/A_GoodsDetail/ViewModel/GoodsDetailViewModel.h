@@ -9,5 +9,5 @@
 #import "LB_BaseViewModel.h"
 
 @interface GoodsDetailViewModel : LB_BaseViewModel
--(id)initWithViewController:(BaseViewController*)ViewController;
+//-(id)initWithViewController:(BaseViewController*)ViewController;
 @end

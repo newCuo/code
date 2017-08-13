@@ -10,28 +10,46 @@
 #import "GoodsDetailView.h"
 
 @interface GoodsDetailViewModel ()
-@property(strong,nonatomic)BaseViewController *viewController;
+@property(weak,nonatomic)BaseViewController *viewController;
+
+@property(strong,nonatomic) GoodsDetailView *detailView;
+
+@property(copy)NSString *tt;
 @end
 @implementation GoodsDetailViewModel
--(id)initWithViewController:(BaseViewController*)viewController{
-    
-    self = [super init];
-    if (self) {
-        self.viewController = viewController;
-        [self initUI];
-        [self bindingEvent];
-    }
-    return self;
-}
+//-(id)initWithViewController:(BaseViewController*)viewController{
+//    
+//    self = [super init];
+//    if (self) {
+//        self.viewController = viewController;
+//        [self initUI];
+//        [self bindingEvent];
+//    }
+//    return self;
+//}
 
 -(void)initUI{
     
-    GoodsDetailView *detailView = [[GoodsDetailView alloc]initWithFrame:CGRectMake(0, 64, KSCREENWIDTH, KSCREENHEIGHT-60*SCALE-64)];//60*SCALE 是底部一按钮的高度 64是顶部导航栏的高度
+    self.detailView = [[GoodsDetailView alloc]initWithFrame:CGRectMake(0, 64, KSCREENWIDTH, KSCREENHEIGHT-60*SCALE-64)];//60*SCALE 是底部一按钮的高度 64是顶部导航栏的高度
+    [self.viewController.view addSubview:self.detailView];
     
     
-    [self.viewController.view addSubview:detailView];
+    
+    
+    
 }
 -(void)bindingEvent{
     
+    
+    RAC(self.detailView.goodsNameLab,text) = RACObserve(self, tt);
+
+    
+    
 }
+-(void)NetWorking
+{
+    
+    
+}
+
 @end
