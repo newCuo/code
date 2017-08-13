@@ -1,24 +1,25 @@
 //
-//  LB_AccountContentViewModel.m
+//  LB_AddressContentViewModel.m
 //  NewCuo
 //
-//  Created by 林波 on 2017/8/7.
+//  Created by 林波 on 2017/8/9.
 //  Copyright © 2017年 林波. All rights reserved.
 //
 
-#import "LB_AccountContentViewModel.h"
-#import "LB_AccountContentView.h"
+#import "LB_AddressContentViewModel.h"
+#import "LB_AddressContentView.h"
 
-@interface LB_AccountContentViewModel()
+@interface LB_AddressContentViewModel()
 
-@property(strong,nonatomic)LB_AccountContentView *contentView;
+@property(strong,nonatomic)LB_AddressContentView *contentView;
 
 @end
-@implementation LB_AccountContentViewModel
 
--(void)initUI{
-    
-    self.contentView = [[LB_AccountContentView alloc]init];
+@implementation LB_AddressContentViewModel
+
+-(void)initUI
+{
+    self.contentView = [[LB_AddressContentView alloc]init];
     [self.LB_View addSubview:self.contentView];
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.LB_View.mas_top).offset(64);
@@ -26,24 +27,6 @@
         make.right.equalTo(self.LB_View.mas_right).offset(0);
         make.bottom.equalTo(self.LB_View.mas_bottom).offset(0);
     }];
-    
 }
-
-
-
-
--(void)bindingEvent
-{
-    
-    
-}
-
--(void)NetWorking{
-    
-    
-    
-}
-
-
 
 @end
