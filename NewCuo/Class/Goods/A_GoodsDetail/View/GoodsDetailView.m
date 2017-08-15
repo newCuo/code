@@ -165,7 +165,7 @@
         make.top.equalTo(view1.bottom).offset(10);
 //        make.leading.trailing.equalTo(self.topScrollView);
         make.width.equalTo(view1);
-        make.height.equalTo(40);
+        make.height.offset(40);
     }];
     view2.backgroundColor = [UIColor whiteColor];
     
@@ -425,7 +425,7 @@
     headerView = [UIView new];
     self.bottomTableView.tableHeaderView = headerView;
     [headerView makeConstraints:^(MASConstraintMaker *make) {
-        make.top.leading.equalTo(self.bottomTableView);
+        make.top.leading.equalTo(self);
         make.width.height.equalTo(self.bottomTableView);
     }];
     headerView.backgroundColor = [UIColor clearColor];
@@ -436,10 +436,10 @@
     [headerView addSubview:btnView];
     [btnView makeConstraints:^(MASConstraintMaker *make) {
         make.top.leading.trailing.equalTo(headerView);
-        make.height.equalTo(40);
+        make.height.offset(40);
     }];
     btnView.backgroundColor = [UIColor clearColor];
-    
+
     self.btn1 = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [btnView addSubview:self.btn1];
     [self.btn1 makeConstraints:^(MASConstraintMaker *make) {
@@ -448,7 +448,7 @@
     [self.btn1 setTitle:@"商品介绍" forState:(UIControlStateNormal)];
     [self.btn1 setTitleColor:K_COLOR_TEXT_BLACK forState:(UIControlStateNormal)];
     self.btn1.titleLabel.font = K_FONT_17;
-    
+
     self.btn2 = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [btnView addSubview:self.btn2];
     [self.btn2 makeConstraints:^(MASConstraintMaker *make) {
@@ -459,7 +459,7 @@
     [self.btn2 setTitle:@"规格参数" forState:(UIControlStateNormal)];
     [self.btn2 setTitleColor:K_COLOR_TEXT_BLACK forState:(UIControlStateNormal)];
     self.btn2.titleLabel.font = K_FONT_17;
-    
+
     web1 = [UIWebView new];
     [headerView addSubview:web1];
     [web1 makeConstraints:^(MASConstraintMaker *make) {
@@ -505,19 +505,16 @@
     CGFloat offsetY = scrollView.contentOffset.y - targetContentOffset->y;
     if (tag == 88) {
         if (offsetY > 50) {
-            
-            [self.topScrollView remakeConstraints:^(MASConstraintMaker *make) {
+            [UIView animateWithDuration:0.5 animations:^{
+                [self.topScrollView remakeConstraints:^(MASConstraintMaker *make) {
                 make.top.leading.trailing.equalTo(self);
                 make.height.equalTo(0.01);
             }];
-            
-            [UIView animateWithDuration:0.5 animations:^{
                 [self.bottomTableView remakeConstraints:^(MASConstraintMaker *make) {
                     make.edges.insets(UIEdgeInsetsZero);
                 }];
                 [self.bottomTableView.superview layoutIfNeeded];//强制绘制
             }];
-            
         }
     }else if (tag == 99){
         if (offsetY < -50) {
@@ -525,27 +522,23 @@
                 [self.topScrollView remakeConstraints:^(MASConstraintMaker *make) {
                     make.edges.insets(UIEdgeInsetsZero);
                 }];
+                [self.bottomTableView remakeConstraints:^(MASConstraintMaker *make) {
+                    make.top.equalTo(self.topScrollView.bottom);
+                    make.leading.equalTo(self.topScrollView);
+                    make.size.equalTo(CGSizeMake(KSCREENWIDTH, 0.01));
+                }];
                 [self.topScrollView.superview layoutIfNeeded];//强制绘制
             }];
-            
-            
-            [self.bottomTableView remakeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.topScrollView.bottom);
-                make.leading.equalTo(self.topScrollView);
-                make.size.equalTo(CGSizeMake(KSCREENWIDTH, 0.01));
-            }];
-
         }
-        
     }else{
         
     }
 }
+
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(nullable UIView *)view atScale:(CGFloat)scale{
     NSLog(@"%f",scale);
     
 }
-
 - (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font
 {
     CGSize maxSize = CGSizeMake(MAXFLOAT, MAXFLOAT);
