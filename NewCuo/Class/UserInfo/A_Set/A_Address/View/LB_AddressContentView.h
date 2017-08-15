@@ -10,4 +10,6 @@
 
 @interface LB_AddressContentView : UIView
 
+-(UIButton*)addAddressBtn;
+
 @end

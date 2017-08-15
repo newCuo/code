@@ -8,6 +8,7 @@
 
 #import "LB_AddressContentViewModel.h"
 #import "LB_AddressContentView.h"
+#import "LB_AddressModificationViewController.h"
 
 @interface LB_AddressContentViewModel()
 
@@ -28,5 +29,20 @@
         make.bottom.equalTo(self.LB_View.mas_bottom).offset(0);
     }];
 }
+
+-(void)bindingEvent
+{
+    
+    @weakify(self);
+    [[self.contentView.addAddressBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
+        @strongify(self);
+        LB_AddressModificationViewController *address = [LB_AddressModificationViewController new];
+        [self.viewController.navigationController pushViewController:address animated:YES];
+    }];
+    
+    
+    
+}
+
 
 @end

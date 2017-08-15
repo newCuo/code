@@ -120,6 +120,10 @@
 		5EA5D8D41F3AA18400560864 /* LB_PointTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5D8D31F3AA18400560864 /* LB_PointTableViewCell.m */; };
 		5EA5D8D71F3AF3AA00560864 /* LB_AccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5D8D61F3AF3AA00560864 /* LB_AccountTableViewCell.m */; };
 		5EA5D8DA1F3AF3BF00560864 /* LB_AccountContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5D8D91F3AF3BF00560864 /* LB_AccountContentView.m */; };
+		5EAFA6D11F41A13A00A7EF02 /* LB_AddressModificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAFA6D01F41A13A00A7EF02 /* LB_AddressModificationViewController.m */; };
+		5EAFA6D41F41A15E00A7EF02 /* LB_AddressModificationTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAFA6D31F41A15E00A7EF02 /* LB_AddressModificationTitleViewModel.m */; };
+		5EAFA6D71F41A17500A7EF02 /* LB_AddressModificationContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAFA6D61F41A17500A7EF02 /* LB_AddressModificationContentViewModel.m */; };
+		5EAFA6DA1F41AAAE00A7EF02 /* LB_AddressModificationContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAFA6D91F41AAAE00A7EF02 /* LB_AddressModificationContentView.m */; };
 		5EF4EC681F1F311C000C2EAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4EC671F1F311C000C2EAD /* main.m */; };
 		5EF4EC6B1F1F311C000C2EAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4EC6A1F1F311C000C2EAD /* AppDelegate.m */; };
 		5EF4EC731F1F311C000C2EAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF4EC721F1F311C000C2EAD /* Assets.xcassets */; };
@@ -363,6 +367,14 @@
 		5EA5D8D61F3AF3AA00560864 /* LB_AccountTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_AccountTableViewCell.m; sourceTree = "<group>"; };
 		5EA5D8D81F3AF3BF00560864 /* LB_AccountContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_AccountContentView.h; sourceTree = "<group>"; };
 		5EA5D8D91F3AF3BF00560864 /* LB_AccountContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_AccountContentView.m; sourceTree = "<group>"; };
+		5EAFA6CF1F41A13A00A7EF02 /* LB_AddressModificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_AddressModificationViewController.h; sourceTree = "<group>"; };
+		5EAFA6D01F41A13A00A7EF02 /* LB_AddressModificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_AddressModificationViewController.m; sourceTree = "<group>"; };
+		5EAFA6D21F41A15E00A7EF02 /* LB_AddressModificationTitleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_AddressModificationTitleViewModel.h; sourceTree = "<group>"; };
+		5EAFA6D31F41A15E00A7EF02 /* LB_AddressModificationTitleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_AddressModificationTitleViewModel.m; sourceTree = "<group>"; };
+		5EAFA6D51F41A17500A7EF02 /* LB_AddressModificationContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_AddressModificationContentViewModel.h; sourceTree = "<group>"; };
+		5EAFA6D61F41A17500A7EF02 /* LB_AddressModificationContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_AddressModificationContentViewModel.m; sourceTree = "<group>"; };
+		5EAFA6D81F41AAAE00A7EF02 /* LB_AddressModificationContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_AddressModificationContentView.h; sourceTree = "<group>"; };
+		5EAFA6D91F41AAAE00A7EF02 /* LB_AddressModificationContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_AddressModificationContentView.m; sourceTree = "<group>"; };
 		5EF4EC631F1F311C000C2EAD /* NewCuo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewCuo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF4EC671F1F311C000C2EAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5EF4EC691F1F311C000C2EAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -474,6 +486,8 @@
 		5E5AE5421F3B115E0036CBBF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5EAFA6CF1F41A13A00A7EF02 /* LB_AddressModificationViewController.h */,
+				5EAFA6D01F41A13A00A7EF02 /* LB_AddressModificationViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -488,6 +502,8 @@
 		5E5AE5441F3B115E0036CBBF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5EAFA6D81F41AAAE00A7EF02 /* LB_AddressModificationContentView.h */,
+				5EAFA6D91F41AAAE00A7EF02 /* LB_AddressModificationContentView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -495,6 +511,10 @@
 		5E5AE5451F3B115E0036CBBF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5EAFA6D21F41A15E00A7EF02 /* LB_AddressModificationTitleViewModel.h */,
+				5EAFA6D31F41A15E00A7EF02 /* LB_AddressModificationTitleViewModel.m */,
+				5EAFA6D51F41A17500A7EF02 /* LB_AddressModificationContentViewModel.h */,
+				5EAFA6D61F41A17500A7EF02 /* LB_AddressModificationContentViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1574,6 +1594,7 @@
 				5E7C89561F2735C9009A578E /* LB_UserInfoOnLineView.m in Sources */,
 				5E7D75CC1F2AD93F00C6C92F /* LB_GoodsLeftView.m in Sources */,
 				5EF4ECA11F1F5E88000C2EAD /* UserInfoViewController.m in Sources */,
+				5EAFA6D71F41A17500A7EF02 /* LB_AddressModificationContentViewModel.m in Sources */,
 				5E975FBB1F283D7D006994FE /* LB_MyMessageFootView.m in Sources */,
 				5EA3D8BA1F29BB1200A8EFAD /* LB_MyMessageCell.m in Sources */,
 				5E5AE53A1F3B10DA0036CBBF /* LB_AddressViewController.m in Sources */,
@@ -1621,6 +1642,7 @@
 				5E7C890B1F248220009A578E /* LB_HomeTitleView.m in Sources */,
 				5E7C894D1F26E942009A578E /* LB_CustormView.m in Sources */,
 				5E7D75C31F29F39A00C6C92F /* UIView+SDExtension.m in Sources */,
+				5EAFA6D41F41A15E00A7EF02 /* LB_AddressModificationTitleViewModel.m in Sources */,
 				5E7D75E41F2B363F00C6C92F /* LB_GoodsDetailViewController.m in Sources */,
 				5EA5D8DA1F3AF3BF00560864 /* LB_AccountContentView.m in Sources */,
 				5E82184B1F21DF7800635013 /* NavigationTitleView.m in Sources */,
@@ -1638,6 +1660,8 @@
 				5E7D75EC1F2B3DD200C6C92F /* LB_GoodsClassViewController.m in Sources */,
 				5E8218571F21EF0B00635013 /* AppDelegate+Configuration.m in Sources */,
 				5E975FA71F277905006994FE /* LB_SetContentView.m in Sources */,
+				5EAFA6DA1F41AAAE00A7EF02 /* LB_AddressModificationContentView.m in Sources */,
+				5EAFA6D11F41A13A00A7EF02 /* LB_AddressModificationViewController.m in Sources */,
 				5EA3D8D71F29D6E200A8EFAD /* LB_MyConcernContentView.m in Sources */,
 				5E7C89171F24D4B3009A578E /* LB_HomeContentView.m in Sources */,
 				5E975FAF1F278764006994FE /* LB_UserInfoMyMessageViewController.m in Sources */,
