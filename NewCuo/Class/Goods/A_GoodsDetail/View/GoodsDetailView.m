@@ -11,12 +11,10 @@
 
 @interface GoodsDetailView ()<UIScrollViewDelegate,UITableViewDelegate>
 {
-//    UIWebView *self.web1,*self.web2;
-//    UIView *self.headerView;
+    UIWebView *web1,*web2;
+    UIView *headerView;
 }
 @property (strong,nonatomic)UIButton *btn1,*btn2;
-@property (strong,nonatomic)UIView *headerView;
-@property (strong,nonatomic)UIWebView *web1,*web2;
 @end
 @implementation GoodsDetailView
 
@@ -424,20 +422,20 @@
     
     
     //头部的view
-    self.headerView = [UIView new];
-    self.bottomTableView.tableHeaderView = self.headerView;
-    [self.headerView makeConstraints:^(MASConstraintMaker *make) {
+    headerView = [UIView new];
+    self.bottomTableView.tableHeaderView = headerView;
+    [headerView makeConstraints:^(MASConstraintMaker *make) {
         make.top.leading.equalTo(self);
         make.width.height.equalTo(self.bottomTableView);
     }];
-    self.headerView.backgroundColor = [UIColor clearColor];
+    headerView.backgroundColor = [UIColor clearColor];
     
     
     //商品介绍 规格参数两个按钮所在的view
     UIView *btnView = [UIView new];
-    [self.headerView addSubview:btnView];
+    [headerView addSubview:btnView];
     [btnView makeConstraints:^(MASConstraintMaker *make) {
-        make.top.leading.trailing.equalTo(self.headerView);
+        make.top.leading.trailing.equalTo(headerView);
         make.height.offset(40);
     }];
     btnView.backgroundColor = [UIColor clearColor];
@@ -462,44 +460,40 @@
     [self.btn2 setTitleColor:K_COLOR_TEXT_BLACK forState:(UIControlStateNormal)];
     self.btn2.titleLabel.font = K_FONT_17;
 
-    self.web1 = [UIWebView new];
-    [self.headerView addSubview:self.web1];
-    [self.web1 makeConstraints:^(MASConstraintMaker *make) {
+    web1 = [UIWebView new];
+    [headerView addSubview:web1];
+    [web1 makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(btnView.bottom);
-        make.leading.bottom.trailing.equalTo(self.headerView);
+        make.leading.bottom.trailing.equalTo(headerView);
     }];
     NSURL *url1 = [NSURL URLWithString:@"https://www.baidu.com"];
     NSURLRequest *request1 = [NSURLRequest requestWithURL:url1];
-    [self.web1 loadRequest:request1];
+    [web1 loadRequest:request1];
     
-    self.web2 = [UIWebView new];
-    [self.headerView addSubview:self.web2];
-    [self.web2 makeConstraints:^(MASConstraintMaker *make) {
+    web2 = [UIWebView new];
+    [headerView addSubview:web2];
+    [web2 makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(btnView.bottom);
-        make.leading.bottom.trailing.equalTo(self.headerView);
+        make.leading.bottom.trailing.equalTo(headerView);
     }];
     NSURL *url2 = [NSURL URLWithString:@"https://cn.bing.com"];
     NSURLRequest *request2 = [NSURLRequest requestWithURL:url2];
-    [self.web2 loadRequest:request2];
+    [web2 loadRequest:request2];
     
-    [self.headerView bringSubviewToFront:self.web1];
+    [headerView bringSubviewToFront:web1];
     
 }
 -(void)bindingEvent{
    
     [[self.couponRedemptionBtn rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(id x) {
-        
 
-        NSLog(@"点击了领券按钮");
     }];
     
     [[self.btn1 rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(id x) {
-        @strongify(self);
-        [self.headerView bringSubviewToFront:self.web1];
+        [headerView bringSubviewToFront:web1];
     }];
     [[self.btn2 rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(id x) {
-        @strongify(self);
-        [self.headerView bringSubviewToFront:self.web2];
+        [headerView bringSubviewToFront:web2];
     }];
 
     
