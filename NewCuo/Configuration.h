@@ -29,6 +29,10 @@
 
 
 #define KNTCHANGEGOODSCLASS    @"KNTCHANGEGOODSCLASS" //切换种类
+#define KNTLOINGSUCCESS        @"KNTLOINGSUCCESS"     //登录成功
+#define KNTLOINGOUTSUCCESS     @"KNTLOINGOUTSUCCESS"  //退出登录成功
+
+
 
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 

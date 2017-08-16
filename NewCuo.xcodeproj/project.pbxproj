@@ -124,6 +124,14 @@
 		5EAFA6D41F41A15E00A7EF02 /* LB_AddressModificationTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAFA6D31F41A15E00A7EF02 /* LB_AddressModificationTitleViewModel.m */; };
 		5EAFA6D71F41A17500A7EF02 /* LB_AddressModificationContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAFA6D61F41A17500A7EF02 /* LB_AddressModificationContentViewModel.m */; };
 		5EAFA6DA1F41AAAE00A7EF02 /* LB_AddressModificationContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAFA6D91F41AAAE00A7EF02 /* LB_AddressModificationContentView.m */; };
+		5EAFA6DD1F44253800A7EF02 /* LB_ShoppingContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAFA6DC1F44253800A7EF02 /* LB_ShoppingContentViewModel.m */; };
+		5EAFA6E11F44279500A7EF02 /* LB_ShoppingHeadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAFA6DF1F44279500A7EF02 /* LB_ShoppingHeadTableViewCell.m */; };
+		5EAFA6E21F44279500A7EF02 /* LB_ShoppingHeadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EAFA6E01F44279500A7EF02 /* LB_ShoppingHeadTableViewCell.xib */; };
+		5EAFA6E91F4427E100A7EF02 /* LB_ShoppingContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAFA6E71F4427E100A7EF02 /* LB_ShoppingContentTableViewCell.m */; };
+		5EAFA6EA1F4427E100A7EF02 /* LB_ShoppingContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EAFA6E81F4427E100A7EF02 /* LB_ShoppingContentTableViewCell.xib */; };
+		5EAFA6ED1F44288800A7EF02 /* LB_ShoppingContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAFA6EC1F44288800A7EF02 /* LB_ShoppingContentView.m */; };
+		5EAFA6EF1F442A4300A7EF02 /* LB_ShoppingContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EAFA6EE1F442A4300A7EF02 /* LB_ShoppingContentView.xib */; };
+		5EAFA6F21F443ECD00A7EF02 /* LB_PuleAndDownCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAFA6F11F443ECD00A7EF02 /* LB_PuleAndDownCustomView.m */; };
 		5EF4EC681F1F311C000C2EAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4EC671F1F311C000C2EAD /* main.m */; };
 		5EF4EC6B1F1F311C000C2EAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4EC6A1F1F311C000C2EAD /* AppDelegate.m */; };
 		5EF4EC731F1F311C000C2EAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF4EC721F1F311C000C2EAD /* Assets.xcassets */; };
@@ -375,6 +383,19 @@
 		5EAFA6D61F41A17500A7EF02 /* LB_AddressModificationContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_AddressModificationContentViewModel.m; sourceTree = "<group>"; };
 		5EAFA6D81F41AAAE00A7EF02 /* LB_AddressModificationContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_AddressModificationContentView.h; sourceTree = "<group>"; };
 		5EAFA6D91F41AAAE00A7EF02 /* LB_AddressModificationContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_AddressModificationContentView.m; sourceTree = "<group>"; };
+		5EAFA6DB1F44253800A7EF02 /* LB_ShoppingContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_ShoppingContentViewModel.h; sourceTree = "<group>"; };
+		5EAFA6DC1F44253800A7EF02 /* LB_ShoppingContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_ShoppingContentViewModel.m; sourceTree = "<group>"; };
+		5EAFA6DE1F44279500A7EF02 /* LB_ShoppingHeadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_ShoppingHeadTableViewCell.h; sourceTree = "<group>"; };
+		5EAFA6DF1F44279500A7EF02 /* LB_ShoppingHeadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_ShoppingHeadTableViewCell.m; sourceTree = "<group>"; };
+		5EAFA6E01F44279500A7EF02 /* LB_ShoppingHeadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LB_ShoppingHeadTableViewCell.xib; sourceTree = "<group>"; };
+		5EAFA6E61F4427E100A7EF02 /* LB_ShoppingContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_ShoppingContentTableViewCell.h; sourceTree = "<group>"; };
+		5EAFA6E71F4427E100A7EF02 /* LB_ShoppingContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_ShoppingContentTableViewCell.m; sourceTree = "<group>"; };
+		5EAFA6E81F4427E100A7EF02 /* LB_ShoppingContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LB_ShoppingContentTableViewCell.xib; sourceTree = "<group>"; };
+		5EAFA6EB1F44288800A7EF02 /* LB_ShoppingContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_ShoppingContentView.h; sourceTree = "<group>"; };
+		5EAFA6EC1F44288800A7EF02 /* LB_ShoppingContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_ShoppingContentView.m; sourceTree = "<group>"; };
+		5EAFA6EE1F442A4300A7EF02 /* LB_ShoppingContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LB_ShoppingContentView.xib; sourceTree = "<group>"; };
+		5EAFA6F01F443ECD00A7EF02 /* LB_PuleAndDownCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_PuleAndDownCustomView.h; sourceTree = "<group>"; };
+		5EAFA6F11F443ECD00A7EF02 /* LB_PuleAndDownCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_PuleAndDownCustomView.m; sourceTree = "<group>"; };
 		5EF4EC631F1F311C000C2EAD /* NewCuo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewCuo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF4EC671F1F311C000C2EAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5EF4EC691F1F311C000C2EAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1357,6 +1378,17 @@
 			children = (
 				5E8218621F21FD1700635013 /* ShoppingEmptyView.h */,
 				5E8218631F21FD1700635013 /* ShoppingEmptyView.m */,
+				5EAFA6DE1F44279500A7EF02 /* LB_ShoppingHeadTableViewCell.h */,
+				5EAFA6DF1F44279500A7EF02 /* LB_ShoppingHeadTableViewCell.m */,
+				5EAFA6E01F44279500A7EF02 /* LB_ShoppingHeadTableViewCell.xib */,
+				5EAFA6E61F4427E100A7EF02 /* LB_ShoppingContentTableViewCell.h */,
+				5EAFA6E71F4427E100A7EF02 /* LB_ShoppingContentTableViewCell.m */,
+				5EAFA6E81F4427E100A7EF02 /* LB_ShoppingContentTableViewCell.xib */,
+				5EAFA6EB1F44288800A7EF02 /* LB_ShoppingContentView.h */,
+				5EAFA6EC1F44288800A7EF02 /* LB_ShoppingContentView.m */,
+				5EAFA6EE1F442A4300A7EF02 /* LB_ShoppingContentView.xib */,
+				5EAFA6F01F443ECD00A7EF02 /* LB_PuleAndDownCustomView.h */,
+				5EAFA6F11F443ECD00A7EF02 /* LB_PuleAndDownCustomView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1368,6 +1400,8 @@
 				5E8218531F21EBB500635013 /* ShoppingTitleViewModel.m */,
 				5E8218651F21FD7900635013 /* ShoppingEmptyViewModel.h */,
 				5E8218661F21FD7900635013 /* ShoppingEmptyViewModel.m */,
+				5EAFA6DB1F44253800A7EF02 /* LB_ShoppingContentViewModel.h */,
+				5EAFA6DC1F44253800A7EF02 /* LB_ShoppingContentViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1499,7 +1533,7 @@
 				TargetAttributes = {
 					5EF4EC621F1F311C000C2EAD = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2YNXRD8G33;
+						DevelopmentTeam = 78SE4BENGG;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1528,7 +1562,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EF4EC761F1F311C000C2EAD /* LaunchScreen.storyboard in Resources */,
+				5EAFA6E21F44279500A7EF02 /* LB_ShoppingHeadTableViewCell.xib in Resources */,
+				5EAFA6EF1F442A4300A7EF02 /* LB_ShoppingContentView.xib in Resources */,
 				5EF4EC731F1F311C000C2EAD /* Assets.xcassets in Resources */,
+				5EAFA6EA1F4427E100A7EF02 /* LB_ShoppingContentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1562,7 +1599,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A399471172B6BA691F90A14C /* [CP] Copy Pods Resources */ = {
@@ -1610,6 +1647,7 @@
 				5EF4EC891F1F3B83000C2EAD /* TabBarViewController.m in Sources */,
 				5E7D75C91F2AD92400C6C92F /* LB_GoodsRightViewModel.m in Sources */,
 				5E7D75C01F29F39A00C6C92F /* TAPageControl.m in Sources */,
+				5EAFA6ED1F44288800A7EF02 /* LB_ShoppingContentView.m in Sources */,
 				5E7D761B1F32CCBE00C6C92F /* LB_UserOrderContentViewModel.m in Sources */,
 				5EF4ECAA1F1F5EB5000C2EAD /* ShoppingViewController.m in Sources */,
 				5E7C892E1F24D842009A578E /* LB_SearchTitleViewModel.m in Sources */,
@@ -1668,6 +1706,7 @@
 				5E7D75CF1F2AD95200C6C92F /* LB_GoodsRightView.m in Sources */,
 				5E7D75F21F2B3E3900C6C92F /* LB_GoodsClassTitleView.m in Sources */,
 				5EA3D8B71F29B74200A8EFAD /* LB_MyMessageContentView.m in Sources */,
+				5EAFA6E11F44279500A7EF02 /* LB_ShoppingHeadTableViewCell.m in Sources */,
 				5E7C89311F24D870009A578E /* LB_SearchContentView.m in Sources */,
 				5E5AE5401F3B111B0036CBBF /* LB_AddressContentViewModel.m in Sources */,
 				5EA5D8D71F3AF3AA00560864 /* LB_AccountTableViewCell.m in Sources */,
@@ -1695,10 +1734,13 @@
 				5E7D75D21F2B0B7700C6C92F /* LB_GoodsHomeCell.m in Sources */,
 				5E7D75FE1F2F101C00C6C92F /* LB_GoodsClassListView.m in Sources */,
 				5E7D75DC1F2B229100C6C92F /* LB_GoodsRightCollectionHeadView.m in Sources */,
+				5EAFA6E91F4427E100A7EF02 /* LB_ShoppingContentTableViewCell.m in Sources */,
 				5E7D76151F32CBE700C6C92F /* LB_UserOrderViewController.m in Sources */,
 				5E7C892B1F24D81F009A578E /* LB_SearchTitleView.m in Sources */,
 				5E7D76041F2F10D000C6C92F /* LB_GoodsClassListViewModel.m in Sources */,
 				5EA5D8C11F3858CF00560864 /* LB_PointContentViewModel.m in Sources */,
+				5EAFA6F21F443ECD00A7EF02 /* LB_PuleAndDownCustomView.m in Sources */,
+				5EAFA6DD1F44253800A7EF02 /* LB_ShoppingContentViewModel.m in Sources */,
 				5E6A35A51F246A14000C9D43 /* LB_ContentView.m in Sources */,
 				3F6181DC1F31DB550096693D /* GoodsDetailTitleViewModel.m in Sources */,
 				5E975FB81F2787F2006994FE /* LB_MyMessageFootViewModel.m in Sources */,
@@ -1822,7 +1864,7 @@
 			baseConfigurationReference = 78D2519C920F3AB93394571C /* Pods-NewCuo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2YNXRD8G33;
+				DEVELOPMENT_TEAM = 78SE4BENGG;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NewCuo/NewCuo.pch";
 				INFOPLIST_FILE = NewCuo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1837,7 +1879,7 @@
 			baseConfigurationReference = 75FF1E215122D9B56594A278 /* Pods-NewCuo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2YNXRD8G33;
+				DEVELOPMENT_TEAM = 78SE4BENGG;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NewCuo/NewCuo.pch";
 				INFOPLIST_FILE = NewCuo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

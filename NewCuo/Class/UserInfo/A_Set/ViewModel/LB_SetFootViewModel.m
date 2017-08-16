@@ -28,7 +28,9 @@
 
 -(void)bindingEvent
 {
+    @weakify(self);
     [[self.loginOutView.loginOutBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
+        @strongify(self);
         [UserModel shareDefaultUserModel].token = @"";
         AppDelegate *app  = KAPPDELEGATE;
         [app.tabBarVC setSelectedIndex:0];
