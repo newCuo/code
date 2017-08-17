@@ -9,6 +9,6 @@
 #import "LB_BaseViewModel.h"
 
 @interface GoodsDetailBottomViewModel : LB_BaseViewModel
-//-(id)initWithViewController:(BaseViewController*)ViewController;
+
 
 @end

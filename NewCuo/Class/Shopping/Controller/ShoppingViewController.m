@@ -8,13 +8,13 @@
 
 #import "ShoppingViewController.h"
 #import "ShoppingTitleViewModel.h"
-#import "ShoppingEmptyViewModel.h"
+#import "LB_ShoppingContentViewModel.h"
 
 @interface ShoppingViewController ()
 
 @property (strong,nonatomic)ShoppingTitleViewModel *titleViewModel;
 
-@property (strong,nonatomic)ShoppingEmptyViewModel *emptyViewModel;
+@property (strong,nonatomic)LB_ShoppingContentViewModel *contentViewModel;
 
 
 
@@ -27,8 +27,9 @@
     // Do any additional setup after loading the view.
     
     self.titleViewModel = [[ShoppingTitleViewModel alloc]initWithViewController:self];
-    
-    self.emptyViewModel = [[ShoppingEmptyViewModel alloc]initWithViewController:self];
+   
+    self.contentViewModel =[[LB_ShoppingContentViewModel alloc]initWithViewController:self];
+   
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,7 +10,9 @@
 #import "NavigationTitleView.h"
 
 @interface GoodsDetailTitleViewModel ()
+
 @property(strong,nonatomic)NavigationTitleView *titleView;
+
 @end
 @implementation GoodsDetailTitleViewModel
 -(void)initUI{
@@ -19,8 +21,6 @@
     self.titleView = [[NavigationTitleView alloc]initWithFrame:CGRectMake(0, 0, KSCREENWIDTH, 64)];
     [self.viewController.view addSubview:self.titleView];
     self.titleView.titleLab.text = @"商品详情";
-//    self.titleView.backgroundColor = [UIColor whiteColor];
-//    self.titleView.titleLab.textColor = K_COLOR_TEXT_BLACK;
     [self.titleView.leftBtn setImage:[UIImage imageNamed:@"navigation_back"] forState:UIControlStateNormal];
 }
 
@@ -30,9 +30,7 @@
     @weakify(self);
     [[self.titleView.leftBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
         @strongify(self);
-        
         [self.viewController.navigationController popViewControllerAnimated:YES];
-        
     }];
     
     

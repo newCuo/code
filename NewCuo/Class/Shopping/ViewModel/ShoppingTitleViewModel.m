@@ -11,7 +11,7 @@
 
 @interface ShoppingTitleViewModel()
 
-@property(strong,nonatomic)BaseViewController *viewController;
+@property(weak,nonatomic)BaseViewController *viewController;
 
 @property(strong,nonatomic)NavigationTitleView *titleView;
 

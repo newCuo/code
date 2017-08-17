@@ -10,4 +10,6 @@
 
 @interface LB_ContentView : UIView
 
+-(UIButton*)loginBtn;
+
 @end

@@ -9,12 +9,14 @@
 #import "ShoppingEmptyViewModel.h"
 #import "ShoppingEmptyView.h"
 #import "LoginViewController.h"
+#import "UserModel.h"
 
 @interface ShoppingEmptyViewModel()
 
-@property(strong,nonatomic)BaseViewController *viewController;
+@property(weak,nonatomic)BaseViewController *viewController;
 
 @property(strong,nonatomic)ShoppingEmptyView *shoppingEmptyView;
+
 
 @end
 
@@ -58,7 +60,16 @@
         
     }];
     
+    
+    RAC(self.shoppingEmptyView,isLogin) = RACObserve([UserModel shareDefaultUserModel],isLogin);
+    
+    
+    
+    
 }
+
+
+
 
 
 @end
