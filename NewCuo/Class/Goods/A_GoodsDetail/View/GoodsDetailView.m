@@ -8,6 +8,7 @@
 
 #import "GoodsDetailView.h"
 #import "SDCycleScrollView.h"
+#import <WebKit/WebKit.h>
 
 @interface GoodsDetailView ()<UIScrollViewDelegate,UITableViewDelegate>
 {
@@ -16,7 +17,7 @@
 }
 @property (strong,nonatomic)UIButton *btn1,*btn2;
 @property (strong,nonatomic)UIView *headerView;
-@property (strong,nonatomic)UIWebView *web1,*web2;
+@property (strong,nonatomic)WKWebView *web1,*web2;
 @end
 @implementation GoodsDetailView
 
@@ -462,7 +463,7 @@
     [self.btn2 setTitleColor:K_COLOR_TEXT_BLACK forState:(UIControlStateNormal)];
     self.btn2.titleLabel.font = K_FONT_17;
 
-    self.web1 = [UIWebView new];
+    self.web1 = [WKWebView new];
     [self.headerView addSubview:self.web1];
     [self.web1 makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(btnView.bottom);
@@ -472,7 +473,7 @@
     NSURLRequest *request1 = [NSURLRequest requestWithURL:url1];
     [self.web1 loadRequest:request1];
     
-    self.web2 = [UIWebView new];
+    self.web2 = [WKWebView new];
     [self.headerView addSubview:self.web2];
     [self.web2 makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(btnView.bottom);
