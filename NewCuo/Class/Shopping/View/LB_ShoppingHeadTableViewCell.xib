@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="165"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="164.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="164.66666666666666"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YjA-xe-iRK">
@@ -147,7 +147,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="hn4-Nt-GEG" secondAttribute="trailing" id="6eV-8h-34x"/>
                     <constraint firstAttribute="bottom" secondItem="hn4-Nt-GEG" secondAttribute="bottom" constant="-0.5" id="AeK-lI-Whu"/>
@@ -161,7 +161,7 @@
                     <constraint firstItem="YjA-xe-iRK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="vZz-vm-6Le"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="32" y="104.5"/>
+            <point key="canvasLocation" x="-73" y="28"/>
         </tableViewCell>
     </objects>
     <resources>
