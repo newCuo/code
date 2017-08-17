@@ -12,25 +12,15 @@
 
 @interface GoodsDetailBottomViewModel()
 
-@property(weak,nonatomic)BaseViewController *viewController;
+
 
 
 @end
 @implementation GoodsDetailBottomViewModel
-//-(id)initWithViewController:(BaseViewController*)viewController{
-//    
-//    self = [super init];
-//    if (self) {
-//        self.viewController = viewController;
-//        [self initUI];
-//        [self bindingEvent];
-//    }
-//    return self;
-//}
+
 
 -(void)initUI{
     GoodsDetailBottomView *bottomView = [[GoodsDetailBottomView alloc]initWithFrame:CGRectMake(0, KSCREENHEIGHT - 60*SCALE, KSCREENWIDTH, 60*SCALE)];
-//    [self.viewController.view addSubview:bottomView];
     [self.LB_View addSubview:bottomView];
 }
 -(void)bindingEvent{

@@ -10,6 +10,7 @@
 #import "GoodsDetailBottomViewModel.h"
 #import "GoodsDetailViewModel.h"
 #import "GoodsDetailTitleViewModel.h"
+
 @interface GoodsDetailsViewController ()
 @property (strong,nonatomic)GoodsDetailTitleViewModel *goodsDetailTitleViewModel;
 @property (strong,nonatomic)GoodsDetailBottomViewModel *goodsDetailBottomViewModel;

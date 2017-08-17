@@ -484,10 +484,9 @@
     
 }
 -(void)bindingEvent{
-    @weakify(self);
+   
     [[self.couponRedemptionBtn rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(id x) {
-        @strongify(self);
-        NSLog(@"点击了领券按钮");
+
     }];
     
     [[self.btn1 rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(id x) {
@@ -496,6 +495,7 @@
     [[self.btn2 rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(id x) {
         [headerView bringSubviewToFront:web2];
     }];
+
     
 }
 #pragma mark ---- scrollView delagate
@@ -546,6 +546,13 @@
     return [text boundingRectWithSize:maxSize options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesFontLeading  |NSStringDrawingUsesLineFragmentOrigin//采用换行
                            attributes:attrs //传入的字体字典
                               context:nil].size;
+}
+
+-(void)dealloc
+{
+    
+    NSLog(@"GoodsDetailView  dealloc");
+    
 }
 
 @end
