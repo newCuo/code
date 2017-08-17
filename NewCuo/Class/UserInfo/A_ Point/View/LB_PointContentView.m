@@ -142,8 +142,10 @@
 }
 -(void)bindingEvent{
     
+    
+    @weakify(self);
     [[self.getBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(UIButton *btn) {
-        
+        @strongify(self);
         if (btn.selected) {return;}
         btn.selected = !btn.selected;
         self.payBtn.selected = !btn.selected;
@@ -154,6 +156,7 @@
     
     
     [[self.payBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(UIButton *btn) {
+         @strongify(self);
         if (btn.selected) {return;}
         btn.selected = !btn.selected;
         self.getBtn.selected = !btn.selected;

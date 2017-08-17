@@ -10,26 +10,16 @@
 #import "GoodsDetailView.h"
 
 @interface GoodsDetailViewModel ()
-@property(weak,nonatomic)BaseViewController *viewController;
+
 
 @property(strong,nonatomic) GoodsDetailView *detailView;
 
 @property(copy)NSString *tt;
 @end
 @implementation GoodsDetailViewModel
-//-(id)initWithViewController:(BaseViewController*)viewController{
-//    
-//    self = [super init];
-//    if (self) {
-//        self.viewController = viewController;
-//        [self initUI];
-//        [self bindingEvent];
-//    }
-//    return self;
-//}
+
 
 -(void)initUI{
-    
     self.detailView = [[GoodsDetailView alloc]initWithFrame:CGRectMake(0, 64, KSCREENWIDTH, KSCREENHEIGHT-60*SCALE-64)];//60*SCALE 是底部一按钮的高度 64是顶部导航栏的高度
     [self.viewController.view addSubview:self.detailView];
     

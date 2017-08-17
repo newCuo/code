@@ -16,6 +16,8 @@
 
 @property(strong,nonatomic)UIView *loginView;
 
+@property(strong,nonatomic)UILabel *tishi;
+
 @end
 
 @implementation ShoppingEmptyView
@@ -66,21 +68,22 @@
     self.loginBtn.layer.borderWidth = 0.5f;
     [self.loginView addSubview:self.loginBtn];
     [self.loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.loginView.mas_top).offset(15);
+        make.centerY.equalTo(self.loginView.mas_centerY).offset(0);
         make.left.equalTo(self.loginView.mas_left).offset(15);
-        make.bottom.equalTo(line.mas_top).offset(-15);
         make.width.offset(65);
+        make.height.offset(35);
     }];
     
     //登录提示
-    UILabel *tishi = [[UILabel alloc]init];
-    tishi.font = [UIFont systemFontOfSize:12];
-    tishi.textColor = [UIColor grayColor];
-    tishi.text = @"登录后可同步购物车里的商品";
-    [self.loginView addSubview:tishi];
-    [tishi mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.tishi = [[UILabel alloc]init];
+    self.tishi.font = [UIFont systemFontOfSize:12];
+    self.tishi.textColor = [UIColor grayColor];
+    self.tishi.text = @"登录后可同步购物车里的商品";
+    [self.loginView addSubview:self.tishi];
+    [self.tishi mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.loginBtn.mas_right).offset(15);
         make.centerY.equalTo(self.loginBtn.mas_centerY).offset(0);
+        make.height.offset(20);
     }];
     
     
@@ -126,5 +129,35 @@
     
     
 }
+
+-(void)setIsLogin:(BOOL)isLogin
+{
+    _isLogin = isLogin;
+    [self.tishi remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.loginBtn.mas_right).offset(15);
+        make.centerY.equalTo(self.loginBtn.mas_centerY).offset(0);
+        make.height.offset(isLogin?0:20);
+    }];
+    self.tishi.hidden = isLogin;
+    [self.loginBtn remakeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.loginView.mas_centerY).offset(0);
+        make.left.equalTo(self.loginView.mas_left).offset(15);
+        make.width.offset(65);
+        make.height.offset(isLogin?0:35);
+    }];
+    self.loginBtn.hidden = isLogin;
+
+    [self.loginView remakeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.equalTo(self.mas_top).offset(0);
+        make.right.equalTo(self.mas_right).offset(0);
+        make.left.equalTo(self.mas_left).offset(0);
+        make.height.offset(isLogin?0:60);
+        
+    }];
+    self.loginView.hidden = isLogin;
+    
+}
+
 
 @end

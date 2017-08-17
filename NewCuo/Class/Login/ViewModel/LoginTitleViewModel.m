@@ -38,7 +38,6 @@
     @weakify(self);
     [[self.titleView.leftBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
         @strongify(self);
-        [UserModel shareDefaultUserModel].token = @"12132";
         [self.viewController dismissViewControllerAnimated:YES completion:nil];
         
     }];

@@ -16,6 +16,8 @@
 
 @property(strong,nonatomic)NSString *userName;
 
+@property(assign,nonatomic)BOOL isLogin;
+
 
 
 +(instancetype)shareDefaultUserModel;

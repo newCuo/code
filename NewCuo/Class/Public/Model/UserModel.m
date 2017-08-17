@@ -38,6 +38,7 @@ static UserModel *_instance = nil;
     // 最好用self 用Tools他的子类调用时会出现错误
     return [[self alloc]init];
 }
+
 // 为了严谨，也要重写copyWithZone 和 mutableCopyWithZone
 -(id)copyWithZone:(NSZone *)zone
 {
@@ -47,7 +48,11 @@ static UserModel *_instance = nil;
 {
     return _instance;
 }
-
+-(void)setToken:(NSString *)token
+{
+    _token = token;
+    self.isLogin = token.length>0?YES:NO;
+}
 
 
 @end

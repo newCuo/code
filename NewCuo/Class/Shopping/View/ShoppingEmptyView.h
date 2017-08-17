@@ -10,9 +10,15 @@
 
 @interface ShoppingEmptyView : UIView
 
+
+@property(assign,nonatomic)BOOL isLogin;
+
 -(UIButton*)buyBtn;
 
 -(UIButton*)loginBtn;
 
 -(UIView*)loginView;
+
+
+
 @end

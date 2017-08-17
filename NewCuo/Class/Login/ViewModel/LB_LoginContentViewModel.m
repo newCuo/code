@@ -8,6 +8,7 @@
 
 #import "LB_LoginContentViewModel.h"
 #import "LB_ContentView.h"
+#import "UserModel.h"
 
 @interface LB_LoginContentViewModel()
 @property(strong,nonatomic)LB_ContentView *contentView;
@@ -21,5 +22,16 @@
     [self.viewController.view addSubview:self.contentView];
     
 }
+
+-(void)bindingEvent
+{
+    
+    [[self.contentView.loginBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
+        [UserModel shareDefaultUserModel].token = @"qeqweq";
+    }];
+    
+    
+}
+
 
 @end
