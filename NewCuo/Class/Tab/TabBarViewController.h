@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ShoppingViewController.h"
+
 
 @interface TabBarViewController : UITabBarController
+
+-(UITabBarItem*)shoppingItem;
 
 @end

@@ -9,6 +9,7 @@
 #import "LB_ShoppingContentView.h"
 #import "LB_ShoppingHeadTableViewCell.h"
 #import "LB_ShoppingContentTableViewCell.h"
+#import "LB_StroeModel.h"
 
 @interface LB_ShoppingContentView()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -19,6 +20,7 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *list;
 
 
 
@@ -42,24 +44,23 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    
-    
+
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
-    return 2;
+    LB_StroeModel * arr = self.list[section];
+    return arr.goodsList.count;
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return self.list.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
-        return 160;
+        return 162;
     }else
     {
         return 104;
@@ -69,14 +70,21 @@
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    LB_StroeModel *stroeModel = self.list[indexPath.section];
+    
     if (indexPath.row==0) {
-        
         static NSString * tt = @"LB_ShoppingHeadTableViewCell";
         if (!markHead) {
             markHead = [UINib nibWithNibName:@"LB_ShoppingHeadTableViewCell" bundle:nil];
             [tableView registerNib:markHead forCellReuseIdentifier:tt];
         }
         LB_ShoppingHeadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tt];
+        cell.stroeModel = stroeModel;
+        cell.goodsModel = stroeModel.goodsList[indexPath.row];
+        WS(weakSelf);
+        cell.reloadTableView = ^{
+            [weakSelf.tableView reloadData];
+        };
         return cell;
         
     }else{
@@ -87,6 +95,12 @@
             [tableView registerNib:markContent forCellReuseIdentifier:tt];
         }
         LB_ShoppingContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tt];
+        cell.stroeModel = stroeModel;
+        cell.goodsModel = stroeModel.goodsList[indexPath.row];
+        WS(weakSelf);
+        cell.reloadTableView = ^{
+            [weakSelf.tableView reloadData];
+        };
         return cell;
     }
 }

@@ -29,6 +29,12 @@
     self.titleViewModel = [[ShoppingTitleViewModel alloc]initWithViewController:self];
    
     self.contentViewModel =[[LB_ShoppingContentViewModel alloc]initWithViewController:self];
+    
+    self.contentViewModel.editBtn = self.titleViewModel.titleView.rightBtn;
+
+    
+   
+    
    
 }
 

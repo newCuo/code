@@ -10,4 +10,8 @@
 
 @interface LB_ShoppingContentViewModel : LB_BaseViewModel
 
+@property(strong,nonatomic)UIButton *editBtn;
+
+
+
 @end

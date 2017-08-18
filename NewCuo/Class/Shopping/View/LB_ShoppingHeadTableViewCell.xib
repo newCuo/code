@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="165"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="164.66666666666666"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="164.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YjA-xe-iRK">
@@ -29,13 +29,49 @@
                                 </constraints>
                                 <state key="normal" image="unselect"/>
                                 <state key="selected" image="select"/>
+                                <connections>
+                                    <action selector="selectAllAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Z08-ts-Eo9"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="store" translatesAutoresizingMaskIntoConstraints="NO" id="7dI-Wl-lYY">
+                                <rect key="frame" x="35" y="13" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="TuU-yh-Qpe"/>
+                                    <constraint firstAttribute="height" constant="20" id="zIX-Dz-aby"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="深圳商集" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3M6-ub-WlS">
+                                <rect key="frame" x="63" y="13" width="170" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="sMN-lP-9Lv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.70732555650684936" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="运费: 12" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6D-l9-Loy">
+                                <rect key="frame" x="248" y="12" width="64" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="8db-rZ-i58"/>
+                                    <constraint firstAttribute="height" constant="21" id="xd9-tt-JoA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="3M6-ub-WlS" firstAttribute="leading" secondItem="7dI-Wl-lYY" secondAttribute="trailing" constant="8" id="08Y-N9-QWe"/>
+                            <constraint firstItem="V6D-l9-Loy" firstAttribute="centerY" secondItem="YjA-xe-iRK" secondAttribute="centerY" id="8Vm-lC-oq4"/>
+                            <constraint firstItem="7dI-Wl-lYY" firstAttribute="leading" secondItem="ism-Gt-Y5a" secondAttribute="trailing" constant="7" id="AUh-fp-MgO"/>
                             <constraint firstAttribute="height" constant="46" id="MJC-Ch-pqk"/>
                             <constraint firstItem="ism-Gt-Y5a" firstAttribute="centerY" secondItem="YjA-xe-iRK" secondAttribute="centerY" id="YcC-9C-brb"/>
                             <constraint firstItem="ism-Gt-Y5a" firstAttribute="leading" secondItem="YjA-xe-iRK" secondAttribute="leading" constant="8" id="dbR-4k-Ej9"/>
+                            <constraint firstItem="V6D-l9-Loy" firstAttribute="leading" secondItem="3M6-ub-WlS" secondAttribute="trailing" constant="15" id="euP-zv-RTK"/>
+                            <constraint firstItem="3M6-ub-WlS" firstAttribute="centerY" secondItem="YjA-xe-iRK" secondAttribute="centerY" id="kes-xe-bmR"/>
+                            <constraint firstAttribute="trailing" secondItem="V6D-l9-Loy" secondAttribute="trailing" constant="8" id="sER-nH-Fr0"/>
+                            <constraint firstItem="7dI-Wl-lYY" firstAttribute="centerY" secondItem="YjA-xe-iRK" secondAttribute="centerY" id="vBo-Kq-IC7"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hn4-Nt-GEG">
@@ -56,6 +92,9 @@
                                 </constraints>
                                 <state key="normal" image="unselect"/>
                                 <state key="selected" image="select"/>
+                                <connections>
+                                    <action selector="selectGoodsAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="iVe-WT-yS3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="说短发十分大时代发生放大十分大" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTX-XR-TAV">
                                 <rect key="frame" x="130" y="9" width="177" height="34"/>
@@ -161,12 +200,19 @@
                     <constraint firstItem="YjA-xe-iRK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="vZz-vm-6Le"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="-73" y="28"/>
+            <connections>
+                <outlet property="freightLab" destination="V6D-l9-Loy" id="erl-gv-BRL"/>
+                <outlet property="goodsSelectBtn" destination="qPh-JI-u0C" id="dWy-OG-LfO"/>
+                <outlet property="selectAllBtn" destination="ism-Gt-Y5a" id="uE0-5f-m1p"/>
+                <outlet property="storeNameLab" destination="3M6-ub-WlS" id="W0w-Pm-qBj"/>
+            </connections>
+            <point key="canvasLocation" x="-73" y="27.5"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="arrow" width="11" height="11"/>
         <image name="select" width="13" height="13"/>
+        <image name="store" width="32" height="32"/>
         <image name="test" width="120" height="120"/>
         <image name="unselect" width="13" height="13"/>
     </resources>

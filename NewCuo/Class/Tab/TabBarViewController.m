@@ -8,12 +8,16 @@
 
 #import "TabBarViewController.h"
 #import "HomeViewController.h"
-#import "ShoppingViewController.h"
+
 #import "GoodsViewController.h"
 #import "UserInfoViewController.h"
 
 
 @interface TabBarViewController ()
+
+@property(strong,nonatomic)UITabBarItem * shoppingItem;
+
+
 
 @end
 
@@ -43,11 +47,12 @@
 
     
     
-    ShoppingViewController *shopping = [[ShoppingViewController alloc]init];
+   ShoppingViewController * shopping = [[ShoppingViewController alloc]init];
     UINavigationController *shoppingNC = [[UINavigationController alloc]initWithRootViewController:shopping];
     shoppingNC.navigationBar.hidden = YES;
-    UITabBarItem * shoppingItem = [[UITabBarItem alloc]initWithTitle:@"购物车" image:[UIImage imageNamed:@"tabbar_buy"] selectedImage:[UIImage imageNamed:@"tabbar_buy_select"]];
-    shoppingNC.tabBarItem = shoppingItem;
+    _shoppingItem = [[UITabBarItem alloc]initWithTitle:@"购物车" image:[UIImage imageNamed:@"tabbar_buy"] selectedImage:[UIImage imageNamed:@"tabbar_buy_select"]];
+    shoppingNC.tabBarItem = _shoppingItem;
+
 
     
     UserInfoViewController *userInfo = [[UserInfoViewController alloc]init];
