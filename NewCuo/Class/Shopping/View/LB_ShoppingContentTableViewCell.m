@@ -9,6 +9,8 @@
 #import "LB_ShoppingContentTableViewCell.h"
 @interface LB_ShoppingContentTableViewCell()
 @property (weak, nonatomic) IBOutlet UIButton *goodsSelectBtn;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageContent;
+@property (weak, nonatomic) IBOutlet UIView *typeView;
 
 @end
 
@@ -19,11 +21,14 @@
     // Initialization code
     
     
+    
 }
 
 -(void)setIsOpen:(BOOL)isOpen
 {
     _isOpen = isOpen;
+    self.imageContent.constant = isOpen?10:0;
+    self.typeView.backgroundColor = isOpen?K_COLOR_RGB(239, 239, 244):[UIColor whiteColor];
 }
 
 

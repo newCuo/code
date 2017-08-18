@@ -59,15 +59,27 @@
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ILM-A8-CfA">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ILM-A8-CfA">
                                         <rect key="frame" x="79" y="5" width="10" height="12"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="heW-gP-v5L"/>
+                                            <constraint firstAttribute="height" constant="12" id="q7A-0f-LYL"/>
+                                        </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGo-vZ-VUH">
+                                        <rect key="frame" x="0.0" y="0.0" width="98" height="22"/>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="9eu-kP-1Jn"/>
+                                    <constraint firstItem="ILM-A8-CfA" firstAttribute="centerY" secondItem="PV2-5p-njm" secondAttribute="centerY" id="G16-C8-dg0"/>
+                                    <constraint firstAttribute="trailing" secondItem="wGo-vZ-VUH" secondAttribute="trailing" id="OQj-Vu-iAK"/>
+                                    <constraint firstAttribute="bottom" secondItem="wGo-vZ-VUH" secondAttribute="bottom" id="QUh-kX-v0G"/>
+                                    <constraint firstAttribute="trailing" secondItem="ILM-A8-CfA" secondAttribute="trailing" constant="9" id="d1h-En-Jx5"/>
+                                    <constraint firstItem="wGo-vZ-VUH" firstAttribute="top" secondItem="PV2-5p-njm" secondAttribute="top" id="ghG-II-YXj"/>
                                     <constraint firstAttribute="width" constant="98" id="v4R-ww-ZOr"/>
+                                    <constraint firstItem="wGo-vZ-VUH" firstAttribute="leading" secondItem="PV2-5p-njm" secondAttribute="leading" id="zrA-Bh-5ua"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥ 123103" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mry-63-oFP">
@@ -129,8 +141,10 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="goodsSelectBtn" destination="NXI-Dh-Am0" id="ihW-cm-ZRF"/>
+                <outlet property="imageContent" destination="heW-gP-v5L" id="iPp-8m-wTa"/>
+                <outlet property="typeView" destination="PV2-5p-njm" id="04B-Ke-0lA"/>
             </connections>
-            <point key="canvasLocation" x="25" y="44"/>
+            <point key="canvasLocation" x="-245" y="-84"/>
         </tableViewCell>
     </objects>
     <resources>

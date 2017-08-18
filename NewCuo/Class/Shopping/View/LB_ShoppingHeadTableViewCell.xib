@@ -115,15 +115,20 @@
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="JnL-KA-hXS">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="JnL-KA-hXS">
                                         <rect key="frame" x="79" y="5" width="10" height="12"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="1A7-rJ-d2R"/>
+                                            <constraint firstAttribute="height" constant="12" id="dFn-6E-Tha"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="98" id="Bkf-kL-6uH"/>
                                     <constraint firstAttribute="height" constant="22" id="Gz7-y6-LnT"/>
+                                    <constraint firstItem="JnL-KA-hXS" firstAttribute="centerY" secondItem="o2k-Vt-H50" secondAttribute="centerY" id="fP3-r9-sN8"/>
+                                    <constraint firstAttribute="trailing" secondItem="JnL-KA-hXS" secondAttribute="trailing" constant="9" id="yDB-gn-nij"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥ 123103" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdS-iy-IUv">
@@ -203,10 +208,12 @@
             <connections>
                 <outlet property="freightLab" destination="V6D-l9-Loy" id="erl-gv-BRL"/>
                 <outlet property="goodsSelectBtn" destination="qPh-JI-u0C" id="dWy-OG-LfO"/>
+                <outlet property="imageContent" destination="1A7-rJ-d2R" id="xmx-sW-Y2K"/>
                 <outlet property="selectAllBtn" destination="ism-Gt-Y5a" id="uE0-5f-m1p"/>
                 <outlet property="storeNameLab" destination="3M6-ub-WlS" id="W0w-Pm-qBj"/>
+                <outlet property="typeView" destination="o2k-Vt-H50" id="2xc-Rr-CL0"/>
             </connections>
-            <point key="canvasLocation" x="-73" y="27.5"/>
+            <point key="canvasLocation" x="-325" y="31"/>
         </tableViewCell>
     </objects>
     <resources>

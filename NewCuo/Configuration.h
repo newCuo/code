@@ -22,7 +22,7 @@
 #define K_LINE_COLOR             K_COLOR_RGBA(180,180,180,1)
 #define K_BACKGROUND_COLOR       K_COLOR_RGBA(230,230,230,1)
 #define K_DARKLINE_COLOR         K_COLOR_RGBA(200,200,200,1)
-#define K_RED_COLOR              K_COLOR_RGBA(240,10,10,1)
+#define K_RED_COLOR              K_COLOR_RGBA(229,58,89,1)
 
 
 #define KAPPDELEGATE             (AppDelegate*)[UIApplication sharedApplication].delegate

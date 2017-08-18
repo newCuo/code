@@ -21,6 +21,11 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *list;
+@property (weak, nonatomic) IBOutlet UIView *footView;
+@property (weak, nonatomic) IBOutlet UIView *moneyView;
+@property (weak, nonatomic) IBOutlet UIButton *selectBtn;
+@property (weak, nonatomic) IBOutlet UIButton *deleteBtn;
+@property (weak, nonatomic) IBOutlet UIButton *moveToCollectBtn;
 
 
 
@@ -43,6 +48,12 @@
   
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    self.deleteBtn.layer.cornerRadius = 3;
+    self.moveToCollectBtn.layer.cornerRadius = 3;
+    self.moveToCollectBtn.layer.borderColor = [UIColor grayColor].CGColor;
+    self.moveToCollectBtn.layer.borderWidth = 1;
+    
     
 
 }
@@ -71,7 +82,6 @@
 {
     
     LB_StroeModel *stroeModel = self.list[indexPath.section];
-    
     if (indexPath.row==0) {
         static NSString * tt = @"LB_ShoppingHeadTableViewCell";
         if (!markHead) {
@@ -79,6 +89,7 @@
             [tableView registerNib:markHead forCellReuseIdentifier:tt];
         }
         LB_ShoppingHeadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tt];
+        cell.isOpen = self.isOpen;
         cell.stroeModel = stroeModel;
         cell.goodsModel = stroeModel.goodsList[indexPath.row];
         WS(weakSelf);
@@ -96,6 +107,7 @@
         }
         LB_ShoppingContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tt];
         cell.stroeModel = stroeModel;
+        cell.isOpen = self.isOpen;
         cell.goodsModel = stroeModel.goodsList[indexPath.row];
         WS(weakSelf);
         cell.reloadTableView = ^{
@@ -103,6 +115,19 @@
         };
         return cell;
     }
+}
+
+-(void)setIsOpen:(BOOL)isOpen
+{
+    _isOpen = isOpen;
+    self.footView.backgroundColor = isOpen?[UIColor whiteColor]:K_COLOR_RGB(30, 30, 30);
+    self.moneyView.hidden = isOpen;
+    [self.selectBtn setTitleColor:isOpen?K_COLOR_RGB(30, 30, 30):[UIColor whiteColor] forState:UIControlStateNormal];
+}
+- (IBAction)selectAllAction:(UIButton *)sender {
+    
+    sender.selected = !sender.selected;
+    
 }
 
 

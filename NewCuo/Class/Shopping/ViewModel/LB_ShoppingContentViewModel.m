@@ -47,22 +47,21 @@
 {
     
     RAC(self.contentView,list) = RACObserve(self, list);
-   
-    
-    
-    
-    
+    RAC(self.contentView,isOpen) = RACObserve(self, isEdited);
+
 }
 
 -(void)setEditBtn:(UIButton *)editBtn{
     
-    
     _editBtn = editBtn;
     [self.editBtn setTitle:@"编辑" forState:UIControlStateNormal];
-   
+    [self.editBtn setTitle:@"完成" forState:UIControlStateSelected];
+    @weakify(self);
     [[self.editBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(UIButton *btn) {
-        self.list = [NSMutableArray new];
-        
+        @strongify(self);
+        btn.selected = !btn.selected;
+        self.isEdited = btn.selected;
+        [self.contentView.tableView reloadData];
     }];
 
 }

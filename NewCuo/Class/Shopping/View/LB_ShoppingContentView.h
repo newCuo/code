@@ -10,6 +10,9 @@
 
 @interface LB_ShoppingContentView : UIView
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentHeight;
+
+@property(assign,nonatomic) BOOL isOpen;
+
 -(UITableView*)tableView;
 -(NSMutableArray*)list;
 @end
