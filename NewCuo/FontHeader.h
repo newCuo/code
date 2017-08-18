@@ -10,6 +10,8 @@
 #define FontHeader_h
 
 #define K_FONT_FLOAT(float) ([UIFont systemFontOfSize:float])
+#define K_FONT_10   K_FONT_FLOAT(10)
+#define K_FONT_11   K_FONT_FLOAT(11)
 #define K_FONT_12   K_FONT_FLOAT(12)
 #define K_FONT_13   K_FONT_FLOAT(13)
 #define K_FONT_14   K_FONT_FLOAT(14)

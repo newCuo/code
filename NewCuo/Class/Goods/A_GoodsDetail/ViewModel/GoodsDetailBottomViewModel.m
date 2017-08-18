@@ -9,7 +9,7 @@
 #import "GoodsDetailBottomViewModel.h"
 #import "GoodsDetailBottomView.h"
 #import "GoodsDetailView.h"
-
+#import "GoodsSpecificationSelectVC.h"
 
 @interface GoodsDetailBottomViewModel()
 
@@ -27,11 +27,11 @@
     @weakify(self);
     [[self.bottomView.addToShoppingCartBtn rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(id x) {
         @strongify(self);
-//        LI_GoodsSpecificationSelectVC *goodsSpecificationSelectVC = [LI_GoodsSpecificationSelectVC new];
-//        goodsSpecificationSelectVC.modalPresentationStyle = UIModalPresentationOverFullScreen;//设置样式，与背景透明配合
-//        [self.viewController.navigationController presentViewController:goodsSpecificationSelectVC animated:NO completion:^{
-//            goodsSpecificationSelectVC.view.superview.backgroundColor = [UIColor clearColor];//设置背景为透明色
-//        }];
+        GoodsSpecificationSelectVC *goodsSpecificationSelectVC = [GoodsSpecificationSelectVC new];
+        goodsSpecificationSelectVC.modalPresentationStyle = UIModalPresentationOverFullScreen;//设置样式，与背景透明配合
+        [self.viewController.navigationController presentViewController:goodsSpecificationSelectVC animated:NO completion:^{
+            goodsSpecificationSelectVC.view.superview.backgroundColor = [UIColor clearColor];//设置背景为透明色
+        }];
     }];
 }
 @end
