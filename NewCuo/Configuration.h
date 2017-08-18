@@ -37,4 +37,21 @@
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 
 
+
+//自定义输出
+//常用DEBUG  Debug
+#ifdef Debug
+#define CLog(format, ...) NSLog(format, ## __VA_ARGS__)
+#else
+#define CLog(format, ...)
+#endif
+
+//详细的日志信息
+#ifdef Debug
+# define DLog(fmt, ...) NSLog((@"[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+# define DLog(...);
+#endif
+
+
 #endif /* Configuration_h */
