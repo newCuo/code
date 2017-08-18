@@ -7,8 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NavigationTitleView.h"
 
 @interface ShoppingTitleViewModel : NSObject
+
 -(id)initWithViewController:(BaseViewController*)ViewController;
+
+-(NavigationTitleView*)titleView;
 
 @end

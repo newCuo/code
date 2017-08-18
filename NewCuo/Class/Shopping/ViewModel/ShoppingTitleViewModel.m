@@ -7,7 +7,7 @@
 //
 
 #import "ShoppingTitleViewModel.h"
-#import "NavigationTitleView.h"
+
 
 @interface ShoppingTitleViewModel()
 
@@ -33,6 +33,9 @@
     self.titleView.titleLab.text = @"购物车";
     [self.viewController.view addSubview:self.titleView];
     
+    
 }
+
+
 
 @end

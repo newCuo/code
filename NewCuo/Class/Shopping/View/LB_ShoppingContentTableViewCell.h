@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LB_StroeModel.h"
+#import "LB_GoodsModel.h"
+typedef void(^ReloadTableView)();
 
 @interface LB_ShoppingContentTableViewCell : UITableViewCell
+
+@property(assign,nonatomic)BOOL isOpen;
+
+@property(strong,nonatomic)LB_StroeModel *stroeModel;
+
+@property(strong,nonatomic)LB_GoodsModel *goodsModel;
+
+@property(strong,nonatomic)ReloadTableView reloadTableView;
 
 @end

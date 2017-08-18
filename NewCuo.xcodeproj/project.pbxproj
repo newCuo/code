@@ -132,6 +132,8 @@
 		5EAFA72F1F45346500A7EF02 /* LB_ShoppingHeadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAFA7261F45346500A7EF02 /* LB_ShoppingHeadTableViewCell.m */; };
 		5EAFA7301F45346500A7EF02 /* LB_ShoppingHeadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EAFA7271F45346500A7EF02 /* LB_ShoppingHeadTableViewCell.xib */; };
 		5EAFA7311F45346500A7EF02 /* ShoppingEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAFA7291F45346500A7EF02 /* ShoppingEmptyView.m */; };
+		5EAFA7351F4583FC00A7EF02 /* LB_StroeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAFA7341F4583FC00A7EF02 /* LB_StroeModel.m */; };
+		5EAFA7381F45840E00A7EF02 /* LB_GoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAFA7371F45840E00A7EF02 /* LB_GoodsModel.m */; };
 		5EF4EC681F1F311C000C2EAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4EC671F1F311C000C2EAD /* main.m */; };
 		5EF4EC6B1F1F311C000C2EAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF4EC6A1F1F311C000C2EAD /* AppDelegate.m */; };
 		5EF4EC731F1F311C000C2EAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF4EC721F1F311C000C2EAD /* Assets.xcassets */; };
@@ -396,6 +398,10 @@
 		5EAFA7271F45346500A7EF02 /* LB_ShoppingHeadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LB_ShoppingHeadTableViewCell.xib; sourceTree = "<group>"; };
 		5EAFA7281F45346500A7EF02 /* ShoppingEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingEmptyView.h; sourceTree = "<group>"; };
 		5EAFA7291F45346500A7EF02 /* ShoppingEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingEmptyView.m; sourceTree = "<group>"; };
+		5EAFA7331F4583FC00A7EF02 /* LB_StroeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_StroeModel.h; sourceTree = "<group>"; };
+		5EAFA7341F4583FC00A7EF02 /* LB_StroeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_StroeModel.m; sourceTree = "<group>"; };
+		5EAFA7361F45840E00A7EF02 /* LB_GoodsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_GoodsModel.h; sourceTree = "<group>"; };
+		5EAFA7371F45840E00A7EF02 /* LB_GoodsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_GoodsModel.m; sourceTree = "<group>"; };
 		5EF4EC631F1F311C000C2EAD /* NewCuo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewCuo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF4EC671F1F311C000C2EAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5EF4EC691F1F311C000C2EAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1130,6 +1136,17 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		5EAFA7321F4583DE00A7EF02 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EAFA7331F4583FC00A7EF02 /* LB_StroeModel.h */,
+				5EAFA7341F4583FC00A7EF02 /* LB_StroeModel.m */,
+				5EAFA7361F45840E00A7EF02 /* LB_GoodsModel.h */,
+				5EAFA7371F45840E00A7EF02 /* LB_GoodsModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5EF4EC5A1F1F311C000C2EAD = {
 			isa = PBXGroup;
 			children = (
@@ -1268,6 +1285,7 @@
 		5EF4EC8C1F1F4CB6000C2EAD /* Shopping */ = {
 			isa = PBXGroup;
 			children = (
+				5EAFA7321F4583DE00A7EF02 /* Model */,
 				5EF4EC941F1F53C7000C2EAD /* Controller */,
 				5EF4EC951F1F53C7000C2EAD /* View */,
 				5EF4EC961F1F53C7000C2EAD /* ViewModel */,
@@ -1707,6 +1725,7 @@
 				5E975FAF1F278764006994FE /* LB_UserInfoMyMessageViewController.m in Sources */,
 				5E7D75CF1F2AD95200C6C92F /* LB_GoodsRightView.m in Sources */,
 				5E7D75F21F2B3E3900C6C92F /* LB_GoodsClassTitleView.m in Sources */,
+				5EAFA7351F4583FC00A7EF02 /* LB_StroeModel.m in Sources */,
 				5EA3D8B71F29B74200A8EFAD /* LB_MyMessageContentView.m in Sources */,
 				5E7C89311F24D870009A578E /* LB_SearchContentView.m in Sources */,
 				5E5AE5401F3B111B0036CBBF /* LB_AddressContentViewModel.m in Sources */,
@@ -1732,6 +1751,7 @@
 				5EA3D8C51F29D63200A8EFAD /* LB_MyConcernViewController.m in Sources */,
 				5E7C89401F24F257009A578E /* LB_SearchClickEmptyView.m in Sources */,
 				5E975FB51F2787CE006994FE /* LB_MyMessageContentViewModel.m in Sources */,
+				5EAFA7381F45840E00A7EF02 /* LB_GoodsModel.m in Sources */,
 				5E7D75D21F2B0B7700C6C92F /* LB_GoodsHomeCell.m in Sources */,
 				5E7D75FE1F2F101C00C6C92F /* LB_GoodsClassListView.m in Sources */,
 				5E7D75DC1F2B229100C6C92F /* LB_GoodsRightCollectionHeadView.m in Sources */,
