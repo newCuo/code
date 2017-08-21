@@ -8,7 +8,7 @@
 
 #import "GoodsDetailViewModel.h"
 #import "GoodsDetailView.h"
-
+#import "GoodsSpecificationSelectVC.h"
 @interface GoodsDetailViewModel ()
 
 
@@ -25,7 +25,15 @@
     
 }
 -(void)bindingEvent{
-    
+    @weakify(self);
+    [[self.detailView.specificationTap rac_gestureSignal] subscribeNext:^(id x) {
+        @strongify(self);
+        GoodsSpecificationSelectVC *goodsSpecificationSelectVC = [GoodsSpecificationSelectVC new];
+        goodsSpecificationSelectVC.modalPresentationStyle = UIModalPresentationOverFullScreen;//设置样式，与背景透明配合
+        [self.viewController.navigationController presentViewController:goodsSpecificationSelectVC animated:NO completion:^{
+            goodsSpecificationSelectVC.view.superview.backgroundColor = [UIColor clearColor];//设置背景为透明色
+        }];
+    }];
     
 //    RAC(self.detailView.goodsNameLab,text) = RACObserve(self, tt);
 

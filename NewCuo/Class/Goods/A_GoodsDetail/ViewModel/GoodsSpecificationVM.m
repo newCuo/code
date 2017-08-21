@@ -20,13 +20,22 @@
     //点击手势：将商品规格选择的这个VC移除
     [[self.goodsSpecificationView.tap rac_gestureSignal] subscribeNext:^(id x) {
         @strongify(self);
-        [UIView animateWithDuration:0.25 animations:^{
-            self.goodsSpecificationView.infoView.transform = CGAffineTransformMakeTranslation(0, 0);
-        } completion:^(BOOL finished) {
-            [self.viewController dismissViewControllerAnimated:NO completion:nil];
-        }];
-        
+        [self dismissSelf];
     }];
-    //    [self.goodsSpecificationView.transparentView addGestureRecognizer:self.goodsSpecificationView.tap];
+    [[self.goodsSpecificationView.closeBtn rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(id x) {
+        @strongify(self);
+        [self dismissSelf];
+    }];
+    [[self.goodsSpecificationView.okBtn rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(id x) {
+        @strongify(self);
+        [self dismissSelf];
+    }];
+}
+-(void)dismissSelf{
+    [UIView animateWithDuration:0.25 animations:^{
+        self.goodsSpecificationView.infoView.transform = CGAffineTransformMakeTranslation(0, 0);
+    } completion:^(BOOL finished) {
+        [self.viewController dismissViewControllerAnimated:NO completion:nil];
+    }];
 }
 @end

@@ -11,4 +11,6 @@
 @interface GoodsSpecificationView : UIView
 @property (strong,nonatomic)UIView *infoView;
 @property (strong,nonatomic)UITapGestureRecognizer *tap;
+@property (strong,nonatomic)UIButton *closeBtn;
+@property (strong,nonatomic)UIButton *okBtn;
 @end

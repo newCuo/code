@@ -53,7 +53,8 @@
     [self addSubview:self.minusBtn];
     [self.minusBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.leading.bottom.equalTo(self);
-        make.width.offset(self.frame.size.width/3);
+//        make.width.offset(self.frame.size.width/3);
+        make.width.equalTo(self).dividedBy(3);
     }];
     
     self.pulsBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -63,7 +64,8 @@
     [self.pulsBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.equalTo(self);
         make.right.equalTo(self.mas_right).offset(0);
-        make.width.offset(self.frame.size.width/3);
+//        make.width.offset(self.frame.size.width/3);
+        make.width.equalTo(self).dividedBy(3);
     }];
     
    

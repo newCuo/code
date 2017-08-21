@@ -54,12 +54,12 @@
     bgView.backgroundColor = [UIColor clearColor];
     
     ///商品轮播图
-    SDCycleScrollView *headerScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, self.frame.size.width, KSCREENWIDTH*0.4) imageNamesGroup:@[@"222",@"222"]];
+    SDCycleScrollView *headerScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, 0, 0) imageNamesGroup:@[@"222",@"222"]];
     [bgView addSubview:headerScrollView];
     [headerScrollView makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.topScrollView.top);
         make.width.equalTo(self.frame.size.width);
-        make.height.equalTo(KSCREENWIDTH*0.6);
+        make.height.equalTo(KSCREENWIDTH*0.8);
     }];
     ///商品名，价格，优惠券等所在view
     UIView *view1 = [UIView new];
@@ -171,6 +171,8 @@
         make.height.offset(40);
     }];
     view2.backgroundColor = [UIColor whiteColor];
+    self.specificationTap = [[UITapGestureRecognizer alloc]init];
+    [view2 addGestureRecognizer:self.specificationTap];
     
     UILabel *selectedTitlelab = [UILabel new];
     [view2 addSubview:selectedTitlelab];

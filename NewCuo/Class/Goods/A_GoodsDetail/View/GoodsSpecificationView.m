@@ -7,7 +7,7 @@
 //
 
 #import "GoodsSpecificationView.h"
-
+#import "LB_PuleAndDownCustomView.h"
 @interface GoodsSpecificationView ()
 {
     
@@ -66,21 +66,21 @@
     }];
     goodsImgV.image = [UIImage imageNamed:@"222"];
     
-    UIButton *closeBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    [self.infoView addSubview:closeBtn];
-    [closeBtn makeConstraints:^(MASConstraintMaker *make) {
+    self.closeBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [self.infoView addSubview:self.closeBtn];
+    [self.closeBtn makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.infoView).offset(-10);
         make.top.equalTo(self.infoView).offset(10);
         make.size.equalTo(CGSizeMake(20, 20));
     }];
-    [closeBtn setImage:[UIImage imageNamed:@"close_btn_bg"] forState:(UIControlStateNormal)];
+    [self.closeBtn setImage:[UIImage imageNamed:@"close_btn_bg"] forState:(UIControlStateNormal)];
     
     UILabel *goodsNameLab = [UILabel new];
     [self.infoView addSubview:goodsNameLab];
     [goodsNameLab makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(imgBGView.right).offset(5);
         make.top.equalTo(self.infoView).offset(5);
-        make.right.equalTo(closeBtn.left).offset(-5);
+        make.right.equalTo(self.closeBtn.left).offset(-5);
     }];
     goodsNameLab.preferredMaxLayoutWidth = KSCREENWIDTH;
     goodsNameLab.numberOfLines = 2;
@@ -140,6 +140,7 @@
     CGFloat padding = 5;
     ///按钮宽
     CGFloat btnWidth  = (KSCREENWIDTH - 2*15 - (count -1)*padding)/(count);
+    ///按钮高
     CGFloat btnHeight = btnWidth*0.5;
     for (int i = 0; i < colorArr.count; i++) {
         UIButton *btn = [UIButton buttonWithType:(UIButtonTypeCustom)];
@@ -157,8 +158,24 @@
         btn.layer.cornerRadius = 3.0;
         btn.layer.masksToBounds = YES;
     }
-  
+    LB_PuleAndDownCustomView *puleAndDownView = [[LB_PuleAndDownCustomView alloc]init];
+    [self.infoView addSubview:puleAndDownView];
+    [puleAndDownView makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(colorTitleLab);
+        make.top.equalTo(colorTitleLab.bottom).offset(5+5+(colorArr.count/count +1)*(btnHeight + padding));
+        make.width.offset(70);
+        make.height.offset(20);
+    }];
     
+    self.okBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [self.infoView addSubview:self.okBtn];
+    [self.okBtn makeConstraints:^(MASConstraintMaker *make) {
+        make.left.bottom.right.equalTo(self.infoView);
+        make.height.offset(40);
+    }];
+    self.okBtn.backgroundColor = K_COLOR_TEXT_RED;
+    [self.okBtn setTitle:@"确定" forState:(UIControlStateNormal)];
+    self.okBtn.titleLabel.font = K_FONT_14;
     
 }
 -(void)bindingEvent{

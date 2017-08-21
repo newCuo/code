@@ -102,13 +102,13 @@
     }];
 }
 -(void)bindingEvent{
-    @weakify(self);
-    [[self.addToShoppingCartBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        @strongify(self);
-        
-        NSLog(@"addddd");
-        
-    }];
+//    @weakify(self);
+//    [[self.addToShoppingCartBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+//        @strongify(self);
+//        
+//        NSLog(@"addddd");
+//        
+//    }];
 }
 
 

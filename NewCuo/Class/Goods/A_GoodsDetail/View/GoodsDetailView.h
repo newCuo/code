@@ -15,4 +15,5 @@
 @property (strong,nonatomic)UILabel *goodsPriceLab;
 @property (strong,nonatomic)UIButton *couponRedemptionBtn;
 @property (strong,nonatomic)UIButton *addressBtn;
+@property (strong,nonatomic)UITapGestureRecognizer *specificationTap;
 @end
