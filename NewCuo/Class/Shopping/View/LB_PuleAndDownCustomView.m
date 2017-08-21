@@ -35,6 +35,7 @@
     self = [super init];
     if (self) {
         [self initUI];
+        [self bindingEvent];
     }
     return self;
 }
@@ -103,10 +104,33 @@
         make.left.equalTo(lab1.mas_right).offset(0);;
         make.right.equalTo(lab2.mas_left).offset(0);
     }];
-    
+    self.textField.text = @"1";
     
 }
-
-
+-(void)bindingEvent{
+    @weakify(self);
+    [[self.textField rac_textSignal] subscribeNext:^(id x) {
+        @strongify(self);
+//        int i = [self.textField.text intValue];
+        NSLog(@"%@",self.textField.text);
+    }];
+    
+    [[self.minusBtn rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(id x) {
+        @strongify(self);
+        int i = [self.textField.text intValue];
+        if (i == 1) {
+            self.minusBtn.enabled = NO;
+        }else{
+            self.minusBtn.enabled = YES;
+            self.textField.text = [NSString stringWithFormat:@"%d", i-1];
+        }
+    }];
+    [[self.pulsBtn rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(id x) {
+        @strongify(self);
+        int i = [self.textField.text intValue];
+        self.textField.text = [NSString stringWithFormat:@"%d", i+1];
+        self.minusBtn.enabled = YES;
+    }];
+}
 
 @end

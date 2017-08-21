@@ -74,17 +74,33 @@
         make.top.equalTo(view1.top).offset(10);
     }];
     self.goodsNameLab.backgroundColor = [UIColor clearColor];
-    self.goodsNameLab.preferredMaxLayoutWidth = KSCREENWIDTH - 2*10;
-    //    [self.goodsNameLab setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+    self.goodsNameLab.preferredMaxLayoutWidth = KSCREENWIDTH - 2*10;//最大宽度
+    //    [self.goodsNameLab setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];//不知道有什么，加不加都一要样
     self.goodsNameLab.text = @"商品名name商品名name商品名name商品名name商品名name";
     self.goodsNameLab.numberOfLines = 0;
     self.goodsNameLab.font = K_FONT_16;
+    
+    self.goodsInfoLab = [[UILabel alloc]init];
+    [view1 addSubview:self.goodsInfoLab];
+    [self.goodsInfoLab makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(view1.leading).offset(10);
+        make.trailing.equalTo(view1.trailing).offset(-10);
+        make.top.equalTo(self.goodsNameLab.bottom).offset(5);
+    }];
+    self.goodsInfoLab.backgroundColor = [UIColor clearColor];
+    self.goodsInfoLab.preferredMaxLayoutWidth = KSCREENWIDTH - 2*10;//最大宽度
+    //    [self.goodsNameLab setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];//不知道有什么，加不加都一要样
+    self.goodsInfoLab.text = @"白色，高配，豪华";
+    self.goodsInfoLab.textColor = K_COLOR_TEXT_RED;
+    self.goodsInfoLab.numberOfLines = 0;
+    self.goodsInfoLab.font = K_FONT_14;
+    
     
     UILabel *RMBlab = [UILabel new];
     [view1 addSubview:RMBlab];
     [RMBlab makeConstraints:^(MASConstraintMaker *make) {
         make.leading.equalTo(self.goodsNameLab);
-        make.top.equalTo(self.goodsNameLab.bottom).offset(10);
+        make.top.equalTo(self.goodsInfoLab.bottom).offset(10);
     }];
     RMBlab.text = @"¥";
     RMBlab.textColor = K_COLOR_TEXT_RED;
@@ -173,7 +189,6 @@
     view2.backgroundColor = [UIColor whiteColor];
     self.specificationTap = [[UITapGestureRecognizer alloc]init];
     [view2 addGestureRecognizer:self.specificationTap];
-    
     UILabel *selectedTitlelab = [UILabel new];
     [view2 addSubview:selectedTitlelab];
     [selectedTitlelab makeConstraints:^(MASConstraintMaker *make) {
@@ -435,7 +450,6 @@
     }];
     self.headerView.backgroundColor = [UIColor clearColor];
     
-    
     //商品介绍 规格参数两个按钮所在的view
     UIView *btnView = [UIView new];
     [self.headerView addSubview:btnView];
@@ -502,17 +516,20 @@
         @strongify(self);
         [self.headerView bringSubviewToFront:self.web2];
     }];
-
-    
 }
 #pragma mark ---- scrollView delagate
 -(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
     NSInteger tag = scrollView.tag;
     ///偏移量，下拉的偏移量为负，上拉的正
     CGFloat offsetY = scrollView.contentOffset.y - targetContentOffset->y;
+    //添加一个手势判断，不然会有bug
+    UIPanGestureRecognizer *panGes = scrollView.panGestureRecognizer;
+    CGPoint velocityPon = [panGes velocityInView:self.topScrollView];
+    CGFloat velocityPonY = velocityPon.y;//velocityPonY<0时为向上滑动 velocityPonY>0时为向下滑动
     if (tag == 88) {
-        if (offsetY > 50) {
+        if (offsetY > 50 && velocityPonY < 0) {
             [UIView animateWithDuration:0.5 animations:^{
+                
                 [self.topScrollView remakeConstraints:^(MASConstraintMaker *make) {
                 make.top.leading.trailing.equalTo(self);
                 make.height.equalTo(0.01);

@@ -12,6 +12,7 @@
 @property (strong,nonatomic)UIScrollView *topScrollView;//
 @property (strong,nonatomic)UITableView *bottomTableView;//
 @property (strong,nonatomic)UILabel *goodsNameLab;
+@property (strong,nonatomic)UILabel *goodsInfoLab;
 @property (strong,nonatomic)UILabel *goodsPriceLab;
 @property (strong,nonatomic)UIButton *couponRedemptionBtn;
 @property (strong,nonatomic)UIButton *addressBtn;
