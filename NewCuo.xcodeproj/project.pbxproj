@@ -15,6 +15,7 @@
 		3F6181D61F31A34C0096693D /* GoodsDetailBottomViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181D31F31A34C0096693D /* GoodsDetailBottomViewModel.m */; };
 		3F6181D71F31A34C0096693D /* GoodsDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181D51F31A34C0096693D /* GoodsDetailViewModel.m */; };
 		3F6181DC1F31DB550096693D /* GoodsDetailTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6181DB1F31DB550096693D /* GoodsDetailTitleViewModel.m */; };
+		3F8FFE5C1F4BD53C00C63B20 /* GoodsDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8FFE5B1F4BD53C00C63B20 /* GoodsDetailModel.m */; };
 		3FF8781A1F46861800843449 /* GoodsSpecificationSelectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF878191F46861800843449 /* GoodsSpecificationSelectVC.m */; };
 		3FF8781D1F46864C00843449 /* GoodsSpecificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8781C1F46864C00843449 /* GoodsSpecificationView.m */; };
 		3FF878201F46867100843449 /* GoodsSpecificationVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8781F1F46867100843449 /* GoodsSpecificationVM.m */; };
@@ -169,6 +170,8 @@
 		3F6181D91F31AA660096693D /* FontHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontHeader.h; sourceTree = "<group>"; };
 		3F6181DA1F31DB550096693D /* GoodsDetailTitleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDetailTitleViewModel.h; sourceTree = "<group>"; };
 		3F6181DB1F31DB550096693D /* GoodsDetailTitleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDetailTitleViewModel.m; sourceTree = "<group>"; };
+		3F8FFE5A1F4BD53C00C63B20 /* GoodsDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoodsDetailModel.h; path = NewCuo/Class/Goods/A_GoodsDetail/ViewModel/GoodsDetailModel.h; sourceTree = SOURCE_ROOT; };
+		3F8FFE5B1F4BD53C00C63B20 /* GoodsDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoodsDetailModel.m; path = NewCuo/Class/Goods/A_GoodsDetail/ViewModel/GoodsDetailModel.m; sourceTree = SOURCE_ROOT; };
 		3FF878181F46861800843449 /* GoodsSpecificationSelectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsSpecificationSelectVC.h; sourceTree = "<group>"; };
 		3FF878191F46861800843449 /* GoodsSpecificationSelectVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsSpecificationSelectVC.m; sourceTree = "<group>"; };
 		3FF8781B1F46864C00843449 /* GoodsSpecificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsSpecificationView.h; sourceTree = "<group>"; };
@@ -737,6 +740,8 @@
 		5E7D75DF1F2B362600C6C92F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3F8FFE5A1F4BD53C00C63B20 /* GoodsDetailModel.h */,
+				3F8FFE5B1F4BD53C00C63B20 /* GoodsDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1560,7 +1565,7 @@
 		5EF4EC5B1F1F311C000C2EAD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = LB_;
+				CLASSPREFIX = LI_;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "林波";
 				TargetAttributes = {
@@ -1679,6 +1684,7 @@
 				5E7D76181F32CC9300C6C92F /* LB_UserOrderTitleViewModel.m in Sources */,
 				3FF8781D1F46864C00843449 /* GoodsSpecificationView.m in Sources */,
 				5E7C890E1F24844F009A578E /* LB_HomeTitleViewModel.m in Sources */,
+				3F8FFE5C1F4BD53C00C63B20 /* GoodsDetailModel.m in Sources */,
 				5EF4EC891F1F3B83000C2EAD /* TabBarViewController.m in Sources */,
 				5EAFA72A1F45346500A7EF02 /* LB_PuleAndDownCustomView.m in Sources */,
 				5E7D75C91F2AD92400C6C92F /* LB_GoodsRightViewModel.m in Sources */,

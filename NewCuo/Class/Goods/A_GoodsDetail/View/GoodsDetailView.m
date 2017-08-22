@@ -7,7 +7,6 @@
 //
 
 #import "GoodsDetailView.h"
-#import "SDCycleScrollView.h"
 #import <WebKit/WebKit.h>
 
 @interface GoodsDetailView ()<UIScrollViewDelegate,UITableViewDelegate>
@@ -54,9 +53,10 @@
     bgView.backgroundColor = [UIColor clearColor];
     
     ///商品轮播图
-    SDCycleScrollView *headerScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, 0, 0) imageNamesGroup:@[@"222",@"222"]];
-    [bgView addSubview:headerScrollView];
-    [headerScrollView makeConstraints:^(MASConstraintMaker *make) {
+    self.headerScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, 0, 0) imageNamesGroup:@[@"222",@"222"]];
+//    SDCycleScrollView *headerScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, 0, 0) imageNamesGroup:self.goodsDetailModel.goodsImgUrlArr];
+    [bgView addSubview:self.headerScrollView];
+    [self.headerScrollView makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.topScrollView.top);
         make.width.equalTo(self.frame.size.width);
         make.height.equalTo(KSCREENWIDTH*0.8);
@@ -69,8 +69,8 @@
     self.goodsNameLab = [[UILabel alloc]init];
     [view1 addSubview:self.goodsNameLab];
     [self.goodsNameLab makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(view1.leading).offset(10);
-        make.trailing.equalTo(view1.trailing).offset(-10);
+        make.left.equalTo(view1.left).offset(10);
+        make.right.equalTo(view1.right).offset(-10);
         make.top.equalTo(view1.top).offset(10);
     }];
     self.goodsNameLab.backgroundColor = [UIColor clearColor];
@@ -83,13 +83,13 @@
     self.goodsInfoLab = [[UILabel alloc]init];
     [view1 addSubview:self.goodsInfoLab];
     [self.goodsInfoLab makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(view1.leading).offset(10);
-        make.trailing.equalTo(view1.trailing).offset(-10);
+        make.left.equalTo(view1.left).offset(10);
+        make.right.equalTo(view1.right).offset(-10);
         make.top.equalTo(self.goodsNameLab.bottom).offset(5);
     }];
     self.goodsInfoLab.backgroundColor = [UIColor clearColor];
     self.goodsInfoLab.preferredMaxLayoutWidth = KSCREENWIDTH - 2*10;//最大宽度
-    //    [self.goodsNameLab setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];//不知道有什么，加不加都一要样
+    //    [self.goodsNameLab setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];//不知道有什么，加不加都一样
     self.goodsInfoLab.text = @"白色，高配，豪华";
     self.goodsInfoLab.textColor = K_COLOR_TEXT_RED;
     self.goodsInfoLab.numberOfLines = 0;
@@ -99,7 +99,7 @@
     UILabel *RMBlab = [UILabel new];
     [view1 addSubview:RMBlab];
     [RMBlab makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(self.goodsNameLab);
+        make.left.equalTo(self.goodsNameLab);
         make.top.equalTo(self.goodsInfoLab.bottom).offset(10);
     }];
     RMBlab.text = @"¥";
@@ -110,7 +110,7 @@
     [view1 addSubview:self.goodsPriceLab];
     [self.goodsPriceLab makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(RMBlab.bottom);
-        make.leading.equalTo(RMBlab.trailing).offset(3);
+        make.left.equalTo(RMBlab.right).offset(3);
     }];
     self.goodsPriceLab.text = @"888.88";
     self.goodsPriceLab.textColor = K_COLOR_TEXT_RED;
@@ -120,7 +120,7 @@
     [view1 addSubview:lineLab];
     lineLab.backgroundColor = K_COLOR_LINE;
     [lineLab makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.trailing.equalTo(view1);
+        make.left.right.equalTo(view1);
         make.top.equalTo(self.goodsPriceLab.bottom).offset(20);
         make.height.equalTo(0.5);
     }];
@@ -128,7 +128,7 @@
     UILabel *couponRedemptionLab = [UILabel new];
     [view1 addSubview:couponRedemptionLab];
     [couponRedemptionLab makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(self.goodsNameLab.leading);
+        make.left.equalTo(self.goodsNameLab.left);
         make.top.equalTo(lineLab.bottom).offset(15);
     }];
     couponRedemptionLab.text = @"领券";
@@ -139,7 +139,7 @@
     UILabel *discountLab = [UILabel new];
     [view1 addSubview:discountLab];
     [discountLab makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(couponRedemptionLab.trailing).offset(10);
+        make.left.equalTo(couponRedemptionLab.right).offset(10);
         make.centerY.equalTo(couponRedemptionLab);
         make.width.equalTo(maxSize.width+20);
         make.height.equalTo(maxSize.height+10);
@@ -159,20 +159,20 @@
         make.width.equalTo(10);
         make.height.equalTo(18);
         make.centerY.equalTo(couponRedemptionLab);
-        make.trailing.equalTo(view1.trailing).offset(-10);
+        make.right.equalTo(view1.right).offset(-10);
     }];
     
     self.couponRedemptionBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [view1 addSubview:self.couponRedemptionBtn];
     [self.couponRedemptionBtn makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.trailing.bottom.equalTo(view1);
+        make.left.right.bottom.equalTo(view1);
         make.top.equalTo(lineLab.bottom);
     }];
     self.couponRedemptionBtn.backgroundColor = [UIColor clearColor];
     
     [view1 makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(headerScrollView.bottom);
-        make.leading.equalTo(self.topScrollView.leading);
+        make.top.equalTo(self.headerScrollView.bottom);
+        make.left.equalTo(self.topScrollView.left);
         make.bottom.equalTo(couponRedemptionLab.bottom).offset(15);
         make.width.equalTo(self.topScrollView.width);
 //        make.height.equalTo(KSCREENWIDTH*0.6);
@@ -182,7 +182,7 @@
     [bgView addSubview:view2];
     [view2 makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(view1.bottom).offset(10);
-//        make.leading.trailing.equalTo(self.topScrollView);
+//        make.left.right.equalTo(self.topScrollView);
         make.width.equalTo(view1);
         make.height.offset(40);
     }];
@@ -192,7 +192,7 @@
     UILabel *selectedTitlelab = [UILabel new];
     [view2 addSubview:selectedTitlelab];
     [selectedTitlelab makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(self.goodsNameLab);
+        make.left.equalTo(self.goodsNameLab);
         make.centerY.equalTo(view2.centerY);
     }];
     selectedTitlelab.textColor = [UIColor colorWithHexString:@"666666"];
@@ -203,7 +203,7 @@
     [view2 addSubview:selectedlab];
     [selectedlab makeConstraints:^(MASConstraintMaker *make) {
         
-        make.leading.equalTo(selectedTitlelab.trailing).offset(10);
+        make.left.equalTo(selectedTitlelab.right).offset(10);
         make.centerY.equalTo(view2.centerY);
     }];
     selectedlab.text = @"高配 1台";
@@ -214,7 +214,7 @@
     [rightArrowImgV2 makeConstraints:^(MASConstraintMaker *make) {
         make.width.height.equalTo(rightArrowImgV);
         make.centerY.equalTo(view2);
-        make.trailing.equalTo(rightArrowImgV);
+        make.right.equalTo(rightArrowImgV);
     }];
     
     ///地址，运费，服务，提示等所在的view
@@ -225,7 +225,7 @@
     UILabel *sendToLab = [UILabel new];
     [view3 addSubview:sendToLab];
     [sendToLab makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(self.goodsNameLab);
+        make.left.equalTo(self.goodsNameLab);
         make.top.equalTo(view3).offset(10);
     }];
     sendToLab.font = K_FONT_14;
@@ -235,7 +235,7 @@
     UILabel *addressLab = [UILabel new];
     [view3 addSubview:addressLab];
     [addressLab makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(sendToLab.trailing).offset(10);
+        make.left.equalTo(sendToLab.right).offset(10);
         make.centerY.equalTo(sendToLab);
     }];
     addressLab.text = @"北京 朝阳区 xx路";
@@ -246,7 +246,7 @@
     [addressImgV makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(14);
         make.height.equalTo(16);
-        make.trailing.equalTo(rightArrowImgV);
+        make.right.equalTo(rightArrowImgV);
         make.centerY.equalTo(sendToLab);
     }];
     addressImgV.image = [UIImage imageNamed:@"address_img"];
@@ -254,7 +254,7 @@
     self.addressBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [view3 addSubview:self.addressBtn];
     [self.addressBtn makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.trailing.top.equalTo(view3);
+        make.left.right.top.equalTo(view3);
         make.bottom.equalTo(sendToLab).offset(5);
     }];
     self.addressBtn.backgroundColor = [UIColor clearColor];
@@ -262,7 +262,7 @@
     UILabel *isHaveGoodsLab = [UILabel new];
     [view3 addSubview:isHaveGoodsLab];
     [isHaveGoodsLab makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(addressLab);
+        make.left.equalTo(addressLab);
         make.top.equalTo(addressLab.bottom).offset(10);
     }];
     isHaveGoodsLab.text = @"现货";
@@ -272,52 +272,53 @@
     UILabel *freightTitleLab = [UILabel new];
     [view3 addSubview:freightTitleLab];
     [freightTitleLab makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(self.goodsNameLab);
+        make.left.equalTo(self.goodsNameLab);
         make.top.equalTo(isHaveGoodsLab.bottom).offset(10);
     }];
     freightTitleLab.textColor = K_COLOR_TEXT_MID;
     freightTitleLab.text = @"运费";
     freightTitleLab.font = K_FONT_14;
     
-    UILabel *freightLab = [UILabel new];
-    [view3 addSubview:freightLab];
-    [freightLab makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(addressLab);
+    self.freightLab = [UILabel new];
+    [view3 addSubview:self.freightLab];
+    [self.freightLab makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(addressLab);
         make.top.equalTo(freightTitleLab);
     }];
-    freightLab.text = @"包邮";
-    freightLab.font = K_FONT_14;
+    self.freightLab.text = @"包邮";
+    self.freightLab.font = K_FONT_14;
     
     UILabel *serviceTitleLab = [UILabel new];
     [view3 addSubview:serviceTitleLab];
     [serviceTitleLab makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(self.goodsNameLab);
+        make.left.equalTo(self.goodsNameLab);
         make.top.equalTo(freightTitleLab.bottom).offset(10);
     }];
     serviceTitleLab.textColor = K_COLOR_TEXT_MID;
     serviceTitleLab.text = @"服务";
     serviceTitleLab.font = K_FONT_14;
     
-    UILabel *serviceLab = [UILabel new];
-    [view3 addSubview:serviceLab];
-    [serviceLab makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(addressLab);
+    self.serviceLab = [UILabel new];
+    [view3 addSubview:self.serviceLab];
+    [self.serviceLab makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(view3.right).offset(-10);
+        make.left.equalTo(serviceTitleLab.right).offset(10);
         make.top.equalTo(serviceTitleLab);
-        make.trailing.equalTo(view3.trailing).offset(-10);
     }];
-    serviceLab.preferredMaxLayoutWidth = KSCREENWIDTH - 20 - 40;
-    serviceLab.numberOfLines = 0;
-    serviceLab.text = @"直接发货直接发货直接发货直接发货直接发货直接发货直接发货直接发货";
-    serviceLab.font = K_FONT_14;
+    self.serviceLab.preferredMaxLayoutWidth = KSCREENWIDTH - 20 - 40;
+    self.serviceLab.text = @"直接发货直接发货直接发货直接发货直接发货直接发货直接发货直接发货";
+    self.serviceLab.numberOfLines = 0;
+    self.serviceLab.font = K_FONT_14;
+    self.serviceLab.backgroundColor = [UIColor redColor];
     
     UILabel *promptTitleLab = [UILabel new];
     [view3 addSubview:promptTitleLab];
     [promptTitleLab makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(self.goodsNameLab);
-        make.top.equalTo(serviceLab.bottom).offset(10);
+        make.left.equalTo(self.goodsNameLab);
+        make.top.equalTo(self.serviceLab.bottom).offset(10);
     }];
     promptTitleLab.textColor = K_COLOR_TEXT_MID;
-    promptTitleLab.text = @"服务";
+    promptTitleLab.text = @"提示";
     promptTitleLab.font = K_FONT_14;
     
     NSArray *arr = @[@"正品保障",@"七天无理由退货",@"测试"];
@@ -325,7 +326,7 @@
         UIImageView *imgV = [UIImageView new];
         [view3 addSubview:imgV];
         [imgV makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.equalTo(addressLab);
+            make.left.equalTo(addressLab);
             make.width.height.equalTo(15);
             make.top.equalTo(promptTitleLab).offset(i*25);
         }];
@@ -334,64 +335,65 @@
         UILabel *lab = [UILabel new];
         [view3 addSubview:lab];
         [lab makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.equalTo(imgV.trailing).offset(5);
+            make.left.equalTo(imgV.right).offset(5);
             make.centerY.equalTo(imgV);
         }];
         lab.font = K_FONT_14;
         lab.text = arr[i];
+        lab.tag = i + 10;
     }
     
     UILabel *lineLab2 = [UILabel new];
     [view3 addSubview:lineLab2];
     [lineLab2 makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.trailing.equalTo(view3);
+        make.left.right.equalTo(view3);
         make.top.equalTo(promptTitleLab.bottom).offset((arr.count-1)*25+30);
         make.height.equalTo(0.5);
     }];
     lineLab2.backgroundColor = K_COLOR_LINE;
     
-    UILabel *commentLab = [UILabel new];
-    [view3 addSubview:commentLab];
-    [commentLab makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(self.goodsNameLab);
+    self.commentLab = [UILabel new];
+    [view3 addSubview:self.commentLab];
+    [self.commentLab makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.goodsNameLab);
         make.top.equalTo(lineLab2.bottom).offset(10);
     }];
-    commentLab.text = @"评论(暂无商品评价)";
-    commentLab.textColor = K_COLOR_TEXT_MID;
-    commentLab.font = K_FONT_14;
+    self.commentLab.text = @"评论(暂无商品评价)";
+    self.commentLab.textColor = K_COLOR_TEXT_MID;
+    self.commentLab.font = K_FONT_14;
     
     UIImageView *rightArrowImgV3 = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"right"]];
     [view3 addSubview:rightArrowImgV3];
     [rightArrowImgV3 makeConstraints:^(MASConstraintMaker *make) {
         make.width.height.equalTo(rightArrowImgV);
-        make.centerY.equalTo(commentLab);
-        make.trailing.equalTo(rightArrowImgV);
+        make.centerY.equalTo(self.commentLab);
+        make.right.equalTo(rightArrowImgV);
     }];
     
-    UILabel *commentNumberLab = [UILabel new];
-    [view3 addSubview:commentNumberLab];
-    [commentNumberLab makeConstraints:^(MASConstraintMaker *make) {
-        make.trailing.equalTo(rightArrowImgV3.leading).offset(5);
-        make.centerY.equalTo(commentLab);
+    self.commentNumberLab = [UILabel new];
+    [view3 addSubview:self.commentNumberLab];
+    [self.commentNumberLab makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(rightArrowImgV3.left).offset(5);
+        make.centerY.equalTo(self.commentLab);
         make.width.equalTo(45);
     }];
-    commentNumberLab.textColor = K_COLOR_TEXT_RED;
-    commentNumberLab.font = K_FONT_14;
-    commentNumberLab.text = @"100%";
+    self.commentNumberLab.textColor = K_COLOR_TEXT_RED;
+    self.commentNumberLab.font = K_FONT_14;
+    self.commentNumberLab.text = @"100%";
     
     UILabel *goodCommentLab = [UILabel new];
     [view3 addSubview:goodCommentLab];
     [goodCommentLab makeConstraints:^(MASConstraintMaker *make) {
-        make.trailing.equalTo(commentNumberLab.leading);
-        make.centerY.equalTo(commentLab);
+        make.right.equalTo(self.commentNumberLab.left);
+        make.centerY.equalTo(self.commentLab);
     }];
     goodCommentLab.text = @"好评";
     goodCommentLab.font = K_FONT_14;
     
     [view3 makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(view2.bottom).offset(10);
-        make.leading.equalTo(self.topScrollView.leading);
-        make.bottom.equalTo(commentLab.bottom).offset(10);
+        make.left.equalTo(self.topScrollView.left);
+        make.bottom.equalTo(self.commentLab.bottom).offset(10);
         make.width.equalTo(self.topScrollView.width);
     }];
     
@@ -409,8 +411,8 @@
     UILabel *lineLab3 = [UILabel new];
     [bgView addSubview:lineLab3];
     [lineLab3 makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(self.topScrollView);
-        make.trailing.equalTo(pullUpLab.leading).offset(-5);
+        make.left.equalTo(self.topScrollView);
+        make.right.equalTo(pullUpLab.left).offset(-5);
         make.centerY.equalTo(pullUpLab);
         make.height.equalTo(0.5);
     }];
@@ -419,8 +421,8 @@
     UILabel *lineLab4 = [UILabel new];
     [bgView addSubview:lineLab4];
     [lineLab4 makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(pullUpLab.trailing).offset(5);
-        make.trailing.equalTo(self.topScrollView);
+        make.left.equalTo(pullUpLab.right).offset(5);
+        make.right.equalTo(self.topScrollView);
         make.centerY.equalTo(pullUpLab);
         make.height.equalTo(0.5);
     }];
@@ -432,7 +434,7 @@
     [self.bottomTableView makeConstraints:^(MASConstraintMaker *make) {
 //        make.edges.insets(UIEdgeInsetsZero);
         make.top.equalTo(self.topScrollView.bottom);
-        make.leading.equalTo(self.topScrollView);
+        make.left.equalTo(self.topScrollView);
         make.size.equalTo(CGSizeMake(KSCREENWIDTH, 0.01));
     }];
     self.bottomTableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0.01, 0.01)];
@@ -445,7 +447,7 @@
     self.headerView = [UIView new];
     self.bottomTableView.tableHeaderView = self.headerView;
     [self.headerView makeConstraints:^(MASConstraintMaker *make) {
-        make.top.leading.equalTo(self);
+        make.top.left.equalTo(self);
         make.width.height.equalTo(self.bottomTableView);
     }];
     self.headerView.backgroundColor = [UIColor clearColor];
@@ -454,7 +456,7 @@
     UIView *btnView = [UIView new];
     [self.headerView addSubview:btnView];
     [btnView makeConstraints:^(MASConstraintMaker *make) {
-        make.top.leading.trailing.equalTo(self.headerView);
+        make.top.left.right.equalTo(self.headerView);
         make.height.offset(40);
     }];
     btnView.backgroundColor = [UIColor clearColor];
@@ -462,7 +464,7 @@
     self.btn1 = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [btnView addSubview:self.btn1];
     [self.btn1 makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.top.bottom.equalTo(btnView);
+        make.left.top.bottom.equalTo(btnView);
     }];
     [self.btn1 setTitle:@"商品介绍" forState:(UIControlStateNormal)];
     [self.btn1 setTitleColor:K_COLOR_TEXT_BLACK forState:(UIControlStateNormal)];
@@ -471,8 +473,8 @@
     self.btn2 = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [btnView addSubview:self.btn2];
     [self.btn2 makeConstraints:^(MASConstraintMaker *make) {
-        make.trailing.top.bottom.equalTo(btnView);
-        make.leading.equalTo(self.btn1.trailing);
+        make.right.top.bottom.equalTo(btnView);
+        make.left.equalTo(self.btn1.right);
         make.width.equalTo(self.btn1);
     }];
     [self.btn2 setTitle:@"规格参数" forState:(UIControlStateNormal)];
@@ -483,7 +485,7 @@
     [self.headerView addSubview:self.web1];
     [self.web1 makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(btnView.bottom);
-        make.leading.bottom.trailing.equalTo(self.headerView);
+        make.left.bottom.right.equalTo(self.headerView);
     }];
     NSURL *url1 = [NSURL URLWithString:@"https://www.baidu.com"];
     NSURLRequest *request1 = [NSURLRequest requestWithURL:url1];
@@ -493,7 +495,7 @@
     [self.headerView addSubview:self.web2];
     [self.web2 makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(btnView.bottom);
-        make.leading.bottom.trailing.equalTo(self.headerView);
+        make.left.bottom.right.equalTo(self.headerView);
     }];
     NSURL *url2 = [NSURL URLWithString:@"https://cn.bing.com"];
     NSURLRequest *request2 = [NSURLRequest requestWithURL:url2];
@@ -531,7 +533,7 @@
             [UIView animateWithDuration:0.5 animations:^{
                 
                 [self.topScrollView remakeConstraints:^(MASConstraintMaker *make) {
-                make.top.leading.trailing.equalTo(self);
+                make.top.left.right.equalTo(self);
                 make.height.equalTo(0.01);
             }];
                 [self.bottomTableView remakeConstraints:^(MASConstraintMaker *make) {
@@ -548,7 +550,7 @@
                 }];
                 [self.bottomTableView remakeConstraints:^(MASConstraintMaker *make) {
                     make.top.equalTo(self.topScrollView.bottom);
-                    make.leading.equalTo(self.topScrollView);
+                    make.left.equalTo(self.topScrollView);
                     make.size.equalTo(CGSizeMake(KSCREENWIDTH, 0.01));
                 }];
                 [self.topScrollView.superview layoutIfNeeded];//强制绘制
@@ -563,6 +565,10 @@
     NSLog(@"%f",scale);
     
 }
+//-(void)setGoodsDetailModel:(GoodsDetailModel *)goodsDetailModel{
+//    _goodsDetailModel = goodsDetailModel;
+//    
+//}
 - (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font
 {
     CGSize maxSize = CGSizeMake(MAXFLOAT, MAXFLOAT);
