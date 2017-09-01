@@ -23,6 +23,7 @@
 -(void)setIsSelectAll:(BOOL)isSelectAll
 {
     _isSelectAll = isSelectAll;
+    [[NSNotificationCenter defaultCenter]postNotificationName:KNTCANNOTSELECTALL object:nil];
     
 }
 
@@ -39,6 +40,7 @@
     BOOL isSelct = YES;
     for (LB_GoodsModel *model in self.goodsList) {
         if (model.isSelect == NO) {
+            
             isSelct = NO;
             break;
         }

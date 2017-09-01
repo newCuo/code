@@ -36,6 +36,7 @@
 {
     
     self =  [[[NSBundle mainBundle]loadNibNamed:@"LB_ShoppingContentView" owner:self options:nil]objectAtIndex:0];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(canSelectAction) name:KNTCANNOTSELECTALL object:nil];
     self.contentHeight.constant = KSCREENHEIGHT-64-48;
     if (self) {
         [self initUI];
@@ -127,8 +128,40 @@
 - (IBAction)selectAllAction:(UIButton *)sender {
     
     sender.selected = !sender.selected;
+    if (sender.selected == YES) {
+        for (LB_StroeModel *model in self.list) {
+            model.isSelectAll = YES;
+            for (LB_GoodsModel *good in model.goodsList) {
+                good.isSelect = YES;
+            }
+        }
+    }else
+    {
+        for (LB_StroeModel *model in self.list) {
+            model.isSelectAll = NO;
+            for (LB_GoodsModel *good in model.goodsList) {
+                good.isSelect = NO;
+            }
+        }
+    }
+    [self.tableView reloadData];
+}
+-(void)canSelectAction{
     
+    self.selectBtn.selected = YES;
+    for (LB_StroeModel *model in self.list) {
+        if (model.isSelectAll==NO) {
+            self.selectBtn.selected = NO;
+            break;
+        }
+    }
+   
 }
 
+-(void)dealloc
+{
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
 
 @end
