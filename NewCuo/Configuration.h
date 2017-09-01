@@ -16,14 +16,6 @@
 
 
 
-#define K_COLOR_RGBA(R,G,B,A)    [UIColor colorWithRed:R/255.0F green:G/255.0F blue:B/255.0F alpha:A]
-#define K_COLOR_RGB(R,G,B)       K_COLOR_RGBA(R,G,B,1)
-#define K_MAIN_COLOR             K_COLOR_RGBA(153,203,52,1)    //#99cb34
-#define K_LINE_COLOR             K_COLOR_RGBA(180,180,180,1)
-#define K_BACKGROUND_COLOR       K_COLOR_RGBA(230,230,230,1)
-#define K_DARKLINE_COLOR         K_COLOR_RGBA(200,200,200,1)
-#define K_RED_COLOR              K_COLOR_RGBA(229,58,89,1)
-
 
 #define KAPPDELEGATE             (AppDelegate*)[UIApplication sharedApplication].delegate
 

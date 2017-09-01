@@ -20,7 +20,7 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    
+    [UserModel shareDefaultUserModel].token = @"qeqweq";
     [self initConfiguration];
     
     self.tabBarVC = [[TabBarViewController alloc]init];

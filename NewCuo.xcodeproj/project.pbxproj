@@ -19,6 +19,17 @@
 		3FF8781A1F46861800843449 /* GoodsSpecificationSelectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF878191F46861800843449 /* GoodsSpecificationSelectVC.m */; };
 		3FF8781D1F46864C00843449 /* GoodsSpecificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8781C1F46864C00843449 /* GoodsSpecificationView.m */; };
 		3FF878201F46867100843449 /* GoodsSpecificationVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8781F1F46867100843449 /* GoodsSpecificationVM.m */; };
+		5E3059721F580D400019C24C /* LB_CouponViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3059711F580D400019C24C /* LB_CouponViewController.m */; };
+		5E3059751F580DCB0019C24C /* LB_CouponTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3059741F580DCB0019C24C /* LB_CouponTitleViewModel.m */; };
+		5E3059781F580DE80019C24C /* LB_CouponContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3059771F580DE80019C24C /* LB_CouponContentViewModel.m */; };
+		5E30597B1F580EDD0019C24C /* LB_CouponContentHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E30597A1F580EDD0019C24C /* LB_CouponContentHeadView.m */; };
+		5E30597D1F580EED0019C24C /* LB_CouponContentHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E30597C1F580EED0019C24C /* LB_CouponContentHeadView.xib */; };
+		5E3059801F5816D80019C24C /* LB_CouponContentFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E30597F1F5816D80019C24C /* LB_CouponContentFootView.m */; };
+		5E3059821F5816F00019C24C /* LB_CouponContentFootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E3059811F5816F00019C24C /* LB_CouponContentFootView.xib */; };
+		5E3343251F5904720014184D /* LB_CouponContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3343241F5904720014184D /* LB_CouponContentView.m */; };
+		5E3343271F5904870014184D /* LB_CouponContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E3343261F5904870014184D /* LB_CouponContentView.xib */; };
+		5E33432B1F5908DB0014184D /* LB_CouponContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3343291F5908DB0014184D /* LB_CouponContentCell.m */; };
+		5E33432C1F5908DB0014184D /* LB_CouponContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E33432A1F5908DB0014184D /* LB_CouponContentCell.xib */; };
 		5E5AE53A1F3B10DA0036CBBF /* LB_AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AE5391F3B10DA0036CBBF /* LB_AddressViewController.m */; };
 		5E5AE53D1F3B11060036CBBF /* LB_AddressTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AE53C1F3B11060036CBBF /* LB_AddressTitleViewModel.m */; };
 		5E5AE5401F3B111B0036CBBF /* LB_AddressContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AE53F1F3B111B0036CBBF /* LB_AddressContentViewModel.m */; };
@@ -178,6 +189,24 @@
 		3FF8781C1F46864C00843449 /* GoodsSpecificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsSpecificationView.m; sourceTree = "<group>"; };
 		3FF8781E1F46867100843449 /* GoodsSpecificationVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsSpecificationVM.h; sourceTree = "<group>"; };
 		3FF8781F1F46867100843449 /* GoodsSpecificationVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsSpecificationVM.m; sourceTree = "<group>"; };
+		5E3059701F580D400019C24C /* LB_CouponViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_CouponViewController.h; sourceTree = "<group>"; };
+		5E3059711F580D400019C24C /* LB_CouponViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_CouponViewController.m; sourceTree = "<group>"; };
+		5E3059731F580DCB0019C24C /* LB_CouponTitleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_CouponTitleViewModel.h; sourceTree = "<group>"; };
+		5E3059741F580DCB0019C24C /* LB_CouponTitleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_CouponTitleViewModel.m; sourceTree = "<group>"; };
+		5E3059761F580DE80019C24C /* LB_CouponContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_CouponContentViewModel.h; sourceTree = "<group>"; };
+		5E3059771F580DE80019C24C /* LB_CouponContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_CouponContentViewModel.m; sourceTree = "<group>"; };
+		5E3059791F580EDD0019C24C /* LB_CouponContentHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_CouponContentHeadView.h; sourceTree = "<group>"; };
+		5E30597A1F580EDD0019C24C /* LB_CouponContentHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_CouponContentHeadView.m; sourceTree = "<group>"; };
+		5E30597C1F580EED0019C24C /* LB_CouponContentHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LB_CouponContentHeadView.xib; sourceTree = "<group>"; };
+		5E30597E1F5816D80019C24C /* LB_CouponContentFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_CouponContentFootView.h; sourceTree = "<group>"; };
+		5E30597F1F5816D80019C24C /* LB_CouponContentFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_CouponContentFootView.m; sourceTree = "<group>"; };
+		5E3059811F5816F00019C24C /* LB_CouponContentFootView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LB_CouponContentFootView.xib; sourceTree = "<group>"; };
+		5E3343231F5904720014184D /* LB_CouponContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_CouponContentView.h; sourceTree = "<group>"; };
+		5E3343241F5904720014184D /* LB_CouponContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_CouponContentView.m; sourceTree = "<group>"; };
+		5E3343261F5904870014184D /* LB_CouponContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LB_CouponContentView.xib; sourceTree = "<group>"; };
+		5E3343281F5908DB0014184D /* LB_CouponContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_CouponContentCell.h; sourceTree = "<group>"; };
+		5E3343291F5908DB0014184D /* LB_CouponContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_CouponContentCell.m; sourceTree = "<group>"; };
+		5E33432A1F5908DB0014184D /* LB_CouponContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LB_CouponContentCell.xib; sourceTree = "<group>"; };
 		5E5AE5381F3B10DA0036CBBF /* LB_AddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_AddressViewController.h; sourceTree = "<group>"; };
 		5E5AE5391F3B10DA0036CBBF /* LB_AddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_AddressViewController.m; sourceTree = "<group>"; };
 		5E5AE53B1F3B11060036CBBF /* LB_AddressTitleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_AddressTitleViewModel.h; sourceTree = "<group>"; };
@@ -459,6 +488,63 @@
 				3F6181C71F3182150096693D /* CustomButton.m */,
 			);
 			path = CustomControls;
+			sourceTree = "<group>";
+		};
+		5E30596B1F580CAB0019C24C /* A_ Coupon */ = {
+			isa = PBXGroup;
+			children = (
+				5E30596C1F580CAB0019C24C /* Controller */,
+				5E30596D1F580CAB0019C24C /* Model */,
+				5E30596E1F580CAB0019C24C /* View */,
+				5E30596F1F580CAB0019C24C /* ViewModel */,
+			);
+			path = "A_ Coupon";
+			sourceTree = "<group>";
+		};
+		5E30596C1F580CAB0019C24C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5E3059701F580D400019C24C /* LB_CouponViewController.h */,
+				5E3059711F580D400019C24C /* LB_CouponViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5E30596D1F580CAB0019C24C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E30596E1F580CAB0019C24C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E3059791F580EDD0019C24C /* LB_CouponContentHeadView.h */,
+				5E30597A1F580EDD0019C24C /* LB_CouponContentHeadView.m */,
+				5E30597C1F580EED0019C24C /* LB_CouponContentHeadView.xib */,
+				5E30597E1F5816D80019C24C /* LB_CouponContentFootView.h */,
+				5E30597F1F5816D80019C24C /* LB_CouponContentFootView.m */,
+				5E3059811F5816F00019C24C /* LB_CouponContentFootView.xib */,
+				5E3343231F5904720014184D /* LB_CouponContentView.h */,
+				5E3343241F5904720014184D /* LB_CouponContentView.m */,
+				5E3343261F5904870014184D /* LB_CouponContentView.xib */,
+				5E3343281F5908DB0014184D /* LB_CouponContentCell.h */,
+				5E3343291F5908DB0014184D /* LB_CouponContentCell.m */,
+				5E33432A1F5908DB0014184D /* LB_CouponContentCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5E30596F1F580CAB0019C24C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5E3059731F580DCB0019C24C /* LB_CouponTitleViewModel.h */,
+				5E3059741F580DCB0019C24C /* LB_CouponTitleViewModel.m */,
+				5E3059761F580DE80019C24C /* LB_CouponContentViewModel.h */,
+				5E3059771F580DE80019C24C /* LB_CouponContentViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		5E5AE5331F3B10B40036CBBF /* A_Address */ = {
@@ -1316,6 +1402,7 @@
 		5EF4EC8D1F1F4CB6000C2EAD /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
+				5E30596B1F580CAB0019C24C /* A_ Coupon */,
 				5EA5D8A61F38553400560864 /* A_ Point */,
 				5EA5D8AB1F38553400560864 /* A_Account */,
 				5E7D760E1F32CBC100C6C92F /* A_Order */,
@@ -1565,13 +1652,13 @@
 		5EF4EC5B1F1F311C000C2EAD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = LI_;
+				CLASSPREFIX = LB_;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "林波";
 				TargetAttributes = {
 					5EF4EC621F1F311C000C2EAD = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = X47N2P5XDS;
+						DevelopmentTeam = 78SE4BENGG;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1600,8 +1687,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EF4EC761F1F311C000C2EAD /* LaunchScreen.storyboard in Resources */,
+				5E3343271F5904870014184D /* LB_CouponContentView.xib in Resources */,
 				5EF4EC731F1F311C000C2EAD /* Assets.xcassets in Resources */,
+				5E33432C1F5908DB0014184D /* LB_CouponContentCell.xib in Resources */,
+				5E30597D1F580EED0019C24C /* LB_CouponContentHeadView.xib in Resources */,
 				5EAFA72E1F45346500A7EF02 /* LB_ShoppingContentView.xib in Resources */,
+				5E3059821F5816F00019C24C /* LB_CouponContentFootView.xib in Resources */,
 				5EF4EC731F1F311C000C2EAD /* Assets.xcassets in Resources */,
 				5EAFA7301F45346500A7EF02 /* LB_ShoppingHeadTableViewCell.xib in Resources */,
 				5EAFA72C1F45346500A7EF02 /* LB_ShoppingContentTableViewCell.xib in Resources */,
@@ -1667,6 +1758,7 @@
 				5E7C89631F274844009A578E /* LB_SetViewModel.m in Sources */,
 				5E7D760A1F31B80500C6C92F /* LB_GoodsClassRankSelectView.m in Sources */,
 				5E7C89561F2735C9009A578E /* LB_UserInfoOnLineView.m in Sources */,
+				5E3059781F580DE80019C24C /* LB_CouponContentViewModel.m in Sources */,
 				5E7D75CC1F2AD93F00C6C92F /* LB_GoodsLeftView.m in Sources */,
 				5EAFA72F1F45346500A7EF02 /* LB_ShoppingHeadTableViewCell.m in Sources */,
 				5EF4ECA11F1F5E88000C2EAD /* UserInfoViewController.m in Sources */,
@@ -1718,15 +1810,21 @@
 				5EF4EC6B1F1F311C000C2EAD /* AppDelegate.m in Sources */,
 				3FF8781A1F46861800843449 /* GoodsSpecificationSelectVC.m in Sources */,
 				5E8218541F21EBB500635013 /* ShoppingTitleViewModel.m in Sources */,
+				5E3059801F5816D80019C24C /* LB_CouponContentFootView.m in Sources */,
+				5E3059751F580DCB0019C24C /* LB_CouponTitleViewModel.m in Sources */,
 				5E6A359F1F23994C000C9D43 /* UserModel.m in Sources */,
 				5E7D75BD1F29F39A00C6C92F /* TAAbstractDotView.m in Sources */,
+				5E3343251F5904720014184D /* LB_CouponContentView.m in Sources */,
 				5E7C890B1F248220009A578E /* LB_HomeTitleView.m in Sources */,
+				5E33432B1F5908DB0014184D /* LB_CouponContentCell.m in Sources */,
 				5E7C894D1F26E942009A578E /* LB_CustormView.m in Sources */,
 				5E7D75C31F29F39A00C6C92F /* UIView+SDExtension.m in Sources */,
+				5E30597B1F580EDD0019C24C /* LB_CouponContentHeadView.m in Sources */,
 				5EAFA6D41F41A15E00A7EF02 /* LB_AddressModificationTitleViewModel.m in Sources */,
 				5E7D75E41F2B363F00C6C92F /* LB_GoodsDetailViewController.m in Sources */,
 				5EA5D8DA1F3AF3BF00560864 /* LB_AccountContentView.m in Sources */,
 				5E82184B1F21DF7800635013 /* NavigationTitleView.m in Sources */,
+				5E3059721F580D400019C24C /* LB_CouponViewController.m in Sources */,
 				5E7D76271F32CD1D00C6C92F /* LB_UserOrderTableViewCell.m in Sources */,
 				5E7C89281F24D7F5009A578E /* LB_SearchViewController.m in Sources */,
 				5E7D75BE1F29F39A00C6C92F /* TAAnimatedDotView.m in Sources */,
@@ -1909,7 +2007,7 @@
 			baseConfigurationReference = 78D2519C920F3AB93394571C /* Pods-NewCuo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X47N2P5XDS;
+				DEVELOPMENT_TEAM = 78SE4BENGG;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NewCuo/NewCuo.pch";
 				INFOPLIST_FILE = NewCuo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1924,7 +2022,7 @@
 			baseConfigurationReference = 75FF1E215122D9B56594A278 /* Pods-NewCuo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X47N2P5XDS;
+				DEVELOPMENT_TEAM = 78SE4BENGG;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NewCuo/NewCuo.pch";
 				INFOPLIST_FILE = NewCuo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

@@ -21,6 +21,7 @@
 #import "LB_UserOrderViewController.h"
 #import "LB_AccountViewController.h"
 #import "LB_PointViewController.h"
+#import "LB_CouponViewController.h"
 
 
 @interface LB_UserInfoContentViewModel()
@@ -208,7 +209,9 @@
             }break;
             case 4:
             {
-                
+                LB_CouponViewController * coupon = [[LB_CouponViewController alloc]init];
+                coupon.hidesBottomBarWhenPushed = YES;
+                [weakSelf.viewController.navigationController pushViewController:coupon animated:YES];
             }break;
             default:
                 break;
