@@ -9,10 +9,13 @@
 #import "LB_HomeTitleViewModel.h"
 #import "LB_HomeTitleView.h"
 #import "LB_SearchViewController.h"
+#import "LB_ScanViewController.h"
 
 @interface LB_HomeTitleViewModel()
 
 @property(strong,nonatomic)LB_HomeTitleView *homeTitleView;
+@property(strong,nonatomic)ScanReturn scanReturn;
+@property(copy,nonatomic)NSString *url;
 
 @end
 
@@ -42,10 +45,31 @@
         
     }];
     
+    @weakify(self);
+    [[self.homeTitleView.scanBtn rac_signalForControlEvents:UIControlEventTouchDown] subscribeNext:^(id x) {
+        @strongify(self);
+        LB_ScanViewController *scan = [[LB_ScanViewController alloc]init];
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:scan];
+        RAC(self,url) = RACObserve(scan, url);
+        nav.navigationBar.hidden = YES;
+        AppDelegate *app  = KAPPDELEGATE;
+        [app.tabBarVC presentViewController:nav animated:YES completion:nil];
+
+    }];
     
+}
+
+-(void)setUrl:(NSString *)url
+{
     
+    NSLog(@"------%@",url);
     
+}
+
+-(void)initConfiguration
+{
     
+   
 }
 
 @end

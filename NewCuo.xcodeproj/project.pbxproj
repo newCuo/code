@@ -30,6 +30,9 @@
 		5E3343271F5904870014184D /* LB_CouponContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E3343261F5904870014184D /* LB_CouponContentView.xib */; };
 		5E33432B1F5908DB0014184D /* LB_CouponContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3343291F5908DB0014184D /* LB_CouponContentCell.m */; };
 		5E33432C1F5908DB0014184D /* LB_CouponContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E33432A1F5908DB0014184D /* LB_CouponContentCell.xib */; };
+		5E3343341F594B970014184D /* LB_ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3343331F594B970014184D /* LB_ScanViewController.m */; };
+		5E3343371F594BB90014184D /* LB_ScanViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3343361F594BB90014184D /* LB_ScanViewModel.m */; };
+		5E33433A1F594BCE0014184D /* LB_ScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3343391F594BCE0014184D /* LB_ScanView.m */; };
 		5E5AE53A1F3B10DA0036CBBF /* LB_AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AE5391F3B10DA0036CBBF /* LB_AddressViewController.m */; };
 		5E5AE53D1F3B11060036CBBF /* LB_AddressTitleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AE53C1F3B11060036CBBF /* LB_AddressTitleViewModel.m */; };
 		5E5AE5401F3B111B0036CBBF /* LB_AddressContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5AE53F1F3B111B0036CBBF /* LB_AddressContentViewModel.m */; };
@@ -207,6 +210,12 @@
 		5E3343281F5908DB0014184D /* LB_CouponContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_CouponContentCell.h; sourceTree = "<group>"; };
 		5E3343291F5908DB0014184D /* LB_CouponContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_CouponContentCell.m; sourceTree = "<group>"; };
 		5E33432A1F5908DB0014184D /* LB_CouponContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LB_CouponContentCell.xib; sourceTree = "<group>"; };
+		5E3343321F594B970014184D /* LB_ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_ScanViewController.h; sourceTree = "<group>"; };
+		5E3343331F594B970014184D /* LB_ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_ScanViewController.m; sourceTree = "<group>"; };
+		5E3343351F594BB90014184D /* LB_ScanViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_ScanViewModel.h; sourceTree = "<group>"; };
+		5E3343361F594BB90014184D /* LB_ScanViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_ScanViewModel.m; sourceTree = "<group>"; };
+		5E3343381F594BCE0014184D /* LB_ScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_ScanView.h; sourceTree = "<group>"; };
+		5E3343391F594BCE0014184D /* LB_ScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_ScanView.m; sourceTree = "<group>"; };
 		5E5AE5381F3B10DA0036CBBF /* LB_AddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_AddressViewController.h; sourceTree = "<group>"; };
 		5E5AE5391F3B10DA0036CBBF /* LB_AddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LB_AddressViewController.m; sourceTree = "<group>"; };
 		5E5AE53B1F3B11060036CBBF /* LB_AddressTitleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LB_AddressTitleViewModel.h; sourceTree = "<group>"; };
@@ -543,6 +552,51 @@
 				5E3059741F580DCB0019C24C /* LB_CouponTitleViewModel.m */,
 				5E3059761F580DE80019C24C /* LB_CouponContentViewModel.h */,
 				5E3059771F580DE80019C24C /* LB_CouponContentViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5E33432D1F594B6B0014184D /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				5E33432E1F594B6B0014184D /* Controller */,
+				5E33432F1F594B6B0014184D /* Model */,
+				5E3343301F594B6B0014184D /* View */,
+				5E3343311F594B6B0014184D /* ViewModel */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		5E33432E1F594B6B0014184D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5E3343321F594B970014184D /* LB_ScanViewController.h */,
+				5E3343331F594B970014184D /* LB_ScanViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5E33432F1F594B6B0014184D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E3343301F594B6B0014184D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E3343381F594BCE0014184D /* LB_ScanView.h */,
+				5E3343391F594BCE0014184D /* LB_ScanView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5E3343311F594B6B0014184D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5E3343351F594BB90014184D /* LB_ScanViewModel.h */,
+				5E3343361F594BB90014184D /* LB_ScanViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1379,6 +1433,7 @@
 		5EF4EC8B1F1F4CB6000C2EAD /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5E33432D1F594B6B0014184D /* Scan */,
 				5E7C891F1F24D74B009A578E /* Seach */,
 				5E7C891B1F24D4F5009A578E /* Model */,
 				5EF4EC911F1F53C0000C2EAD /* Controller */,
@@ -1765,7 +1820,9 @@
 				5EAFA6D71F41A17500A7EF02 /* LB_AddressModificationContentViewModel.m in Sources */,
 				5E975FBB1F283D7D006994FE /* LB_MyMessageFootView.m in Sources */,
 				5EA3D8BA1F29BB1200A8EFAD /* LB_MyMessageCell.m in Sources */,
+				5E3343371F594BB90014184D /* LB_ScanViewModel.m in Sources */,
 				5E5AE53A1F3B10DA0036CBBF /* LB_AddressViewController.m in Sources */,
+				5E33433A1F594BCE0014184D /* LB_ScanView.m in Sources */,
 				3F6181D61F31A34C0096693D /* GoodsDetailBottomViewModel.m in Sources */,
 				5E7D75C21F29F39A00C6C92F /* SDCycleScrollView.m in Sources */,
 				5E7C89501F26ED44009A578E /* LB_UserInfoOrderView.m in Sources */,
@@ -1837,6 +1894,7 @@
 				3F6181D01F3186030096693D /* GoodsDetailBottomView.m in Sources */,
 				5E8218511F21E32300635013 /* UserInfoTitleViewModel.m in Sources */,
 				5E7D75EC1F2B3DD200C6C92F /* LB_GoodsClassViewController.m in Sources */,
+				5E3343341F594B970014184D /* LB_ScanViewController.m in Sources */,
 				5E8218571F21EF0B00635013 /* AppDelegate+Configuration.m in Sources */,
 				5E975FA71F277905006994FE /* LB_SetContentView.m in Sources */,
 				5EAFA6DA1F41AAAE00A7EF02 /* LB_AddressModificationContentView.m in Sources */,
